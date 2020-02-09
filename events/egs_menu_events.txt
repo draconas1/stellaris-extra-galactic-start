@@ -1,0 +1,435 @@
+namespace = egs_menu
+
+#main menu
+country_event = {
+	id = egs_menu.1    
+	title = "egs_menu.1.name"
+	desc = "egs_menu.1.desc"
+	picture = GFX_evt_ancient_databank
+	is_triggered_only = yes
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_egs
+	}
+
+	option = {
+		name = "egs_menu.1.option.cluster"
+		hidden_effect = {
+			country_event = { id = egs_menu.100 }
+		}
+	}
+
+	option = {
+		name = "egs_menu.1.option.system"
+		hidden_effect = {
+			country_event = { id = egs_menu.200 }
+		}
+	}
+
+	option = {
+		name = "egs_menu.1.option.kerbal"
+		hidden_effect = {
+			country_event = { id = egs_menu.300 }
+		}
+	}
+
+	option = {
+		name = "egs_menu.1.option.giga"
+		hidden_effect = {
+			country_event = { id = egs_menu.400 }
+		}
+	}
+
+	option = {
+		name = "egs_menu.1.option.link"
+		hidden_effect = {
+			country_event = { id = egs_menu.500 }
+		}
+	}
+
+	option = {
+		name = "egs_menu.1.option.begin"
+		hidden_effect = {
+			country_event = { id = egs_apprentice.1 }
+		}
+	}
+}
+
+# set initalisation variables
+country_event = {
+	id = egs_menu.2    
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_egs
+	}
+
+	immediate = {
+		set_country_flag = EGS_START_RANDOM
+		set_country_flag = EGS_CLUSTER_APPRENTICE
+		set_country_flag = EGS_KERBAL_NO
+		set_country_flag = EGS_GIGA_NO
+		set_country_flag = EGS_LINK_WORMHOLE
+		country_event = { id = egs_menu.1  }
+	}
+}
+
+
+#Cluster Menu
+country_event = {
+	id = egs_menu.100    
+	title = "egs_menu.100.name"
+	desc = "egs_menu.100.desc"
+	picture = GFX_evt_clocks
+	is_triggered_only = yes
+
+	option = {
+		name = "egs_menu.100.option.apprentice"
+		trigger = {
+			NOT = { has_country_flag = EGS_CLUSTER_APPRENTICE }
+		}
+		hidden_effect = {
+			clear_egs_cluster_flags = yes
+			set_country_flag = EGS_CLUSTER_APPRENTICE
+			country_event = { id = egs_menu.1 }
+		}
+	}
+	option = {
+		name = "egs_menu.100.option.apprentice.on"
+		trigger = {
+			has_country_flag = EGS_CLUSTER_APPRENTICE
+		}
+		hidden_effect = {
+			clear_egs_cluster_flags = yes
+			set_country_flag = EGS_CLUSTER_APPRENTICE
+			country_event = { id = egs_menu.1 }
+		}
+	}
+}
+
+
+
+#Home System Menu
+country_event = {
+	id = egs_menu.200    
+	title = "egs_menu.200.name"
+	desc = "egs_menu.200.desc"
+	picture = GFX_evt_colony_settlement
+	is_triggered_only = yes
+
+	option = {
+		name = "egs_menu.200.option.sol"
+		trigger = {
+			NOT = { has_country_flag = EGS_START_SOL }
+		}
+		hidden_effect = {
+			clear_egs_start_system_flags = yes
+			set_country_flag = EGS_START_SOL
+			country_event = { id = egs_menu.1 }
+		}
+	}
+
+	option = {
+		name = "egs_menu.200.option.sol.on"
+		trigger = {
+			has_country_flag = EGS_START_SOL
+		}
+		hidden_effect = {
+			clear_egs_start_system_flags = yes
+			set_country_flag = EGS_START_SOL
+			country_event = { id = egs_menu.1 }
+		}
+	}
+
+	option = {
+		name = "egs_menu.200.option.deneb"
+		trigger = {
+			NOT = { has_country_flag = EGS_START_DENEB }
+		}
+		hidden_effect = {
+			clear_egs_start_system_flags = yes
+			set_country_flag = EGS_START_DENEB
+			country_event = { id = egs_menu.1 }
+		}
+	}
+
+	option = {
+		name = "egs_menu.200.option.deneb.on"
+		trigger = {
+			has_country_flag = EGS_START_DENEB
+		}
+		hidden_effect = {
+			clear_egs_start_system_flags = yes
+			set_country_flag = EGS_START_DENEB
+			country_event = { id = egs_menu.1 }
+		}
+	}
+
+	option = {
+		name = "egs_menu.200.option.random"
+		trigger = {
+			NOT = { has_country_flag = EGS_START_RANDOM }
+		}
+		hidden_effect = {
+			clear_egs_start_system_flags = yes
+			set_country_flag = EGS_START_RANDOM
+			country_event = { id = egs_menu.1 }
+		}
+	}
+
+	option = {
+		name = "egs_menu.200.option.random.on"
+		trigger = {
+			has_country_flag = EGS_START_RANDOM
+		}
+		hidden_effect = {
+			clear_egs_start_system_flags = yes
+			set_country_flag = EGS_START_RANDOM
+			country_event = { id = egs_menu.1 }
+		}
+	}
+
+	option = {
+		name = "egs_menu.200.option.randombinry"
+		trigger = {
+			NOT = { has_country_flag = EGS_START_RANDOM_BINARY }
+		}
+		hidden_effect = {
+			clear_egs_start_system_flags = yes
+			set_country_flag = EGS_START_RANDOM_BINARY
+			country_event = { id = egs_menu.1 }
+		}
+	}
+
+	option = {
+		name = "egs_menu.200.option.randombinry.on"
+		trigger = {
+			has_country_flag = EGS_START_RANDOM_BINARY
+		}
+		hidden_effect = {
+			clear_egs_start_system_flags = yes
+			set_country_flag = EGS_START_RANDOM_BINARY
+			country_event = { id = egs_menu.1 }
+		}
+	}
+
+	option = {
+		name = "egs_menu.200.option.randomtrinary"
+		trigger = {
+			NOT = { has_country_flag = EGS_START_RANDOM_TRINARY }
+		}
+		hidden_effect = {
+			clear_egs_start_system_flags = yes
+			set_country_flag = EGS_START_RANDOM_TRINARY
+			country_event = { id = egs_menu.1 }
+		}
+	}
+
+	option = {
+		name = "egs_menu.200.option.randomtrinary.on"
+		trigger = {
+			has_country_flag = EGS_START_RANDOM_TRINARY
+		}
+		hidden_effect = {
+			clear_egs_start_system_flags = yes
+			set_country_flag = EGS_START_RANDOM_TRINARY
+			country_event = { id = egs_menu.1 }
+		}
+	}	
+}
+
+
+#Kerbal Menu
+country_event = {
+	id = egs_menu.300    
+	title = "egs_menu.300.name"
+	desc = "egs_menu.300.desc"
+	picture = GFX_evt_alien_segregation
+	is_triggered_only = yes
+
+	option = {
+		name = "egs_menu.300.option.no"
+		trigger = {
+			NOT = { has_country_flag = EGS_KERBAL_NO }
+		}
+		hidden_effect = {
+			clear_egs_kerbal_flags = yes
+			set_country_flag = EGS_KERBAL_NO
+			country_event = { id = egs_menu.1 }
+		}
+	}
+
+	option = {
+		name = "egs_menu.300.option.no.on"
+		trigger = {
+			has_country_flag = EGS_KERBAL_NO
+		}
+		hidden_effect = {
+			clear_egs_kerbal_flags = yes
+			set_country_flag = EGS_KERBAL_NO
+			country_event = { id = egs_menu.1 }
+		}
+	}
+
+	option = {
+		name = "egs_menu.300.option.yes"
+		trigger = {
+			NOT = { has_country_flag = EGS_KERBAL_YES }
+		}
+		hidden_effect = {
+			clear_egs_kerbal_flags = yes
+			set_country_flag = EGS_KERBAL_YES
+			country_event = { id = egs_menu.1 }
+		}
+	}
+
+	option = {
+		name = "egs_menu.300.option.yes.on"
+		trigger = {
+			has_country_flag = EGS_KERBAL_YES
+		}
+		hidden_effect = {
+			clear_egs_kerbal_flags = yes
+			set_country_flag = EGS_KERBAL_YES
+			country_event = { id = egs_menu.1 }
+		}
+	}
+}
+
+#Gigastructures Menu
+country_event = {
+	id = egs_menu.400    
+	title = "egs_menu.400.name"
+	desc = "egs_menu.400.desc"
+	picture = GFX_evt_think_tank
+	is_triggered_only = yes
+
+	option = {
+		name = "egs_menu.400.option.no"
+		trigger = {
+			NOT = { has_country_flag = EGS_GIGA_NO }
+		}
+		hidden_effect = {
+			clear_egs_gigastructure_flags = yes
+			set_country_flag = EGS_GIGA_NO
+			country_event = { id = egs_menu.1 }
+		}
+	}
+	option = {
+		name = "egs_menu.400.option.no.on"
+		trigger = {
+			has_country_flag = EGS_GIGA_NO
+		}
+		hidden_effect = {
+			clear_egs_gigastructure_flags = yes
+			set_country_flag = EGS_GIGA_NO
+			country_event = { id = egs_menu.1 }
+		}
+	}
+
+	option = {
+		name = "egs_menu.400.option.yes"
+		trigger = {
+			NOT = { has_country_flag = EGS_GIGA_YES }
+		}
+		hidden_effect = {
+			clear_egs_gigastructure_flags = yes
+			set_country_flag = EGS_GIGA_YES
+			country_event = { id = egs_menu.1 }
+		}
+	}
+	option = {
+		name = "egs_menu.400.option.yes.on"
+		trigger = {
+			has_country_flag = EGS_GIGA_YES
+		}
+		hidden_effect = {
+			clear_egs_gigastructure_flags = yes
+			set_country_flag = EGS_GIGA_YES
+			country_event = { id = egs_menu.1 }
+		}
+	}
+}
+
+#Cluster linking Menu
+country_event = {
+	id = egs_menu.500    
+	title = "egs_menu.500.name"
+	desc = "egs_menu.500.desc"
+	picture = GFX_evt_federation_fleet
+	is_triggered_only = yes
+
+	option = {
+		name = "egs_menu.500.option.wormhole"
+		trigger = {
+			NOT = { has_country_flag = EGS_LINK_WORMHOLE }
+		}
+		hidden_effect = {
+			clear_egs_clusterlink_flags = yes
+			set_country_flag = EGS_LINK_WORMHOLE
+			country_event = { id = egs_menu.1 }
+		}
+	}
+	option = {
+		name = "egs_menu.500.option.wormhole.on"
+		trigger = {
+			has_country_flag = EGS_LINK_WORMHOLE
+		}
+		hidden_effect = {
+			clear_egs_clusterlink_flags = yes
+			set_country_flag = EGS_LINK_WORMHOLE
+			country_event = { id = egs_menu.1 }
+		}
+	}
+
+	option = {
+		name = "egs_menu.500.option.manywormhole"
+		trigger = {
+			NOT = { has_country_flag = EGS_LINK_MANY_WORMHOLE }
+		}
+		hidden_effect = {
+			clear_egs_clusterlink_flags = yes
+			set_country_flag = EGS_LINK_MANY_WORMHOLE
+			country_event = { id = egs_menu.1 }
+		}
+	}
+	option = {
+		name = "egs_menu.500.option.manywormhole.on"
+		trigger = {
+			has_country_flag = EGS_LINK_MANY_WORMHOLE
+		}
+		hidden_effect = {
+			clear_egs_clusterlink_flags = yes
+			set_country_flag = EGS_LINK_MANY_WORMHOLE
+			country_event = { id = egs_menu.1 }
+		}
+	}
+
+	option = {
+		name = "egs_menu.500.option.lgate"
+		trigger = {
+			has_distar = yes
+			NOT = { has_country_flag = EGS_LINK_L_GATE }
+		}
+		hidden_effect = {
+			clear_egs_clusterlink_flags = yes
+			set_country_flag = EGS_LINK_L_GATE
+			country_event = { id = egs_menu.1 }
+		}
+	}
+	option = {
+		name = "egs_menu.500.option.lgate.on"
+		trigger = {
+			has_distar = yes
+			has_country_flag = EGS_LINK_L_GATE
+		}
+		hidden_effect = {
+			clear_egs_clusterlink_flags = yes
+			set_country_flag = EGS_LINK_L_GATE
+			country_event = { id = egs_menu.1 }
+		}
+	}
+}

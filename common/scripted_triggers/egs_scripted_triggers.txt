@@ -1,0 +1,7 @@
+egs_has_random_start_system = {
+	OR = {
+		has_country_flag = EGS_START_RANDOM
+		has_country_flag = EGS_START_RANDOM_BINARY
+		has_country_flag = EGS_START_RANDOM_TRINARY
+	}
+}

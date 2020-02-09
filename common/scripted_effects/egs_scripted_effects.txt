@@ -1,0 +1,274 @@
+clear_egs_start_system_flags = {
+	remove_country_flag = EGS_START_SOL
+	remove_country_flag = EGS_START_DENEB
+	remove_country_flag = EGS_START_RANDOM
+	remove_country_flag = EGS_START_RANDOM_BINARY
+	remove_country_flag = EGS_START_RANDOM_TRINARY
+}
+
+clear_egs_cluster_flags = {
+	remove_country_flag = EGS_CLUSTER_APPRENTICE
+}
+
+clear_egs_kerbal_flags = {
+	remove_country_flag = EGS_KERBAL_YES
+	remove_country_flag = EGS_KERBAL_NO
+}
+
+clear_egs_gigastructure_flags = {
+	remove_country_flag = EGS_GIGA_YES
+	remove_country_flag = EGS_GIGA_NO
+}
+
+clear_egs_clusterlink_flags = {
+	remove_country_flag = EGS_LINK_WORMHOLE
+	remove_country_flag = EGS_LINK_MANY_WORMHOLE
+	remove_country_flag = EGS_LINK_L_GATE
+}
+
+
+#fromfrom = source planet
+#from = target planet
+match_planet_class = {
+	event_target:previous_home_planet = {
+		switch = {
+			trigger = is_planet_class
+			pc_desert = {
+				event_target:egs_target_planet = {
+					change_pc = pc_desert
+				}
+			}
+
+			pc_arid = {
+				event_target:egs_target_planet = {
+					change_pc = pc_arid
+				}
+			}
+
+			pc_savannah = {
+				event_target:egs_target_planet = {
+					change_pc = pc_savannah
+				}
+			}
+
+			pc_ocean = {
+				event_target:egs_target_planet = {
+					change_pc = pc_ocean
+				}
+			}
+
+			pc_continental = {
+				event_target:egs_target_planet = {
+					change_pc = pc_continental
+				}
+			}
+
+			pc_tropical = {
+				event_target:egs_target_planet = {
+					change_pc = pc_tropical
+				}
+			}
+
+			pc_tundra = {
+				event_target:egs_target_planet = {
+					change_pc = pc_tundra
+				}
+			}
+
+			pc_arctic = {
+				event_target:egs_target_planet = {
+					change_pc = pc_arctic
+				}
+			}
+
+			pc_nuked = {
+				event_target:egs_target_planet = {
+					change_pc = pc_nuked
+				}
+			}
+
+			pc_gaia = {
+				event_target:egs_target_planet = {
+					change_pc = pc_gaia
+				}
+			}
+
+
+			#Planetary Diversity
+
+			pc_aquatic = {
+				event_target:egs_target_planet = {
+					change_pc = pc_aquatic
+				}
+			}
+
+			pc_prairie = {
+				event_target:egs_target_planet = {
+					change_pc = pc_prairie
+				}
+			}
+
+			pc_antarctic = {
+				event_target:egs_target_planet = {
+					change_pc = pc_antarctic
+				}
+			}
+
+			pc_snow = {
+				event_target:egs_target_planet = {
+					change_pc = pc_snow
+				}
+			}
+
+			pc_glacial = {
+				event_target:egs_target_planet = {
+					change_pc = pc_glacial
+				}
+			}
+
+			pc_frozen_desert = {
+				event_target:egs_target_planet = {
+					change_pc = pc_frozen_desert
+				}
+			}
+
+			pc_steppe = {
+				event_target:egs_target_planet = {
+					change_pc = pc_steppe
+				}
+			}
+
+			pc_hadesert = {
+				event_target:egs_target_planet = {
+					change_pc = pc_hadesert
+				}
+			}
+
+			pc_boreal = {
+				event_target:egs_target_planet = {
+					change_pc = pc_boreal
+				}
+			}
+
+			pc_sandsea = {
+				event_target:egs_target_planet = {
+					change_pc = pc_sandsea
+				}
+			}
+
+			pc_subarctic = {
+				event_target:egs_target_planet = {
+					change_pc = pc_subarctic
+				}
+			}
+
+			pc_cascadian = {
+				event_target:egs_target_planet = {
+					change_pc = pc_cascadian
+				}
+			}
+
+			pc_swamp = {
+				event_target:egs_target_planet = {
+					change_pc = pc_swamp
+				}
+			}
+
+			pc_mangrove = {
+				event_target:egs_target_planet = {
+					change_pc = pc_mangrove
+				}
+			}
+
+			pc_desertislands = {
+				event_target:egs_target_planet = {
+					change_pc = pc_desertislands
+				}
+			}
+
+			pc_mesa = {
+				event_target:egs_target_planet = {
+					change_pc = pc_mesa
+				}
+			}
+
+			pc_oasis = {
+				event_target:egs_target_planet = {
+					change_pc = pc_oasis
+				}
+			}
+
+			pc_hajungle = {
+				event_target:egs_target_planet = {
+					change_pc = pc_hajungle
+				}
+			}
+
+			pc_mushroom = {
+				event_target:egs_target_planet = {
+					change_pc = pc_mushroom
+				}
+			}
+
+			pc_retinal = {
+				event_target:egs_target_planet = {
+					change_pc = pc_retinal
+				}
+			}
+
+			pc_forest = {
+				event_target:egs_target_planet = {
+					change_pc = pc_forest
+				}
+			}
+
+			pc_med = {
+				event_target:egs_target_planet = {
+					change_pc = pc_med
+				}
+			}
+
+			pc_primal = {
+				event_target:egs_target_planet = {
+					change_pc = pc_primal
+				}
+			}
+
+			pc_karst = {
+				event_target:egs_target_planet = {
+					change_pc = pc_karst
+				}
+			}
+
+			pc_superhabitable = {
+				event_target:egs_target_planet = {
+					change_pc = pc_superhabitable
+				}
+			}
+
+			pc_tidallylocked = {
+				event_target:egs_target_planet = {
+					change_pc = pc_tidallylocked
+				}
+			}
+
+			pc_geothermal = {
+				event_target:egs_target_planet = {
+					change_pc = pc_geothermal
+				}
+			}
+
+			pc_biolumen = {
+				event_target:egs_target_planet = {
+					change_pc = pc_biolumen
+				}
+			}
+		}
+	}
+
+	event_target:egs_target_planet = {
+		reroll_deposits = yes
+		reroll_planet_modifiers = yes
+	}
+}
+

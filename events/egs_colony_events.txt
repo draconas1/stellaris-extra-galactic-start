@@ -1,0 +1,339 @@
+namespace = egs_colony
+#move the home sysem
+country_event = {
+	id = egs_colony.1
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		# put everything into an empire cluster
+		every_system = {
+			limit = {
+				has_star_flag = egs_cluster
+			}
+			set_star_flag = empire_cluster
+		}
+
+		#first tag our old home planet
+		random_owned_planet = {
+			save_event_target_as = previous_home_planet
+			solar_system = {
+				save_event_target_as = previous_home_system
+			}
+		}
+		# then tag our new ones
+		random_system = {
+			limit = {
+				has_star_flag = egs_empire_home
+			}
+			save_event_target_as = egs_home_system
+		}
+
+		# Sol = earth has a planet tag, very handy
+		# though it would have been even better if they could have called the default generate_home_planet script LIKE EVERYONE ELSE
+		if = {
+			limit = {
+				has_country_flag = EGS_START_SOL
+			}
+			random_planet = {
+				limit = {
+					has_planet_flag = planet_earth
+					solar_system = {
+						has_star_flag = egs_empire_home
+					}
+				}
+				save_event_target_as = egs_home_planet
+			}
+		}
+		else = {
+			random_planet = {
+				limit = {
+					has_planet_flag = egs_home_planet_marker
+					solar_system = {
+						has_star_flag = egs_empire_home
+					}
+				}
+				save_event_target_as = egs_home_planet
+			}
+		}
+
+		#set the correct planet class for home planet
+		event_target:egs_home_planet = {
+			save_event_target_as = egs_target_planet
+			match_planet_class = yes
+		}
+
+		#Set the correct class for secondary planets
+		#Go developers putting a bloody flag on the secondary planet!
+		every_planet = {
+			limit = {
+				has_planet_flag = prescripted_ideal
+				solar_system = {
+					has_star_flag = egs_cluster
+				}
+			}
+			save_event_target_as = egs_target_planet
+			match_planet_class = yes
+		}
+
+
+		# Set up the spaceport
+		if = {
+			limit = {
+				is_gestalt = yes
+			}
+			event_target:egs_home_system = {
+				create_starbase = {
+					size = "starbase_starport"
+					module = "shipyard"
+					module = "solar_panel_network"
+					building = "crew_quarters"
+					owner = root
+				}
+			}
+		}
+		else = {
+			event_target:egs_home_system = {
+				create_starbase = {
+					size = "starbase_starport"
+					module = "shipyard"
+					module = "trading_hub"
+					building = "crew_quarters"
+					owner = root
+				}
+			}
+		}
+
+		# Set up the capital planet
+		event_target:egs_home_planet = {
+			remove_deposit = yes
+			remove_planet_flag = starting_deposit
+			remove_planet_flag = starting_mining_target
+			remove_planet_flag = starting_research_target
+			clear_planet_modifiers = yes
+			set_owner = root
+			set_controller = root
+			set_capital = yes
+			if = {
+				limit = {
+					has_planet_flag = planet_earth
+				}
+				generate_earth_deposits_and_blockers = yes
+			}
+			else = {
+				generate_start_deposits_and_blockers = yes
+			}
+			generate_start_buildings_and_districts = yes
+		}
+
+		event_target:egs_home_system = {
+			#need to regen as the home planet will have been barren and so probably got a resource deposit
+			generate_home_system_resources = yes
+			random_system_planet = {
+				limit = {
+					is_star = yes
+				}
+				save_event_target_as = egs_home_system_loc
+			}
+			every_system_planet = {
+				limit = {
+					has_deposit = d_energy_5
+				}
+				create_mining_station = {
+					owner = root
+				}
+			}
+			every_system_planet = {
+				limit = {
+					has_deposit = d_minerals_5
+				}
+				create_mining_station = {
+					owner = root
+				}
+			}
+		}
+		
+		every_owned_fleet = {
+			limit = {
+				any_owned_ship = {
+					OR = {
+						is_ship_size = corvette
+						is_ship_size = constructor
+						is_ship_size = science
+					}
+				}
+			}
+			set_location = event_target:egs_home_system_loc
+		}
+		event_target:previous_home_planet = {
+			every_owned_pop = {
+				resettle_pop = {
+					pop = this
+					planet = event_target:egs_home_planet
+				}
+				unemploy_pop = yes
+			}
+			remove_planet = yes
+		}
+		event_target:previous_home_system = {
+			set_name = random
+			random_system_planet = {
+				limit = {
+					is_star = yes
+				}
+				set_name = solar_system
+			}
+			every_fleet_in_system = {
+				delete_fleet = this
+			}
+			remove_star_flag = sol
+			remove_star_flag = deneb_system
+			every_system_planet = {
+				limit = {
+					is_star = no
+				}
+				set_name = random
+			}
+		}
+		every_owned_pop_species = {
+			set_species_homeworld = event_target:egs_home_planet
+		}
+		country_event = {
+			id = egs_colony.100
+		}
+	}
+}
+
+# setup bypasses
+country_event = {
+	id = egs_colony.100
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = EGS_LINK_L_GATE
+				}
+			}
+			event_target:previous_home_system = {
+				event_target:egs_cluster_root = {
+					spawn_natural_wormhole = {
+						bypass_type = wormhole
+						random_pos = yes
+						orbit_angle = 360
+					}
+				}
+				spawn_natural_wormhole = {
+					bypass_type = wormhole
+					random_pos = yes
+					orbit_angle = 360
+				}
+				link_wormholes = event_target:egs_cluster_root
+			}
+		}
+
+		if = {
+			limit = {
+				has_country_flag = EGS_LINK_MANY_WORMHOLE
+			}
+			while = {
+				count = 3
+				#set egs target
+				random_system = {
+					limit = {
+						has_star_flag = egs_cluster
+						NOR = {
+							has_star_flag = egs_empire_home
+							has_star_flag = egs_init_system
+						}
+					}
+					save_event_target_as = egs_wormhole_destination
+					spawn_natural_wormhole = {
+						bypass_type = wormhole
+						random_pos = yes
+						orbit_angle = 360
+					}
+				}
+				random_system = {
+					limit = {
+						has_natural_wormhole = no
+						is_fe_cluster = no
+						NOR = {
+							has_star_flag = abandoned_gateway
+							has_star_flag = AI_hub
+							has_star_flag = empire_home_system
+							has_star_flag = empire_cluster
+							has_star_flag = hostile_system
+							has_star_flag = sol
+							has_star_flag = deneb_system
+							has_star_flag = egs_cluster
+							has_star_flag = marauder_system
+						}
+					}
+			
+					spawn_natural_wormhole = {
+						bypass_type = wormhole
+						random_pos = yes
+						orbit_angle = 360
+					}
+					link_wormholes = event_target:egs_wormhole_destination
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				has_country_flag = EGS_LINK_L_GATE
+			}
+			event_target:egs_cluster_root = {
+				set_star_flag = lgate
+				spawn_megastructure = {
+					type = lgate_base
+					orbit_angle = 225
+					orbit_distance = 30
+					location = solar_system
+				}
+			}
+			every_system = {
+				limit = {
+					has_star_flag =  lgate
+				}
+				every_system_planet = {
+					limit = {
+						is_star = yes
+					}
+					surveyed = {
+						set_surveyed = yes
+						surveyor = root
+					}
+					set_all_comms_surveyed = yes
+				}
+
+			}
+		}
+	}
+}
+
+country_event = {
+	id = egs_colony.4
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_system = {
+			limit = {
+				has_star_flag =  lgate
+			}
+			every_system_planet = {
+				limit = {
+					is_star = yes
+				}
+				surveyed = {
+					set_surveyed = yes
+					surveyor = root
+				}
+				set_all_comms_surveyed = yes
+			}
+
+		}
+	}
+}
