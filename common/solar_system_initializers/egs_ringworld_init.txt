@@ -1,0 +1,157 @@
+egs_ringworld_init = {
+	name = random
+	class = "rl_all_stars"
+
+	flags = { random_ringworld_system }
+	usage = misc_system_init
+
+	planet = {
+		class = star
+		orbit_distance = 0
+	}
+
+	change_orbit = 45
+	
+	planet = {
+		name = random
+		class = "pc_ringworld_habitable"
+		orbit_angle = 30
+		orbit_distance = 0
+		
+		deposit_blockers = none
+		modifiers = none
+		starting_planet = yes
+			
+		init_effect = {
+			generate_empire_home_planet = yes
+			prevent_anomaly = yes
+			trigger_megastructure_icon = yes
+			set_planet_flag = ringworld_start
+			set_planet_flag = megastructure
+		}
+	}			
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "Ring Section B"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {			
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+		}	
+	}
+	planet = {
+		class = "pc_ringworld_seam"
+		name = "Ring Section C"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+		}	
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Habitable Section D"
+		orbit_angle = 30
+		orbit_distance = 0
+		deposit_blockers = none
+		modifiers = none
+		init_effect = {
+			prevent_anomaly = yes
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+		}	
+	}				
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "Ring Section E"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+		}	
+	}
+	planet = {
+		class = "pc_ringworld_seam"
+		name = "Ring Section F"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+		}	
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Habitable Section G"
+		orbit_angle = 30
+		orbit_distance = 0
+		deposit_blockers = none
+		modifiers = none
+		init_effect = {
+			prevent_anomaly = yes
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure			
+		}	
+	}
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "Ring Section H"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+		}	
+	}
+	planet = {
+		class = "pc_ringworld_seam"
+		name = "Ring Section I"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+		}	
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Habitable Section J"
+		orbit_angle = 30
+		orbit_distance = 0
+		deposit_blockers = none
+		modifiers = none
+		init_effect = {
+			prevent_anomaly = yes
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+		}	
+	}				
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "Ring Section K"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+		}	
+	}
+	planet = {
+		class = "pc_ringworld_seam"
+		name = "Ring Section L"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+		}	
+	}
+}
