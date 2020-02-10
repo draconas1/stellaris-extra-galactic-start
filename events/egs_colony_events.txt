@@ -229,6 +229,7 @@ country_event = {
 				has_country_flag = EGS_START_RINGWORLD
 			}
 			add_resource = {
+				energy = 5000
 				minerals = 5000
 				volatile_motes = 750
 				rare_crystals = 750

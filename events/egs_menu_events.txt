@@ -73,6 +73,8 @@ country_event = {
 		set_country_flag = EGS_KERBAL_NO
 		set_country_flag = EGS_GIGA_NO
 		set_country_flag = EGS_LINK_WORMHOLE
+		# make sure we don't spawn extrgalatic cluster
+		set_global_flag = extragalactic_cluster_spawned
 		country_event = { id = egs_menu.1  }
 	}
 }
