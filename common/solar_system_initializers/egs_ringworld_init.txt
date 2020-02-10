@@ -1,19 +1,19 @@
 egs_ringworld_init = {
-	name = random
-	class = "rl_all_stars"
+	class = "sc_neutron_star"
 
-	flags = { random_ringworld_system }
+	flags = { egs_ringworld }
 	usage = misc_system_init
 
 	planet = {
 		class = star
 		orbit_distance = 0
+		size = 60
 	}
 
 	change_orbit = 45
 	
 	planet = {
-		name = random
+		name = "Habitable Section A"
 		class = "pc_ringworld_habitable"
 		orbit_angle = 30
 		orbit_distance = 0
@@ -26,7 +26,7 @@ egs_ringworld_init = {
 			generate_empire_home_planet = yes
 			prevent_anomaly = yes
 			trigger_megastructure_icon = yes
-			set_planet_flag = ringworld_start
+			set_planet_flag = egs_ringworld
 			set_planet_flag = megastructure
 		}
 	}			

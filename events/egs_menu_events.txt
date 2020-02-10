@@ -238,6 +238,30 @@ country_event = {
 			set_country_flag = EGS_START_RANDOM_TRINARY
 			country_event = { id = egs_menu.1 }
 		}
+	}
+
+	option = {
+		name = "egs_menu.200.option.ringworld"
+		trigger = {
+			NOT = { has_country_flag = EGS_START_RINGWORLD }
+		}
+		hidden_effect = {
+			clear_egs_start_system_flags = yes
+			set_country_flag = EGS_START_RINGWORLD
+			country_event = { id = egs_menu.1 }
+		}
+	}
+
+	option = {
+		name = "egs_menu.200.option.ringworld.on"
+		trigger = {
+			has_country_flag = EGS_START_RINGWORLD
+		}
+		hidden_effect = {
+			clear_egs_start_system_flags = yes
+			set_country_flag = EGS_START_RINGWORLD
+			country_event = { id = egs_menu.1 }
+		}
 	}	
 }
 

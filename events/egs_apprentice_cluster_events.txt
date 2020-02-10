@@ -327,6 +327,21 @@ country_event = {
 		}
 		else_if = {
 			limit = {
+				has_country_flag = EGS_START_RINGWORLD 
+			}
+			random_system = {
+				limit = { has_star_flag = egs_6 }
+				spawn_system = {
+					min_distance >= 25
+					max_distance <= 28
+					min_orientation_angle = 44
+					max_orientation_angle = 49
+					initializer = egs_ringworld_init
+				}
+			}
+		}
+		else_if = {
+			limit = {
 				has_country_flag = EGS_START_RANDOM_TRINARY 
 			}
 			random_system = {

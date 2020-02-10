@@ -20,12 +20,14 @@
     egs_menu.200.option.randomtrinary:0 "$custom_starting_init_01_NAME$"
     egs_menu.200.option.sol:0 "Sol"
     egs_menu.200.option.deneb:0 "Deneb"
+    egs_menu.200.option.ringworld:0 "A Ring World"
 
     egs_menu.200.option.random.on:0 "§Y$egs_menu.200.option.random$§!"
     egs_menu.200.option.randombinry.on:0 "§Y$egs_menu.200.option.randombinry$§!"
     egs_menu.200.option.randomtrinary.on:0 "§Y$egs_menu.200.option.randomtrinary$§!"
     egs_menu.200.option.sol.on:0 "§Yegs_menu.200.option.sol$§!"
     egs_menu.200.option.deneb.on:0 "§Y$egs_menu.200.option.deneb$§!"
+    egs_menu.200.option.ringworld.on:0 "§Y$egs_menu.200.option.ringworld$§!"
 
     egs_menu.300.name:0 "Enable Kerbal Space Program"
     egs_menu.300.desc:0 "An homage to the ExtraGalatic Clusters mod from where the cluster spawn coordinates have been taken\n\nShare your cluster with the primitive kerbal space program\n\nAre they the source of the devestation that caused the great rift?  Are they just crazy?  Who knows"

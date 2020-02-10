@@ -4,6 +4,7 @@ clear_egs_start_system_flags = {
 	remove_country_flag = EGS_START_RANDOM
 	remove_country_flag = EGS_START_RANDOM_BINARY
 	remove_country_flag = EGS_START_RANDOM_TRINARY
+	remove_country_flag = EGS_START_RINGWORLD
 }
 
 clear_egs_cluster_flags = {
