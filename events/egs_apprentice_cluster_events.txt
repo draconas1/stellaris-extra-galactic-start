@@ -482,64 +482,56 @@ country_event = {
 		}
 
 		#create the cluster hyperlanes
-		event_target:apprentice_cluster_01 = {
-			add_hyperlane = {
-				from = event_target:apprentice_cluster_01
-				to = event_target:apprentice_cluster_02
-			}
-			add_hyperlane = {
-				from = event_target:apprentice_cluster_01
-				to = event_target:apprentice_cluster_03
-			}
-			add_hyperlane = {
-				from = event_target:apprentice_cluster_01
-				to = event_target:apprentice_cluster_04
-			}
-			add_hyperlane = {
-				from = event_target:apprentice_cluster_01
-				to = event_target:apprentice_cluster_05
-			}
-			add_hyperlane = {
-				from = event_target:apprentice_cluster_01
-				to = event_target:apprentice_cluster_06
-			}
-			add_hyperlane = {
-				from = event_target:apprentice_cluster_01
-				to = event_target:apprentice_cluster_07
-			}
+		
+		add_hyperlane = {
+			from = event_target:apprentice_cluster_01
+			to = event_target:apprentice_cluster_02
 		}
-		event_target:apprentice_cluster_03 = {
-			add_hyperlane = {
-				from = event_target:apprentice_cluster_03
-				to = event_target:apprentice_cluster_04
-			}
+		add_hyperlane = {
+			from = event_target:apprentice_cluster_01
+			to = event_target:apprentice_cluster_03
 		}
-		event_target:apprentice_cluster_05 = {
-			add_hyperlane = {
-				from = event_target:apprentice_cluster_05
-				to = event_target:apprentice_cluster_08
-			}
+		add_hyperlane = {
+			from = event_target:apprentice_cluster_01
+			to = event_target:apprentice_cluster_04
 		}
-		event_target:apprentice_cluster_07 = {
-			add_hyperlane = {
-				from = event_target:apprentice_cluster_07
-				to = event_target:apprentice_cluster_10
-			}
+		add_hyperlane = {
+			from = event_target:apprentice_cluster_01
+			to = event_target:apprentice_cluster_05
 		}
-		event_target:apprentice_cluster_09 = {
-			add_hyperlane = {
-				from = event_target:apprentice_cluster_09
-				to = event_target:apprentice_cluster_06
-			}
-			add_hyperlane = {
-				from = event_target:apprentice_cluster_09
-				to = event_target:apprentice_cluster_10
-			}
-			add_hyperlane = {
-				from = event_target:apprentice_cluster_09
-				to = event_target:apprentice_cluster_11
-			}
+		add_hyperlane = {
+			from = event_target:apprentice_cluster_01
+			to = event_target:apprentice_cluster_06
 		}
+		add_hyperlane = {
+			from = event_target:apprentice_cluster_01
+			to = event_target:apprentice_cluster_07
+		}
+		add_hyperlane = {
+			from = event_target:apprentice_cluster_03
+			to = event_target:apprentice_cluster_04
+		}
+		add_hyperlane = {
+			from = event_target:apprentice_cluster_05
+			to = event_target:apprentice_cluster_08
+		}
+		add_hyperlane = {
+			from = event_target:apprentice_cluster_07
+			to = event_target:apprentice_cluster_10
+		}
+		add_hyperlane = {
+			from = event_target:apprentice_cluster_09
+			to = event_target:apprentice_cluster_06
+		}
+		add_hyperlane = {
+			from = event_target:apprentice_cluster_09
+			to = event_target:apprentice_cluster_10
+		}
+		add_hyperlane = {
+			from = event_target:apprentice_cluster_09
+			to = event_target:apprentice_cluster_11
+		}
+		
 
 		set_spawn_system_batch = end
 

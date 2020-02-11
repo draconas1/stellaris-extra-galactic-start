@@ -5,3 +5,16 @@ egs_has_random_start_system = {
 		has_country_flag = EGS_START_RANDOM_TRINARY
 	}
 }
+
+suitable_egs_planet_for_sr = {
+	is_star = no
+	has_deposit = no
+	is_colonizable = no
+	solar_system = {
+		has_star_flag = egs_cluster
+		NOR = {
+			has_star_flag = egs_init_system
+			has_star_flag = egs_empire_home
+		}
+	}
+}

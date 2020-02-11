@@ -325,15 +325,8 @@ country_event = {
 			limit = {
 				has_country_flag = EGS_LINK_L_GATE
 			}
-			event_target:egs_cluster_root = {
-				set_star_flag = lgate
-				spawn_megastructure = {
-					type = lgate_base
-					orbit_angle = 225
-					orbit_distance = 30
-					location = solar_system
-				}
-			}
+
+			# you need to know about every other Lgate so you can exit the L cluster.
 			every_system = {
 				limit = {
 					has_star_flag =  lgate
@@ -347,33 +340,86 @@ country_event = {
 						surveyor = root
 					}
 					set_all_comms_surveyed = yes
+					#trigger_megastructure_icon = yes
 				}
 
 			}
+
+			event_target:egs_cluster_root = {
+				set_star_flag = lgate
+				spawn_megastructure = {
+					type = lgate_base
+					orbit_angle = 225
+					orbit_distance = 30
+					location = solar_system
+				}
+			}
+			# everyone else needs to know the location of your Lgate so they can invade you
+			every_country = {
+				limit = {
+					NOT =  { is_same_empire = root }
+				}
+				event_target:egs_cluster_root = {
+					surveyed = {
+						set_surveyed = yes
+						surveyor = prev
+					}
+					set_all_comms_surveyed = yes
+				}
+			}
 		}
+
+		country_event = { id = egs_colony.200 }
 	}
 }
 
 country_event = {
-	id = egs_colony.4
+	id = egs_colony.200
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
-		every_system = {
+		log = "IN EVENT"
+		if = {
 			limit = {
-				has_star_flag =  lgate
-			}
-			every_system_planet = {
+				has_country_flag = EGS_SR_YES
+			}		
+			random_planet = {
 				limit = {
-					is_star = yes
+					suitable_egs_planet_for_sr = yes			
 				}
-				surveyed = {
-					set_surveyed = yes
-					surveyor = root
-				}
-				set_all_comms_surveyed = yes
+				add_deposit = d_rare_crystals_3
 			}
 
+			random_planet = {
+				limit = {
+					suitable_egs_planet_for_sr = yes			
+				}
+				add_deposit = d_volatile_motes_3
+			}
+
+			random_planet = {
+				limit = {
+					suitable_egs_planet_for_sr = yes			
+				}
+				add_deposit = d_exotic_gases_3
+			}
+
+			random_planet = {
+				limit = {
+					suitable_egs_planet_for_sr = yes			
+				}
+				add_deposit = d_zro_deposit_3
+			}
+
+			random_planet = {
+				limit = {
+					suitable_egs_planet_for_sr = yes			
+				}
+				add_deposit = d_living_metal_deposit
+				root = {
+					add_research_option = tech_mine_living_metal
+				}
+			}
 		}
 	}
 }

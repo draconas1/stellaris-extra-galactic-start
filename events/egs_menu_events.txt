@@ -49,6 +49,13 @@ country_event = {
 	}
 
 	option = {
+		name = "egs_menu.1.option.sr"
+		hidden_effect = {
+			country_event = { id = egs_menu.600 }
+		}
+	}
+
+	option = {
 		name = "egs_menu.1.option.begin"
 		hidden_effect = {
 			if = {
@@ -79,6 +86,7 @@ country_event = {
 		set_country_flag = EGS_KERBAL_NO
 		set_country_flag = EGS_GIGA_NO
 		set_country_flag = EGS_LINK_WORMHOLE
+		set_country_flag = EGS_SR_NO
 		# make sure we don't spawn extrgalatic cluster
 		set_global_flag = extragalactic_cluster_spawned
 		country_event = { id = egs_menu.1  }
@@ -484,6 +492,63 @@ country_event = {
 		hidden_effect = {
 			clear_egs_clusterlink_flags = yes
 			set_country_flag = EGS_LINK_L_GATE
+			country_event = { id = egs_menu.1 }
+		}
+	}
+}
+
+#Resource Menu
+country_event = {
+	id = egs_menu.600    
+	title = "egs_menu.600.name"
+	desc = "egs_menu.600.desc"
+	picture = GFX_evt_alien_segregation
+	is_triggered_only = yes
+
+	option = {
+		name = "egs_menu.600.option.no"
+		trigger = {
+			NOT = { has_country_flag = EGS_SR_NO }
+		}
+		hidden_effect = {
+			clear_egs_kerbal_flags = yes
+			set_country_flag = EGS_SR_NO
+			country_event = { id = egs_menu.1 }
+		}
+	}
+
+	option = {
+		name = "egs_menu.600.option.no.on"
+		trigger = {
+			has_country_flag = EGS_SR_NO
+		}
+		hidden_effect = {
+			clear_egs_kerbal_flags = yes
+			set_country_flag = EGS_SR_NO
+			country_event = { id = egs_menu.1 }
+		}
+	}
+
+	option = {
+		name = "egs_menu.600.option.yes"
+		trigger = {
+			NOT = { has_country_flag = EGS_SR_YES }
+		}
+		hidden_effect = {
+			clear_egs_kerbal_flags = yes
+			set_country_flag = EGS_SR_YES
+			country_event = { id = egs_menu.1 }
+		}
+	}
+
+	option = {
+		name = "egs_menu.600.option.yes.on"
+		trigger = {
+			has_country_flag = EGS_SR_YES
+		}
+		hidden_effect = {
+			clear_egs_kerbal_flags = yes
+			set_country_flag = EGS_SR_YES
 			country_event = { id = egs_menu.1 }
 		}
 	}
