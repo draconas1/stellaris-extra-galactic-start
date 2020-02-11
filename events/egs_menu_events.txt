@@ -51,7 +51,13 @@ country_event = {
 	option = {
 		name = "egs_menu.1.option.begin"
 		hidden_effect = {
-			country_event = { id = egs_apprentice.1 }
+			if = {
+				limit = { has_country_flag = EGS_CLUSTER_APPRENTICE }				
+				country_event = { id = egs_apprentice.1 }
+			}
+			else = {
+				country_event = { id = egs_hexagon.1 }
+			}
 		}
 	}
 }
@@ -107,6 +113,29 @@ country_event = {
 		hidden_effect = {
 			clear_egs_cluster_flags = yes
 			set_country_flag = EGS_CLUSTER_APPRENTICE
+			country_event = { id = egs_menu.1 }
+		}
+	}
+	
+	option = {
+		name = "egs_menu.100.option.hexagon"
+		trigger = {
+			NOT = { has_country_flag = EGS_CLUSTER_HEXAGON }
+		}
+		hidden_effect = {
+			clear_egs_cluster_flags = yes
+			set_country_flag = EGS_CLUSTER_HEXAGON
+			country_event = { id = egs_menu.1 }
+		}
+	}
+	option = {
+		name = "egs_menu.100.option.hexagon.on"
+		trigger = {
+			has_country_flag = EGS_CLUSTER_HEXAGON
+		}
+		hidden_effect = {
+			clear_egs_cluster_flags = yes
+			set_country_flag = EGS_CLUSTER_HEXAGON
 			country_event = { id = egs_menu.1 }
 		}
 	}
