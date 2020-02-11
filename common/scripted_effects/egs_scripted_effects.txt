@@ -9,6 +9,7 @@ clear_egs_start_system_flags = {
 
 clear_egs_cluster_flags = {
 	remove_country_flag = EGS_CLUSTER_APPRENTICE
+	remove_country_flag = EGS_CLUSTER_HEXAGON
 }
 
 clear_egs_kerbal_flags = {
