@@ -20,7 +20,7 @@ country_event = {
 				max_distance <=  520
 				min_orientation_angle = 314
 				max_orientation_angle = 315
-				initializer = egs_apprentice_cluster_initializer
+				initializer = egs_egs_cluster_initializer
 			}
 		}
 
@@ -33,7 +33,7 @@ country_event = {
 			limit = { has_star_flag = egs_init_system }
 			#also set the targets for the first star
 			save_event_target_as = egs_cluster_root
-			save_event_target_as = apprentice_cluster_01
+			save_event_target_as = egs_cluster_01
 			spawn_system = {
 				min_distance >= 37
 				max_distance <= 41
@@ -47,12 +47,12 @@ country_event = {
 		random_system = {
 			limit = {
 				distance = {
-					source = event_target:apprentice_cluster_01
+					source = event_target:egs_cluster_01
 					max_distance <= @searchDistance1
 				}
 				NOT = { has_star_flag = egs_cluster }
 			}
-			save_event_target_as = apprentice_cluster_02
+			save_event_target_as = egs_cluster_02
 			set_star_flag = egs_cluster
 			set_star_flag = egs_2 
 		}
@@ -65,7 +65,7 @@ country_event = {
 			limit = {
 				num_guaranteed_colonies >= 2
 			}
-			event_target:apprentice_cluster_01 = {
+			event_target:egs_cluster_01 = {
 				spawn_system = {
 					min_distance >= 25
 					max_distance <= 28
@@ -79,7 +79,7 @@ country_event = {
 			limit = {
 				has_country_flag = EGS_GIGA_YES
 			}
-			event_target:apprentice_cluster_01 = {
+			event_target:egs_cluster_01 = {
 				spawn_system = {
 					min_distance >= 25
 					max_distance <= 28
@@ -90,7 +90,7 @@ country_event = {
 			}
 		}
 		else = {
-			event_target:apprentice_cluster_01 = {
+			event_target:egs_cluster_01 = {
 				spawn_system = {
 					min_distance >= 25
 					max_distance <= 28
@@ -105,12 +105,12 @@ country_event = {
 		random_system = {
 			limit = {
 				distance = {
-					source = event_target:apprentice_cluster_01
+					source = event_target:egs_cluster_01
 					max_distance <= @searchDistance1
 				}
 				NOT = { has_star_flag = egs_cluster }
 			}
-			save_event_target_as = apprentice_cluster_03
+			save_event_target_as = egs_cluster_03
 			set_star_flag = egs_cluster
 			set_star_flag = egs_3
 			set_star_flag = egs_habitable_spawn
@@ -125,7 +125,7 @@ country_event = {
 			limit = {
 				has_country_flag = EGS_KERBAL_YES
 			}
-			event_target:apprentice_cluster_01 = {
+			event_target:egs_cluster_01 = {
 				spawn_system = {
 					min_distance >= 26
 					max_distance <= 31
@@ -136,7 +136,7 @@ country_event = {
 			}
 		}
 		else = {
-			event_target:apprentice_cluster_01 = {
+			event_target:egs_cluster_01 = {
 				spawn_system = {
 					min_distance >= 26
 					max_distance <= 31
@@ -151,12 +151,12 @@ country_event = {
 		random_system = {
 			limit = {
 				distance = {
-					source = event_target:apprentice_cluster_01
+					source = event_target:egs_cluster_01
 					max_distance <= @searchDistance1
 				}
 				NOT = { has_star_flag = egs_cluster }
 			}
-			save_event_target_as = apprentice_cluster_04
+			save_event_target_as = egs_cluster_04
 			set_star_flag = egs_cluster
 			set_star_flag = egs_4
 		}
@@ -166,7 +166,7 @@ country_event = {
 		#
 
 		# create the star
-		event_target:apprentice_cluster_01 = {
+		event_target:egs_cluster_01 = {
 			spawn_system = {
 				min_distance >= 22
 				max_distance <= 25
@@ -180,12 +180,12 @@ country_event = {
 		random_system = {
 			limit = {
 				distance = {
-					source = event_target:apprentice_cluster_01
+					source = event_target:egs_cluster_01
 					max_distance <= @searchDistance1
 				}
 				NOT = { has_star_flag = egs_cluster }
 			}
-			save_event_target_as = apprentice_cluster_05
+			save_event_target_as = egs_cluster_05
 			set_star_flag = egs_cluster
 			set_star_flag = egs_5
 		}
@@ -196,7 +196,7 @@ country_event = {
 		#
 
 		# create the star
-		event_target:apprentice_cluster_01 = {
+		event_target:egs_cluster_01 = {
 			spawn_system = {
 				min_distance >= 27
 				max_distance <= 32
@@ -210,12 +210,12 @@ country_event = {
 		random_system = {
 			limit = {
 				distance = {
-					source = event_target:apprentice_cluster_01
+					source = event_target:egs_cluster_01
 					max_distance <= @searchDistance1
 				}
 				NOT = { has_star_flag = egs_cluster }
 			}
-			save_event_target_as = apprentice_cluster_06
+			save_event_target_as = egs_cluster_06
 			set_star_flag = egs_cluster
 			set_star_flag = egs_6
 		}
@@ -225,7 +225,7 @@ country_event = {
 		#
 
 		# create the star
-		event_target:apprentice_cluster_01 = {
+		event_target:egs_cluster_01 = {
 			spawn_system = {
 				min_distance >= 22
 				max_distance <= 27
@@ -239,12 +239,12 @@ country_event = {
 		random_system = {
 			limit = {
 				distance = {
-					source = event_target:apprentice_cluster_01
+					source = event_target:egs_cluster_01
 					max_distance <= @searchDistance1
 				}
 				NOT = { has_star_flag = egs_cluster }
 			}
-			save_event_target_as = apprentice_cluster_07
+			save_event_target_as = egs_cluster_07
 			set_star_flag = egs_cluster
 			set_star_flag = egs_7
 		}
@@ -259,7 +259,7 @@ country_event = {
 		#
 
 		# create the star
-		event_target:apprentice_cluster_05 = {
+		event_target:egs_cluster_05 = {
 			spawn_system = {
 				min_distance >= 40
 				max_distance <= 43
@@ -273,12 +273,12 @@ country_event = {
 		random_system = {
 			limit = {
 				distance = {
-					source = event_target:apprentice_cluster_05
+					source = event_target:egs_cluster_05
 					max_distance <= @searchDistance1
 				}
 				NOT = { has_star_flag = egs_cluster }
 			}
-			save_event_target_as = apprentice_cluster_08
+			save_event_target_as = egs_cluster_08
 			set_star_flag = egs_cluster
 			set_star_flag = egs_8
 		}
@@ -292,7 +292,7 @@ country_event = {
 			limit = {
 				has_country_flag = EGS_START_SOL 
 			}
-			event_target:apprentice_cluster_06 = {
+			event_target:egs_cluster_06 = {
 				spawn_system = {
 					min_distance >= 25
 					max_distance <= 28
@@ -306,7 +306,7 @@ country_event = {
 			limit = {
 				has_country_flag = EGS_START_DENEB 
 			}
-			event_target:apprentice_cluster_06 = {
+			event_target:egs_cluster_06 = {
 				spawn_system = {
 					min_distance >= 25
 					max_distance <= 28
@@ -320,7 +320,7 @@ country_event = {
 			limit = {
 				has_country_flag = EGS_START_RINGWORLD 
 			}
-			event_target:apprentice_cluster_06 = {
+			event_target:egs_cluster_06 = {
 				spawn_system = {
 					min_distance >= 25
 					max_distance <= 28
@@ -334,7 +334,7 @@ country_event = {
 			limit = {
 				has_country_flag = EGS_START_RANDOM_TRINARY 
 			}
-			event_target:apprentice_cluster_06 = {
+			event_target:egs_cluster_06 = {
 				spawn_system = {
 					min_distance >= 25
 					max_distance <= 28
@@ -348,7 +348,7 @@ country_event = {
 			limit = {
 				has_country_flag = EGS_START_RANDOM_BINARY 
 			}
-			event_target:apprentice_cluster_06 = {
+			event_target:egs_cluster_06 = {
 				spawn_system = {
 					min_distance >= 25
 					max_distance <= 28
@@ -359,7 +359,7 @@ country_event = {
 			}
 		}
 		else = {
-			event_target:apprentice_cluster_06 = {
+			event_target:egs_cluster_06 = {
 				spawn_system = {
 					min_distance >= 25
 					max_distance <= 28
@@ -375,12 +375,12 @@ country_event = {
 		random_system = {
 			limit = {
 				distance = {
-					source = event_target:apprentice_cluster_06
+					source = event_target:egs_cluster_06
 					max_distance <= @searchDistance1
 				}
 				NOT = { has_star_flag = egs_cluster }
 			}
-			save_event_target_as = apprentice_cluster_09
+			save_event_target_as = egs_cluster_09
 			set_star_flag = egs_cluster
 			set_star_flag = egs_9
 			set_star_flag = egs_empire_home
@@ -395,7 +395,7 @@ country_event = {
 			limit = {
 				num_guaranteed_colonies >= 1
 			}
-			event_target:apprentice_cluster_07 = {
+			event_target:egs_cluster_07 = {
 				spawn_system = {
 					min_distance >= 29
 					max_distance <= 33
@@ -409,7 +409,7 @@ country_event = {
 			limit = {
 				has_country_flag = EGS_GIGA_YES
 			}
-			event_target:apprentice_cluster_07 = {
+			event_target:egs_cluster_07 = {
 				spawn_system = {
 					min_distance >= 29
 					max_distance <= 33
@@ -420,7 +420,7 @@ country_event = {
 			}
 		}
 		else = {
-			event_target:apprentice_cluster_07 = {
+			event_target:egs_cluster_07 = {
 				spawn_system = {
 					min_distance >= 29
 					max_distance <= 33
@@ -435,12 +435,12 @@ country_event = {
 		random_system = {
 			limit = {
 				distance = {
-					source = event_target:apprentice_cluster_07
+					source = event_target:egs_cluster_07
 					max_distance <= @searchDistance1
 				}
 				NOT = { has_star_flag = egs_cluster }
 			}
-			save_event_target_as = apprentice_cluster_10
+			save_event_target_as = egs_cluster_10
 			set_star_flag = egs_cluster
 			set_star_flag = egs_10
 			set_star_flag = egs_habitable_spawn
@@ -451,7 +451,7 @@ country_event = {
 		#
 
 		# create the star
-		event_target:apprentice_cluster_09 = {
+		event_target:egs_cluster_09 = {
 			spawn_system = {
 				min_distance >= 24
 				max_distance <= 29
@@ -465,12 +465,12 @@ country_event = {
 		random_system = {
 			limit = {
 				distance = {
-					source = event_target:apprentice_cluster_09
+					source = event_target:egs_cluster_09
 					max_distance <= @searchDistance1
 				}
 				NOT = { has_star_flag = egs_cluster }
 			}
-			save_event_target_as = apprentice_cluster_11
+			save_event_target_as = egs_cluster_11
 			set_star_flag = egs_cluster
 			set_star_flag = egs_11
 		}
@@ -484,52 +484,52 @@ country_event = {
 		#create the cluster hyperlanes
 		
 		add_hyperlane = {
-			from = event_target:apprentice_cluster_01
-			to = event_target:apprentice_cluster_02
+			from = event_target:egs_cluster_01
+			to = event_target:egs_cluster_02
 		}
 		add_hyperlane = {
-			from = event_target:apprentice_cluster_01
-			to = event_target:apprentice_cluster_03
+			from = event_target:egs_cluster_01
+			to = event_target:egs_cluster_03
 		}
 		add_hyperlane = {
-			from = event_target:apprentice_cluster_01
-			to = event_target:apprentice_cluster_04
+			from = event_target:egs_cluster_01
+			to = event_target:egs_cluster_04
 		}
 		add_hyperlane = {
-			from = event_target:apprentice_cluster_01
-			to = event_target:apprentice_cluster_05
+			from = event_target:egs_cluster_01
+			to = event_target:egs_cluster_05
 		}
 		add_hyperlane = {
-			from = event_target:apprentice_cluster_01
-			to = event_target:apprentice_cluster_06
+			from = event_target:egs_cluster_01
+			to = event_target:egs_cluster_06
 		}
 		add_hyperlane = {
-			from = event_target:apprentice_cluster_01
-			to = event_target:apprentice_cluster_07
+			from = event_target:egs_cluster_01
+			to = event_target:egs_cluster_07
 		}
 		add_hyperlane = {
-			from = event_target:apprentice_cluster_03
-			to = event_target:apprentice_cluster_04
+			from = event_target:egs_cluster_03
+			to = event_target:egs_cluster_04
 		}
 		add_hyperlane = {
-			from = event_target:apprentice_cluster_05
-			to = event_target:apprentice_cluster_08
+			from = event_target:egs_cluster_05
+			to = event_target:egs_cluster_08
 		}
 		add_hyperlane = {
-			from = event_target:apprentice_cluster_07
-			to = event_target:apprentice_cluster_10
+			from = event_target:egs_cluster_07
+			to = event_target:egs_cluster_10
 		}
 		add_hyperlane = {
-			from = event_target:apprentice_cluster_09
-			to = event_target:apprentice_cluster_06
+			from = event_target:egs_cluster_09
+			to = event_target:egs_cluster_06
 		}
 		add_hyperlane = {
-			from = event_target:apprentice_cluster_09
-			to = event_target:apprentice_cluster_10
+			from = event_target:egs_cluster_09
+			to = event_target:egs_cluster_10
 		}
 		add_hyperlane = {
-			from = event_target:apprentice_cluster_09
-			to = event_target:apprentice_cluster_11
+			from = event_target:egs_cluster_09
+			to = event_target:egs_cluster_11
 		}
 		
 

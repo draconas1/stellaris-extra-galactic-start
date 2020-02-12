@@ -62,6 +62,10 @@ country_event = {
 				limit = { has_country_flag = EGS_CLUSTER_APPRENTICE }				
 				country_event = { id = egs_apprentice.1 }
 			}
+			else_if = {
+				limit = { has_country_flag = EGS_CLUSTER_STEED }				
+				country_event = { id = egs_steed.1 }
+			}
 			else = {
 				country_event = { id = egs_hexagon.1 }
 			}
@@ -144,6 +148,29 @@ country_event = {
 		hidden_effect = {
 			clear_egs_cluster_flags = yes
 			set_country_flag = EGS_CLUSTER_HEXAGON
+			country_event = { id = egs_menu.1 }
+		}
+	}
+
+	option = {
+		name = "egs_menu.100.option.steed"
+		trigger = {
+			NOT = { has_country_flag = EGS_CLUSTER_STEED }
+		}
+		hidden_effect = {
+			clear_egs_cluster_flags = yes
+			set_country_flag = EGS_CLUSTER_STEED
+			country_event = { id = egs_menu.1 }
+		}
+	}
+	option = {
+		name = "egs_menu.100.option.steed.on"
+		trigger = {
+			has_country_flag = EGS_CLUSTER_STEED
+		}
+		hidden_effect = {
+			clear_egs_cluster_flags = yes
+			set_country_flag = EGS_CLUSTER_STEED
 			country_event = { id = egs_menu.1 }
 		}
 	}

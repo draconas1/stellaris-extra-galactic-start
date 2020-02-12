@@ -10,11 +10,13 @@
     egs_menu.1.option.begin:0 "§YBegin§!"
 
     egs_menu.100.name:0 "Choose Cluster Shape"
-    egs_menu.100.desc:0 "These layouts were all originally pioneered by the Extragalatic Cluster Mod, which you should get and enjoy.\nIn that mod these clusters are packed with goodies for you to find.\n\nAvailable Choices:\n\nThe Apprentice (11 stars)\nHexagon (14 stars)"
+    egs_menu.100.desc:0 "These layouts were all originally pioneered by the Extragalatic Cluster Mod, which you should get and enjoy.\nIn that mod these clusters are packed with goodies for you to find.\n\nAvailable Choices:\n\nThe Apprentice (11 stars)\nHexagon (14 stars)\nSteed (8 Stars)"
     egs_menu.100.option.apprentice:0 "Apprentice"
     egs_menu.100.option.hexagon:0 "Hexagon"
+    egs_menu.100.option.steed:0 "Steed"
     egs_menu.100.option.apprentice.on:0 "§Y$egs_menu.100.option.apprentice$§!"
     egs_menu.100.option.hexagon.on:0 "§Y$egs_menu.100.option.hexagon$§!"
+    egs_menu.100.option.steed.on:0 "§Y$egs_menu.100.option.steed$§!"
 
     egs_menu.200.name:0 "Choose Starting System Initaliser"
     egs_menu.200.desc:0 "Works just the same as the option on the start screen, setting the details fo your starting system.\n\nAvailable Choices:\n\nRandom System (default)\nRandom Binary\nRandom Trinary\nSol\nDeneb\nRing World: Start on a ring world.  You will have additional starting funds, as the ringworlds costs are greater than a starting empire can provide.  Unlike ZOFE there are no story events around this, you're just there."
