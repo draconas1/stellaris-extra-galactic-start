@@ -85,7 +85,6 @@ country_event = {
 			save_event_target_as = egs_cluster_03
 			set_star_flag = egs_cluster
 			set_star_flag = egs_3
-			set_star_flag = egs_habitable_spawn
 		}
 		#
 		# STAR 4
@@ -245,6 +244,7 @@ country_event = {
 			save_event_target_as = egs_cluster_07
 			set_star_flag = egs_cluster
 			set_star_flag = egs_7
+			set_star_flag = egs_habitable_spawn
 		}
 		# The below stars are created relative to other stars.
 		# Technically they could all have been done in the above blocks
