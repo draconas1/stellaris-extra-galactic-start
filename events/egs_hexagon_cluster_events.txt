@@ -1,5 +1,5 @@
 namespace = egs_hexagon
-@searchDistance1 = 100
+@searchDistance1 = 70
 country_event = {
 	id = egs_hexagon.1
 	is_triggered_only = yes
@@ -14,24 +14,26 @@ country_event = {
 			# ROOT
 			#
 			spawn_system = {
-				min_distance >= 500
-				max_distance <= 520
+				min_distance >=  560 
+				max_distance <=  561 
 				min_orientation_angle = 321
 				max_orientation_angle = 322
-				initializer = egs_apprentice_cluster_initializer
+				initializer = egs_cluster_initializer
 			}
 		}
+		#Find the star
+		random_system = {
+			limit = { has_star_flag = egs_init_system }
+			#also set the targets for the first star
+			save_event_target_as = egs_cluster_root
+			save_event_target_as = egs_cluster_01
+		}
+
 		#
 		# STAR 2
 		#
 		# create the star
-		random_system = {
-			limit = {
-				has_star_flag = egs_init_system
-			}
-			#also set the targets for the first star
-			save_event_target_as = egs_cluster_root
-			save_event_target_as = egs_cluster_01
+		event_target:egs_cluster_01 = {
 			spawn_system = {
 				min_distance >= 25
 				max_distance <= 31
@@ -531,7 +533,7 @@ country_event = {
 				max_distance <= 18
 				min_orientation_angle = 310
 				max_orientation_angle = 325
-				initializer = binary_init_01
+				initializer = special_init_01
 			}
 		}
 		# find the star

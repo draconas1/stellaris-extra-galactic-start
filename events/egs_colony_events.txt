@@ -84,29 +84,46 @@ country_event = {
 		# Set up the spaceport
 		if = {
 			limit = {
-				is_gestalt = yes
+				has_global_flag = retile_active
 			}
 			event_target:egs_home_system = {
 				create_starbase = {
 					size = "starbase_starport"
 					module = "shipyard"
-					module = "solar_panel_network"
-					building = "crew_quarters"
+					building = "default_network"
+					building = "fleet_hangar"
 					owner = root
 				}
 			}
 		}
 		else = {
-			event_target:egs_home_system = {
-				create_starbase = {
-					size = "starbase_starport"
-					module = "shipyard"
-					module = "trading_hub"
-					building = "crew_quarters"
-					owner = root
+			if = {
+				limit = {
+					is_gestalt = yes
+				}
+				event_target:egs_home_system = {
+					create_starbase = {
+						size = "starbase_starport"
+						module = "shipyard"
+						module = "solar_panel_network"
+						building = "crew_quarters"
+						owner = root
+					}
+				}
+			}
+			else = {
+				event_target:egs_home_system = {
+					create_starbase = {
+						size = "starbase_starport"
+						module = "shipyard"
+						module = "trading_hub"
+						building = "crew_quarters"
+						owner = root
+					}
 				}
 			}
 		}
+		
 
 		# Set up the capital planet
 		event_target:egs_home_planet = {
@@ -124,17 +141,48 @@ country_event = {
 				}
 				generate_start_buildings_and_districts = yes
 				remove_all_districts = yes
-				
-				if = {
+
+				if = { 
 					limit = {
-						root = {
-							country_uses_food = no 
-						}
-					}
+						has_global_flag = retile_active 
+					}				
+
 					add_district = district_rw_generator
+					add_district = district_rw_mining
+					
+					if = {
+						limit = {
+							root = { is_machine_empire = yes }							
+						}
+						#TODO NO ROBOTS IN SI YET
+						add_district = district_rw_hive
+						add_district = district_rw_generator
+					}
+					else = {
+						add_district = district_rw_farming
+					}
+					if = {
+						limit = {
+							root = {  is_hive_empire = yes }
+						}
+						add_district = district_rw_hive
+					}
+					else = {
+						add_district = district_rw_city
+					}
 				}
-				else = {
-					add_district = district_rw_farming
+				else {					
+					if = {
+						limit = {
+							root = {
+								country_uses_food = no 
+							}
+						}
+						add_district = district_rw_generator
+					}
+					else = {
+						add_district = district_rw_farming
+					}
 				}
 			}
 			else = {
@@ -227,6 +275,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = EGS_START_RINGWORLD
+				NOT = { has_global_flag = retile_active }
 			}
 			add_resource = {
 				energy = 5000
@@ -276,8 +325,34 @@ country_event = {
 			limit = {
 				has_country_flag = EGS_LINK_MANY_WORMHOLE
 			}
+			
+			if = {
+				limit = {
+					OR = {
+						has_country_flag = EGS_CLUSTER_STEED
+						has_country_flag = EGS_CLUSTER_BIG_DIPPER
+					}
+				}
+				set_variable = { which = wormholeCount value = 2 }
+			}
+			else_if = {
+				limit = {
+					OR = {
+						has_country_flag = EGS_CLUSTER_HEXAGON
+					}
+				}
+				set_variable = { which = wormholeCount value = 4 }
+			}
+			else = {
+				set_variable = { which = wormholeCount value = 3 }
+			}
+
 			while = {
-				count = 3
+				limit = {
+					check_variable = { which = wormholeCount value > 0 }
+				}
+				subtract_variable = { which = wormholeCount value = 1 }
+
 				#set egs target
 				random_system = {
 					limit = {
@@ -285,8 +360,10 @@ country_event = {
 						NOR = {
 							has_star_flag = egs_empire_home
 							has_star_flag = egs_init_system
+							has_star_flag = egs_wormhole
 						}
 					}
+					set_star_flag = egs_wormhole
 					save_event_target_as = egs_wormhole_destination
 					spawn_natural_wormhole = {
 						bypass_type = wormhole
@@ -340,7 +417,6 @@ country_event = {
 						surveyor = root
 					}
 					set_all_comms_surveyed = yes
-					#trigger_megastructure_icon = yes
 				}
 
 			}

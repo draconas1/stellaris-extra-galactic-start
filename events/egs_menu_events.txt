@@ -4,7 +4,20 @@ namespace = egs_menu
 country_event = {
 	id = egs_menu.1    
 	title = "egs_menu.1.name"
-	desc = "egs_menu.1.desc"
+
+	desc = {
+		trigger = {
+			NOT = { has_global_flag = retile_active }
+		}
+		text = egs_menu.1.desc
+	}
+	desc = {
+		trigger = {
+			has_global_flag = retile_active
+		}
+		text = egs_menu.1.desc.retile
+	}
+
 	picture = GFX_evt_ancient_databank
 	is_triggered_only = yes
 
@@ -57,19 +70,6 @@ country_event = {
 
 	option = {
 		name = "egs_menu.1.option.begin"
-		hidden_effect = {
-			if = {
-				limit = { has_country_flag = EGS_CLUSTER_APPRENTICE }				
-				country_event = { id = egs_apprentice.1 }
-			}
-			else_if = {
-				limit = { has_country_flag = EGS_CLUSTER_STEED }				
-				country_event = { id = egs_steed.1 }
-			}
-			else = {
-				country_event = { id = egs_hexagon.1 }
-			}
-		}
 	}
 }
 
@@ -91,11 +91,90 @@ country_event = {
 		set_country_flag = EGS_GIGA_NO
 		set_country_flag = EGS_LINK_WORMHOLE
 		set_country_flag = EGS_SR_NO
-		# make sure we don't spawn extrgalatic cluster
+		# make sure we don't spawn extrgalatic cluster by accident
 		set_global_flag = extragalactic_cluster_spawned
 		country_event = { id = egs_menu.1  }
 	}
 }
+
+# Trigger the galaxy spawn: Vanilla
+country_event = {
+	id = egs_menu.3    
+	hide_window = yes
+	fire_only_once = yes
+	mean_time_to_happen = { days = 2 }
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_egs
+		NOT = { has_global_flag = retile_active }
+	}
+	immediate = {
+		country_event = {
+			id = egs_menu.5
+		}
+	}
+}
+
+
+# Trigger the galaxy spawn: Stellaris Immortal
+country_event = {
+	id = egs_menu.4
+	hide_window = yes
+	fire_only_once = yes
+	mean_time_to_happen = { days = 10 }
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_egs
+		has_global_flag = retile_active
+	}
+	immediate = {
+		country_event = {
+			id = egs_menu.5
+		}
+	}
+}
+
+
+
+# Kickoff the event
+country_event = {
+	id = egs_menu.5    
+	hide_window = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_egs
+	}
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = EGS_CLUSTER_APPRENTICE }				
+				country_event = { id = egs_apprentice.1 }
+			}
+			else_if = {
+				limit = { has_country_flag = EGS_CLUSTER_STEED }				
+				country_event = { id = egs_steed.1 }
+			}
+			else_if = {
+				limit = { has_country_flag = EGS_CLUSTER_ATRONACH }				
+				country_event = { id = egs_atronach.1 }
+			}
+			else_if = {
+				limit = { has_country_flag = EGS_CLUSTER_BIG_DIPPER }				
+				country_event = { id = egs_bg_dipper.1 }
+			}
+			else = {
+				country_event = { id = egs_hexagon.1 }
+			}
+		}
+	}
+}
+
 
 
 #Cluster Menu
@@ -171,6 +250,52 @@ country_event = {
 		hidden_effect = {
 			clear_egs_cluster_flags = yes
 			set_country_flag = EGS_CLUSTER_STEED
+			country_event = { id = egs_menu.1 }
+		}
+	}
+
+	option = {
+		name = "egs_menu.100.option.atronach"
+		trigger = {
+			NOT = { has_country_flag = EGS_CLUSTER_ATRONACH }
+		}
+		hidden_effect = {
+			clear_egs_cluster_flags = yes
+			set_country_flag = EGS_CLUSTER_ATRONACH
+			country_event = { id = egs_menu.1 }
+		}
+	}
+	option = {
+		name = "egs_menu.100.option.atronach.on"
+		trigger = {
+			has_country_flag = EGS_CLUSTER_ATRONACH
+		}
+		hidden_effect = {
+			clear_egs_cluster_flags = yes
+			set_country_flag = EGS_CLUSTER_ATRONACH
+			country_event = { id = egs_menu.1 }
+		}
+	}
+
+	option = {
+		name = "egs_menu.100.option.bigdipper"
+		trigger = {
+			NOT = { has_country_flag = EGS_CLUSTER_BIG_DIPPER }
+		}
+		hidden_effect = {
+			clear_egs_cluster_flags = yes
+			set_country_flag = EGS_CLUSTER_BIG_DIPPER
+			country_event = { id = egs_menu.1 }
+		}
+	}
+	option = {
+		name = "egs_menu.100.option.bigdipper.on"
+		trigger = {
+			has_country_flag = EGS_CLUSTER_BIG_DIPPER
+		}
+		hidden_effect = {
+			clear_egs_cluster_flags = yes
+			set_country_flag = EGS_CLUSTER_BIG_DIPPER
 			country_event = { id = egs_menu.1 }
 		}
 	}
@@ -529,7 +654,7 @@ country_event = {
 	id = egs_menu.600    
 	title = "egs_menu.600.name"
 	desc = "egs_menu.600.desc"
-	picture = GFX_evt_alien_segregation
+	picture = GFX_evt_strategic_resources
 	is_triggered_only = yes
 
 	option = {

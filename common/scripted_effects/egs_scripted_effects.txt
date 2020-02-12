@@ -11,6 +11,8 @@ clear_egs_cluster_flags = {
 	remove_country_flag = EGS_CLUSTER_APPRENTICE
 	remove_country_flag = EGS_CLUSTER_HEXAGON
 	remove_country_flag = EGS_CLUSTER_STEED
+	remove_country_flag = EGS_CLUSTER_BIG_DIPPER
+	remove_country_flag = EGS_CLUSTER_ATRONACH
 }
 
 clear_egs_kerbal_flags = {

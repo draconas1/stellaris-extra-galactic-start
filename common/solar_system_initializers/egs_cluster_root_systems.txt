@@ -1,6 +1,6 @@
 #taken from fallen_machine_5 = {
 
-egs_apprentice_cluster_initializer = {
+egs_cluster_initializer = {
 	class = sc_black_hole
 	name = "NAME_Great_Wound"
 	flags = { egs_cluster, egs_init_system, egs_1 }
