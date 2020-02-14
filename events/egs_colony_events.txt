@@ -449,12 +449,12 @@ country_event = {
 	}
 }
 
+#setup guarenteed resources
 country_event = {
 	id = egs_colony.200
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
-		log = "IN EVENT"
 		if = {
 			limit = {
 				has_country_flag = EGS_SR_YES

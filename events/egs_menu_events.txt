@@ -70,6 +70,15 @@ country_event = {
 
 	option = {
 		name = "egs_menu.1.option.begin"
+		if = {
+			limit = {
+				has_global_flag = retile_active
+			}
+			country_event = { id = egs_menu.4 days = 1  }
+		}
+		else = {
+			country_event = { id = egs_menu.3 days = 1  }
+		}
 	}
 }
 
@@ -102,13 +111,7 @@ country_event = {
 	id = egs_menu.3    
 	hide_window = yes
 	fire_only_once = yes
-	mean_time_to_happen = { days = 2 }
-
-	trigger = {
-		is_ai = no
-		has_civic = civic_egs
-		NOT = { has_global_flag = retile_active }
-	}
+	is_triggered_only = yes
 	immediate = {
 		country_event = {
 			id = egs_menu.5
@@ -122,13 +125,8 @@ country_event = {
 	id = egs_menu.4
 	hide_window = yes
 	fire_only_once = yes
-	mean_time_to_happen = { days = 10 }
+	is_triggered_only = yes
 
-	trigger = {
-		is_ai = no
-		has_civic = civic_egs
-		has_global_flag = retile_active
-	}
 	immediate = {
 		country_event = {
 			id = egs_menu.5
@@ -663,7 +661,7 @@ country_event = {
 			NOT = { has_country_flag = EGS_SR_NO }
 		}
 		hidden_effect = {
-			clear_egs_kerbal_flags = yes
+			clear_egs_resource_flags = yes
 			set_country_flag = EGS_SR_NO
 			country_event = { id = egs_menu.1 }
 		}
@@ -675,7 +673,7 @@ country_event = {
 			has_country_flag = EGS_SR_NO
 		}
 		hidden_effect = {
-			clear_egs_kerbal_flags = yes
+			clear_egs_resource_flags = yes
 			set_country_flag = EGS_SR_NO
 			country_event = { id = egs_menu.1 }
 		}
@@ -687,7 +685,7 @@ country_event = {
 			NOT = { has_country_flag = EGS_SR_YES }
 		}
 		hidden_effect = {
-			clear_egs_kerbal_flags = yes
+			clear_egs_resource_flags = yes
 			set_country_flag = EGS_SR_YES
 			country_event = { id = egs_menu.1 }
 		}
@@ -699,7 +697,7 @@ country_event = {
 			has_country_flag = EGS_SR_YES
 		}
 		hidden_effect = {
-			clear_egs_kerbal_flags = yes
+			clear_egs_resource_flags = yes
 			set_country_flag = EGS_SR_YES
 			country_event = { id = egs_menu.1 }
 		}

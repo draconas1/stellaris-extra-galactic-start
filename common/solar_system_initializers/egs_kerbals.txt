@@ -2,9 +2,7 @@
 egs_kerbal_space_program = {
 	name = "Unus Kerbol"
 	class = sc_g
-	usage = misc_system_init
-	usage_odds = 0
-	flags = { egs_kerbol }
+	flags = { egs_kerbol egs_app_4 egs_hex_4 egs_ant_2 egs_ste_8 egs_big_2 }
   
 	# star
 	planet = {
