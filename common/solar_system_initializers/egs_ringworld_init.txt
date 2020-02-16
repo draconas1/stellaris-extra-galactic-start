@@ -7,6 +7,66 @@ egs_ringworld_init = {
 		class = star
 		orbit_distance = 0
 		size = 60
+
+		init_effect = {
+			while = {
+				count = 4
+				create_ambient_object = {
+					type = "large_debris_object"
+					entity_offset_height = { min = -0 max = -25 }
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = prev
+						distance = 120
+						angle = random
+					}
+				}
+			}
+			while = {
+				count = 2
+				create_ambient_object = {
+					type = "medium_debris_01_object"
+					entity_offset_height = { min = -0 max = -25 }
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = prev
+						distance = 120
+						angle = random
+					}
+				}
+			}
+			while = {
+				count = 2
+				create_ambient_object = {
+					type = "medium_debris_02_object"
+					entity_offset_height = { min = -0 max = -25 }
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = prev
+						distance = 120
+						angle = random
+					}
+				}
+			}
+			create_ambient_object = {
+				type = "small_debris_object"
+				entity_offset_height = { min = -0 max = -25 }
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = prev
+					distance = 120
+					angle = random
+				}
+			}
+		}
 	}
 
 	change_orbit = 90
@@ -25,6 +85,7 @@ egs_ringworld_init = {
 			trigger_megastructure_icon = yes
 			set_planet_flag = egs_ringworld
 			set_planet_flag = megastructure
+			set_planet_flag = egs_home_planet_marker
 		}
 	}
 	planet = {
@@ -46,7 +107,7 @@ egs_ringworld_init = {
 		}	
 	}
 	planet = {
-		class = "pc_ringworld_tech_damaged"
+		class = "pc_ringworld_seam"
 		name = "Ring Section"
 		orbit_angle = 15
 		orbit_distance = 0
@@ -57,7 +118,7 @@ egs_ringworld_init = {
 		}	
 	}
 	planet = {
-		class = "pc_ringworld_seam_damaged"
+		class = "pc_ringworld_seam"
 		name = "Ring Section"
 		orbit_angle = 15
 		orbit_distance = 0
@@ -66,7 +127,7 @@ egs_ringworld_init = {
 		}	
 	}
 	planet = {
-		class = "pc_ringworld_tech_damaged"
+		class = "pc_ringworld_tech"
 		name = "Ring Section"
 		orbit_angle = 15
 		orbit_distance = 0
@@ -75,7 +136,7 @@ egs_ringworld_init = {
 		}	
 	}
 	planet = {
-		class = "pc_ringworld_habitable_damaged"
+		class = "pc_ringworld_habitable"
 		name = "Habitable Section B"
 		orbit_angle = 15
 		orbit_distance = 0
@@ -87,7 +148,7 @@ egs_ringworld_init = {
 		}	
 	}
 	planet = {
-		class = "pc_ringworld_tech_damaged"
+		class = "pc_ringworld_tech"
 		name = "Ring Section"
 		orbit_angle = 15
 		orbit_distance = 0
@@ -96,7 +157,7 @@ egs_ringworld_init = {
 		}	
 	}
 	planet = {
-		class = "pc_ringworld_seam_damaged"
+		class = "pc_ringworld_seam"
 		name = "Ring Section"
 		orbit_angle = 15
 		orbit_distance = 0
@@ -105,7 +166,7 @@ egs_ringworld_init = {
 		}	
 	}
 	planet = {
-		class = "pc_ringworld_tech_damaged"
+		class = "pc_ringworld_seam"
 		name = "Ring Section"
 		orbit_angle = 15
 		orbit_distance = 0
@@ -116,7 +177,7 @@ egs_ringworld_init = {
 		}	
 	}
 	planet = {
-		class = "pc_ringworld_seam_damaged"
+		class = "pc_ringworld_seam"
 		name = "Ring Section"
 		orbit_angle = 15
 		orbit_distance = 0
@@ -127,7 +188,7 @@ egs_ringworld_init = {
 		}	
 	}
 	planet = {
-		class = "pc_ringworld_tech_damaged"
+		class = "pc_ringworld_tech"
 		name = "Ring Section"
 		orbit_angle = 15
 		orbit_distance = 0
@@ -138,7 +199,7 @@ egs_ringworld_init = {
 		}	
 	}	
 	planet = {
-		class = "pc_ringworld_habitable_damaged"
+		class = "pc_ringworld_habitable"
 		name = "Habitable Section C"
 		orbit_angle = 15
 		orbit_distance = 0
@@ -150,7 +211,7 @@ egs_ringworld_init = {
 		}	
 	}
 	planet = {
-		class = "pc_ringworld_tech_damaged"
+		class = "pc_ringworld_tech"
 		name = "Ring Section"
 		orbit_angle = 15
 		orbit_distance = 0
@@ -161,7 +222,7 @@ egs_ringworld_init = {
 		}	
 	}
 	planet = {
-		class = "pc_ringworld_seam_damaged"
+		class = "pc_ringworld_seam"
 		name = "Ring Section"
 		orbit_angle = 15
 		orbit_distance = 0
@@ -172,7 +233,7 @@ egs_ringworld_init = {
 		}	
 	}
 	planet = {
-		class = "pc_ringworld_tech_damaged"
+		class = "pc_ringworld_seam"
 		name = "Ring Section"
 		orbit_angle = 15
 		orbit_distance = 0
@@ -183,7 +244,7 @@ egs_ringworld_init = {
 		}	
 	}
 	planet = {
-		class = "pc_ringworld_seam_damaged"
+		class = "pc_ringworld_seam"
 		name = "Ring Section"
 		orbit_angle = 15
 		orbit_distance = 0
@@ -192,7 +253,7 @@ egs_ringworld_init = {
 		}	
 	}
 	planet = {
-		class = "pc_ringworld_tech_damaged"
+		class = "pc_ringworld_tech"
 		name = "Ring Section"
 		orbit_angle = 15
 		orbit_distance = 0
@@ -201,7 +262,7 @@ egs_ringworld_init = {
 		}	
 	}
 	planet = {
-		class = "pc_ringworld_habitable_damaged"
+		class = "pc_ringworld_habitable"
 		name = "Habitable section D"
 		orbit_angle = 15
 		orbit_distance = 0
@@ -212,7 +273,7 @@ egs_ringworld_init = {
 		}	
 	}
 	planet = {
-		class = "pc_ringworld_tech_damaged"
+		class = "pc_ringworld_tech"
 		name = "Ring Section"
 		orbit_angle = 15
 		orbit_distance = 0
@@ -223,7 +284,7 @@ egs_ringworld_init = {
 		}	
 	}
 	planet = {
-		class = "pc_ringworld_seam_damaged"
+		class = "pc_ringworld_seam"
 		name = "Ring Section"
 		orbit_angle = 15
 		orbit_distance = 0
@@ -234,7 +295,7 @@ egs_ringworld_init = {
 		}	
 	}
 	planet = {
-		class = "pc_ringworld_tech_damaged"
+		class = "pc_ringworld_seam"
 		name = "Ring Section"
 		orbit_angle = 15
 		orbit_distance = 0

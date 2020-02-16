@@ -37,8 +37,27 @@ clear_egs_resource_flags = {
 	remove_country_flag = EGS_SR_NO
 }
 
-#fromfrom = source planet
-#from = target planet
+
+smart_match_planet_class = {
+	event_target:previous_home_planet = {
+		if = {
+			limit = {
+				OR = {
+					is_planet_class = pc_habitat
+					is_planet_class = pc_ringworld_habitable
+				}
+			}
+			event_target:egs_target_planet = {
+				change_pc = pc_nuked
+			}
+		}
+		else = {
+			match_planet_class = yes
+		}
+	}
+}
+
+
 match_planet_class = {
 	event_target:previous_home_planet = {
 		switch = {

@@ -1,0 +1,28 @@
+[h1]Start in an Isolated Extra-Galactic Constellations[/h1]
+This mod takes the excellent constellations from [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1523039190]Extra Galactic Clusters[/url] and makes it possible to have any of them as a starting location for your civilisation (Note only the Constellation, not the contents.  EGC has them packed with goodies for late game civs to find, these are more plain for starting out).
+
+It is done via a new civic: Extra-Galatic Cluster.
+If your civilisation takes that then a menu will appear on game start for you to customise your cluster.
+
+[h1]Options[/h1]
+[list]
+[*] Constellation Shape
+[*] Starting  System Initaliser (Sol, Deneb, Random, Ring World)
+[*] Guarantee that strategic resources and specific stars for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1121692237]Giagastructures[/url] will spawn
+[*] Access to your cluster? (Wormhole, Many Wormholes, the L-Gate Network)
+[/list]
+
+Your civilisation will move into its new cluster home on day 2 to avoid issues with galaxy generation.  Select your options then start time.  Note that I cannot set your governor with a script, so you will need to manually reassign them post move.
+
+Note: Your constellation will not have precursors.  If you want to learn about your precursor civilisation you will need to get back to your original point in the galaxy where the evidence of their passage was left.  
+
+This mod was also inspired by [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1796380598]Isolated Cluster Start[/url]
+
+[h1]Compatibility[/h1]
+This mod is incompatible with things that change the planet/system start, and so has been disabled for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1743133825]Starborn[/url]
+
+
+[b]Please Rate and Subscribe as it helps others find the mods[/b]
+[img]https://i.imgur.com/fVVaDCS.gif[/img]
+
+[url=https://discordapp.com/invite/CMjnnET][img]https://i.imgur.com/4Und3QN.png[/img][/url]

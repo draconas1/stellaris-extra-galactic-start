@@ -1,3 +1,0 @@
-generate_empire_home_planet = {
-	set_planet_flag = egs_home_planet_marker
-}

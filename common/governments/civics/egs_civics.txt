@@ -1,5 +1,11 @@
 civic_egs = {
 	possible = {
+		civics = {
+			NOR = {
+				value = civic_the_void #dyson swarm
+				value = civic_starborn
+			}
+		}
 	}
 	modification = no
 	random_weight = {

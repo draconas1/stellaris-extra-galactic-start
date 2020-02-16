@@ -342,7 +342,8 @@ egs_random_empire_init_01 = {
 		modifiers = none
 		
 		init_effect = {
-			generate_empire_home_planet = yes			
+			generate_empire_home_planet = yes
+			set_planet_flag = egs_home_planet_marker
 			prevent_anomaly = yes
 		}
 		
@@ -496,7 +497,8 @@ egs_random_empire_init_05 = {
 		modifiers = none
 		
 		init_effect = {
-			generate_empire_home_planet = yes			
+			generate_empire_home_planet = yes
+			set_planet_flag = egs_home_planet_marker
 			prevent_anomaly = yes
 		}
 
@@ -591,7 +593,8 @@ egs_random_empire_init_06 = {
 		modifiers = none
 		
 		init_effect = {
-			generate_empire_home_planet = yes			
+			generate_empire_home_planet = yes
+			set_planet_flag = egs_home_planet_marker
 			prevent_anomaly = yes
 		}
 
@@ -1027,7 +1030,8 @@ egs_deneb_system = {
 			}
 		
 			init_effect = {
-				generate_empire_home_planet = yes		
+				generate_empire_home_planet = yes
+				set_planet_flag = egs_home_planet_marker
 			}
 		}		
 	}

@@ -7,10 +7,7 @@ egs_basic_init_04 = {
 		type = icy_asteroid_belt
 		radius = 120
 	}
-	
-	
-	
-	
+		
 	planet = {
 		count = 1
 		class = star
