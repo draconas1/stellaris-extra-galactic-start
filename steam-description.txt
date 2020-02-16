@@ -21,6 +21,7 @@ This mod was also inspired by [url=https://steamcommunity.com/sharedfiles/filede
 [h1]Compatibility[/h1]
 This mod is incompatible with things that change the planet/system start, and so has been disabled for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1743133825]Starborn[/url]
 
+This mod is completely compatable with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1891758612]Stellaris Immortal[/url] and the resulting cluster and planets will use SI values if SI is installed.  (SI should load afterwards)
 
 [b]Please Rate and Subscribe as it helps others find the mods[/b]
 [img]https://i.imgur.com/fVVaDCS.gif[/img]
