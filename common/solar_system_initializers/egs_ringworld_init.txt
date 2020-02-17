@@ -6,70 +6,9 @@ egs_ringworld_init = {
 	planet = {
 		class = star
 		orbit_distance = 0
-		size = 60
-
-		init_effect = {
-			while = {
-				count = 4
-				create_ambient_object = {
-					type = "large_debris_object"
-					entity_offset_height = { min = -0 max = -25 }
-					location = this
-				}
-				last_created_ambient_object = {
-					set_location = {
-						target = prev
-						distance = 120
-						angle = random
-					}
-				}
-			}
-			while = {
-				count = 2
-				create_ambient_object = {
-					type = "medium_debris_01_object"
-					entity_offset_height = { min = -0 max = -25 }
-					location = this
-				}
-				last_created_ambient_object = {
-					set_location = {
-						target = prev
-						distance = 120
-						angle = random
-					}
-				}
-			}
-			while = {
-				count = 2
-				create_ambient_object = {
-					type = "medium_debris_02_object"
-					entity_offset_height = { min = -0 max = -25 }
-					location = this
-				}
-				last_created_ambient_object = {
-					set_location = {
-						target = prev
-						distance = 120
-						angle = random
-					}
-				}
-			}
-			create_ambient_object = {
-				type = "small_debris_object"
-				entity_offset_height = { min = -0 max = -25 }
-				location = this
-			}
-			last_created_ambient_object = {
-				set_location = {
-					target = prev
-					distance = 120
-					angle = random
-				}
-			}
-		}
 	}
 
-	change_orbit = 90
+	change_orbit = 45
 	
 	planet = {
 		name = "Habitable Section A"
@@ -88,10 +27,11 @@ egs_ringworld_init = {
 			set_planet_flag = egs_home_planet_marker
 		}
 	}
+
 	planet = {
 		class = "pc_ringworld_tech"
-		name = "Ring Section"
-		orbit_angle = 15
+		name = "Ring Section B"
+		orbit_angle = 30
 		orbit_distance = 0
 		init_effect = {
 			set_planet_flag = megastructure
@@ -99,37 +39,8 @@ egs_ringworld_init = {
 	}
 	planet = {
 		class = "pc_ringworld_seam"
-		name = "Ring Section"	
-		orbit_angle = 15
-		orbit_distance = 0
-		init_effect = {
-			set_planet_flag = megastructure
-		}	
-	}
-	planet = {
-		class = "pc_ringworld_seam"
-		name = "Ring Section"
-		orbit_angle = 15
-		orbit_distance = 0
-		deposit_blockers = none
-		modifiers = none
-		init_effect = {
-			set_planet_flag = megastructure
-		}	
-	}
-	planet = {
-		class = "pc_ringworld_seam"
-		name = "Ring Section"
-		orbit_angle = 15
-		orbit_distance = 0
-		init_effect = {
-			set_planet_flag = megastructure
-		}	
-	}
-	planet = {
-		class = "pc_ringworld_tech"
-		name = "Ring Section"
-		orbit_angle = 15
+		name = "Ring Section C"
+		orbit_angle = 30
 		orbit_distance = 0
 		init_effect = {
 			set_planet_flag = megastructure
@@ -137,8 +48,37 @@ egs_ringworld_init = {
 	}
 	planet = {
 		class = "pc_ringworld_habitable"
-		name = "Habitable Section B"
-		orbit_angle = 15
+		name = "Habitable Section D"
+		orbit_angle = 30
+		orbit_distance = 0
+		modifiers = none
+		init_effect = {
+			prevent_anomaly = yes
+			set_planet_flag = megastructure
+		}	
+	}				
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "Ring Section E"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+			set_planet_flag = megastructure
+		}	
+	}
+	planet = {
+		class = "pc_ringworld_seam"
+		name = "Ring Section F"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+			set_planet_flag = megastructure
+		}	
+	}
+	planet = {
+		class = "pc_ringworld_habitable"
+		name = "Habitable Section G"
+		orbit_angle = 30
 		orbit_distance = 0
 		deposit_blockers = none
 		modifiers = none
@@ -149,8 +89,8 @@ egs_ringworld_init = {
 	}
 	planet = {
 		class = "pc_ringworld_tech"
-		name = "Ring Section"
-		orbit_angle = 15
+		name = "Ring Section H"
+		orbit_angle = 30
 		orbit_distance = 0
 		init_effect = {
 			set_planet_flag = megastructure
@@ -158,166 +98,37 @@ egs_ringworld_init = {
 	}
 	planet = {
 		class = "pc_ringworld_seam"
-		name = "Ring Section"
-		orbit_angle = 15
+		name = "Ring Section I"
+		orbit_angle = 30
 		orbit_distance = 0
 		init_effect = {
 			set_planet_flag = megastructure
 		}	
 	}
-	planet = {
-		class = "pc_ringworld_seam"
-		name = "Ring Section"
-		orbit_angle = 15
-		orbit_distance = 0
-		deposit_blockers = none
-		modifiers = none
-		init_effect = {
-			set_planet_flag = megastructure
-		}	
-	}
-	planet = {
-		class = "pc_ringworld_seam"
-		name = "Ring Section"
-		orbit_angle = 15
-		orbit_distance = 0
-		init_effect = {
-
-			trigger_megastructure_icon = yes
-			set_planet_flag = megastructure
-		}	
-	}
-	planet = {
-		class = "pc_ringworld_tech"
-		name = "Ring Section"
-		orbit_angle = 15
-		orbit_distance = 0
-		init_effect = {
-
-			trigger_megastructure_icon = yes
-			set_planet_flag = megastructure
-		}	
-	}	
 	planet = {
 		class = "pc_ringworld_habitable"
-		name = "Habitable Section C"
-		orbit_angle = 15
+		name = "Habitable Section J"
+		orbit_angle = 30
 		orbit_distance = 0
-		deposit_blockers = none
 		modifiers = none
 		init_effect = {
 			prevent_anomaly = yes
 			set_planet_flag = megastructure
 		}	
-	}
+	}				
 	planet = {
 		class = "pc_ringworld_tech"
-		name = "Ring Section"
-		orbit_angle = 15
+		name = "Ring Section K"
+		orbit_angle = 30
 		orbit_distance = 0
-		init_effect = {
-
-			trigger_megastructure_icon = yes
-			set_planet_flag = megastructure
-		}	
-	}
-	planet = {
-		class = "pc_ringworld_seam"
-		name = "Ring Section"
-		orbit_angle = 15
-		orbit_distance = 0
-		init_effect = {
-
-			trigger_megastructure_icon = yes
-			set_planet_flag = megastructure
-		}	
-	}
-	planet = {
-		class = "pc_ringworld_seam"
-		name = "Ring Section"
-		orbit_angle = 15
-		orbit_distance = 0
-		deposit_blockers = none
-		modifiers = none
 		init_effect = {
 			set_planet_flag = megastructure
 		}	
 	}
 	planet = {
 		class = "pc_ringworld_seam"
-		name = "Ring Section"
-		orbit_angle = 15
-		orbit_distance = 0
-		init_effect = {
-			set_planet_flag = megastructure
-		}	
-	}
-	planet = {
-		class = "pc_ringworld_tech"
-		name = "Ring Section"
-		orbit_angle = 15
-		orbit_distance = 0
-		init_effect = {
-			set_planet_flag = megastructure
-		}	
-	}
-	planet = {
-		class = "pc_ringworld_habitable"
-		name = "Habitable section D"
-		orbit_angle = 15
-		orbit_distance = 0
-		deposit_blockers = none
-		modifiers = none
-		init_effect = {
-			set_planet_flag = megastructure
-		}	
-	}
-	planet = {
-		class = "pc_ringworld_tech"
-		name = "Ring Section"
-		orbit_angle = 15
-		orbit_distance = 0
-		init_effect = {
-
-			trigger_megastructure_icon = yes
-			set_planet_flag = megastructure
-		}	
-	}
-	planet = {
-		class = "pc_ringworld_seam"
-		name = "Ring Section"
-		orbit_angle = 15
-		orbit_distance = 0
-		init_effect = {
-
-			trigger_megastructure_icon = yes
-			set_planet_flag = megastructure
-		}	
-	}
-	planet = {
-		class = "pc_ringworld_seam"
-		name = "Ring Section"
-		orbit_angle = 15
-		orbit_distance = 0
-		deposit_blockers = none
-		modifiers = none
-		init_effect = {
-			set_planet_flag = megastructure
-		}	
-	}
-	planet = {
-		class = "pc_ringworld_seam"
-		name = "Ring Section"
-		orbit_angle = 15
-		orbit_distance = 0
-		init_effect = {
-			set_planet_flag = megastructure
-		}	
-	}
-	planet = {
-		class = "pc_ringworld_tech"
-		name = "Ring Section"
-		orbit_angle = 15
+		name = "Ring Section L"
+		orbit_angle = 30
 		orbit_distance = 0
 		init_effect = {
 			set_planet_flag = megastructure

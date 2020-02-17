@@ -179,9 +179,11 @@ country_event = {
 							}
 						}
 						add_district = district_rw_generator
+						add_deposit = d_egs_rw_crystals
 					}
 					else = {
 						add_district = district_rw_farming
+						add_deposit = d_egs_rw_motes
 					}
 				}
 			}
@@ -279,10 +281,7 @@ country_event = {
 			}
 			add_resource = {
 				energy = 5000
-				minerals = 5000
-				volatile_motes = 750
-				rare_crystals = 750
-				exotic_gases = 750
+				minerals = 5000				
             }
 		}
 

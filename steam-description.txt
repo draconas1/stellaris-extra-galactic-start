@@ -2,7 +2,7 @@
 This mod takes the excellent constellations from [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1523039190]Extra Galactic Clusters[/url] and makes it possible to have any of them as a starting location for your civilisation (Note only the Constellation, not the contents.  EGC has them packed with goodies for late game civs to find, these are more plain for starting out).
 
 It is done via a new civic: Extra-Galatic Cluster.
-If your civilisation takes that then a menu will appear on game start for you to customise your cluster.
+If your civilisation takes that then a menu will appear on game start for you to customise your cluster.  The AI never will. 
 
 [h1]Options[/h1]
 [list]
@@ -12,16 +12,35 @@ If your civilisation takes that then a menu will appear on game start for you to
 [*] Access to your cluster? (Wormhole, Many Wormholes, the L-Gate Network)
 [/list]
 
-Your civilisation will move into its new cluster home on day 2 to avoid issues with galaxy generation.  Select your options then start time.  Note that I cannot set your governor with a script, so you will need to manually reassign them post move.
+[h1]Gameplay[/h1]
+Your civilisation will move into its new cluster home on day 2 to avoid issues with galaxy generation.  Select your options then start time, the game will freeze and lag while it generates the cluster, which might take a while on large galaxies, be patient, it will start.  
 
-Note: Your constellation will not have precursors.  If you want to learn about your precursor civilisation you will need to get back to your original point in the galaxy where the evidence of their passage was left.  
+I cannot set your sector governor with a script, so you will need to manually reassign them post move.
+
+Your constellation will not have precursors.  If you want to learn about your precursor civilisation you will need to get back to your original point in the galaxy where the evidence of their passage was left.
+
+You can Experimental Subspace Navigation your science vessels to your old home system (and L-Gates if selected), that is deliberate.  Be warned the AI expands towards your home cluster quickly as it has a glut of nice planets and resources.  
 
 This mod was also inspired by [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1796380598]Isolated Cluster Start[/url]
 
-[h1]Compatibility[/h1]
-This mod is incompatible with things that change the planet/system start, and so has been disabled for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1743133825]Starborn[/url]
+[h1]Future Work[/h1][list]
+[*] L-Gate start - start in the actual L-System cluster.
+[*] Extra-Compatibility with Extragalatic Clusters allow you to spawn the others on top of the one you started with
+[*] Adjust Ring World Start to have 3 repairable sections and 1 habitable (is actually quite tricky as repairable sections are megastructures, and habitable/broken ones are planets, so they do not play nice together.  This may wait until 2.6 where the devs show me the exact arrangement of spawn positions to make it look right)
+[*] Rebalance ringworld start to have a deposit/modifier that pays the SR maintenance of your starting district.  
+[/list]
 
-This mod is completely compatable with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1891758612]Stellaris Immortal[/url] and the resulting cluster and planets will use SI values if SI is installed.  (SI should load afterwards)
+Post 2.6 this will become an origin so become incompatible with all other origins, for now you can enjoy it with the vanilla origin civic starts.
+
+[h1]Compatibility[/h1]
+No vanilla files were harmed in the making of this mod, but as it does a lot of work shifting a colony will have issues with other mods that do the same or things that add planet classes at starting
+
+[list]
+[*]This mod is incompatible with things that change the planet/system start, and so has been disabled for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1743133825]Starborn[/url]
+[*]In theory it is compatible with Planetary Diversity planet starts, but I've not tested it extensively.  It will cheerfully ignore the PD "habitable planets to be same type instead of exact match" option.  
+[/list]
+
+This mod is completely compatible with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1891758612]Stellaris Immortal[/url] and the resulting cluster and planets will use SI values if SI is installed.  (SI should load afterwards)
 
 [b]Please Rate and Subscribe as it helps others find the mods[/b]
 [img]https://i.imgur.com/fVVaDCS.gif[/img]

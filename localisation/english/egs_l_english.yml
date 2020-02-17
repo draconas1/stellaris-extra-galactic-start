@@ -1,3 +1,9 @@
 ﻿l_english:
   civic_egs:0 "Extra Galatic Start"
   civic_egs_desc:0 "Start in an Extra-Galactic cluster, like the L-system.\n\nA menu will appear on game start to let you customise your start.\n\nYour solar-system initaliser will be ignored"
+
+  d_egs_rw_motes:0 "Ringworld Maintenance Supply Node"
+  d_egs_rw_motes_desc:0 "Nobody knows how this thing works, only that it powers the infrastructure of the district, best not to fiddle with it"
+
+  d_egs_rw_crystal:0 "$d_egs_rw_motes$"
+  d_egs_rw_crystal_desc:0 "$d_egs_rw_motes_desc$"
