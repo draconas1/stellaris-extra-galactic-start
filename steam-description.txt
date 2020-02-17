@@ -26,8 +26,7 @@ This mod was also inspired by [url=https://steamcommunity.com/sharedfiles/filede
 [h1]Future Work[/h1][list]
 [*] L-Gate start - start in the actual L-System cluster.
 [*] Extra-Compatibility with Extragalatic Clusters allow you to spawn the others on top of the one you started with
-[*] Adjust Ring World Start to have 3 repairable sections and 1 habitable (is actually quite tricky as repairable sections are megastructures, and habitable/broken ones are planets, so they do not play nice together.  This may wait until 2.6 where the devs show me the exact arrangement of spawn positions to make it look right)
-[*] Rebalance ringworld start to have a deposit/modifier that pays the SR maintenance of your starting district.  
+[*] Adjust Ring World Start to have 3 repairable sections and 1 habitable (is actually quite tricky as repairable sections are megastructures, and habitable/broken ones are planets, so they do not play nice together.  This may wait until 2.6 where the devs show me the exact arrangement of spawn positions to make it look right) 
 [/list]
 
 Post 2.6 this will become an origin so become incompatible with all other origins, for now you can enjoy it with the vanilla origin civic starts.
