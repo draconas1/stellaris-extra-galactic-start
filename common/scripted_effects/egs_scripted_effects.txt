@@ -110,6 +110,14 @@ match_planet_class = {
 				}
 			}
 
+			pc_alpine = {
+				event_target:egs_target_planet = {
+					change_pc = pc_alpine
+				}
+			}
+
+			# special vanilla
+
 			pc_nuked = {
 				event_target:egs_target_planet = {
 					change_pc = pc_nuked
@@ -119,6 +127,18 @@ match_planet_class = {
 			pc_gaia = {
 				event_target:egs_target_planet = {
 					change_pc = pc_gaia
+				}
+			}
+
+			pc_hive = {
+				event_target:egs_target_planet = {
+					change_pc = pc_hive
+				}
+			}
+
+			pc_machine = {
+				event_target:egs_target_planet = {
+					change_pc = pc_machine
 				}
 			}
 
