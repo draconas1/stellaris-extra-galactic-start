@@ -26,7 +26,7 @@ This mod was also inspired by [url=https://steamcommunity.com/sharedfiles/filede
 [h1]Future Work[/h1][list]
 [*] L-Gate start - start in the actual L-System cluster.
 [*] Extra-Compatibility with Extragalatic Clusters allow you to spawn the others on top of the one you started with
-[*] Adjust Ring World Start to have 3 repairable sections and 1 habitable (is actually quite tricky as repairable sections are megastructures, and habitable/broken ones are planets, so they do not play nice together.  This may wait until 2.6 where the devs show me the exact arrangement of spawn positions to make it look right) 
+[*] Adjust Ring World Start to have 3 repairable sections and 1 habitable (is actually quite tricky as repairable sections are megastructures, and habitable/broken ones are planets, so they do not play nice together.  This may wait until 2.6 where the devs show me the exact arrangement of spawn positions to make it look right)
 [/list]
 
 Post 2.6 this will become an origin so become incompatible with all other origins, for now you can enjoy it with the vanilla origin civic starts.
@@ -40,6 +40,15 @@ No vanilla files were harmed in the making of this mod, but as it does a lot of 
 [/list]
 
 This mod is completely compatible with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1891758612]Stellaris Immortal[/url] and the resulting cluster and planets will use SI values if SI is installed.  (SI should load afterwards)
+
+[h1]Bug Reporting[/h1]
+The only way to achieve a lot of the effects is with a large amount of copy and paste code, so if you have a bug I really need to know the following information, even something so trivial as Spawning Kerbals or not falls down an entirely different branch of the cluster generation and so may have bug where the non kerbals don't.[list]
+[*] What cluster you started with
+[*] What your starting world was
+[*] Whether you have gigastructures stars enabled and the Kerbals enable
+[*] What class your original starting planet was 
+[*] What other mods are you using
+[/list]
 
 [b]Please Rate and Subscribe as it helps others find the mods[/b]
 [img]https://i.imgur.com/fVVaDCS.gif[/img]
