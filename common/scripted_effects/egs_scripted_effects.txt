@@ -37,6 +37,63 @@ clear_egs_resource_flags = {
 	remove_country_flag = EGS_SR_NO
 }
 
+clear_egs_egc_flags = {
+	remove_country_flag = EGS_EGC_YES
+	remove_country_flag = EGS_EGC_NO
+}
+
+
+clear_egs_egcconnection_flags = {
+	remove_country_flag = EGS_EGC_CONNECTION_DEFAULT
+	remove_country_flag = EGS_EGC_CONNECTION_ROUND_ROBIN
+	remove_country_flag = EGS_EGC_CONNECTION_L_GATE
+}
+
+
+create_and_share_l_gate = {
+	set_star_flag = lgate
+	spawn_megastructure = {
+		type = lgate_base
+		orbit_angle = 225
+		orbit_distance = 30
+		location = solar_system
+	}
+	every_system_planet = {
+		limit = {
+			is_star = yes
+		}
+		# everyone else needs to know the location of the Lgate
+		every_country = {
+			prev = {				
+				surveyed = {
+					set_surveyed = yes
+					surveyor = prev
+				}
+				set_all_comms_surveyed = yes
+			}
+		}
+	}
+}
+
+create_and_link_wormholes = {
+	event_target:egs_wormhole_1 = {
+		spawn_natural_wormhole = {
+			bypass_type = wormhole
+			random_pos = yes
+			orbit_angle = 360
+		}
+	}
+
+	event_target:egs_wormhole_2 = {
+		spawn_natural_wormhole = {
+			bypass_type = wormhole
+			random_pos = yes
+			orbit_angle = 360
+		}
+		link_wormholes = event_target:egs_wormhole_1
+	}
+}
+
 
 smart_match_planet_class = {
 	event_target:previous_home_planet = {

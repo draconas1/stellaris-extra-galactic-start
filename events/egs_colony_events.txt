@@ -372,21 +372,9 @@ country_event = {
 				}
 				random_system = {
 					limit = {
-						has_natural_wormhole = no
-						is_fe_cluster = no
-						NOR = {
-							has_star_flag = abandoned_gateway
-							has_star_flag = AI_hub
-							has_star_flag = empire_home_system
-							has_star_flag = empire_cluster
-							has_star_flag = hostile_system
-							has_star_flag = sol
-							has_star_flag = deneb_system
-							has_star_flag = egs_cluster
-							has_star_flag = marauder_system
-						}
+						egs_suitable_system_for_wormhole = yes
 					}
-			
+					set_star_flag = egs_wormhole
 					spawn_natural_wormhole = {
 						bypass_type = wormhole
 						random_pos = yes
@@ -430,16 +418,24 @@ country_event = {
 				}
 			}
 			# everyone else needs to know the location of your Lgate so they can invade you
-			every_country = {
-				limit = {
-					NOT =  { is_same_empire = root }
-				}
-				event_target:egs_cluster_root = {
-					surveyed = {
-						set_surveyed = yes
-						surveyor = prev
+			event_target:egs_cluster_root = {
+				every_system_planet = {
+					limit = {
+						is_star = yes
 					}
-					set_all_comms_surveyed = yes
+					# everyone else needs to know the location of the Lgate
+					every_country = {
+						limit = {
+							NOT =  { is_same_empire = root }
+						}
+						prev = {				
+							surveyed = {
+								set_surveyed = yes
+								surveyor = prev
+							}
+							set_all_comms_surveyed = yes
+						}
+					}
 				}
 			}
 		}
@@ -496,6 +492,181 @@ country_event = {
 				}
 			}
 		}
+
+		country_event = { id = extragalactic_cluster.100 days = 30 }
+		
+	}
+}
+
+
+# setup EGC bypasses
+country_event = {
+	id = egs_colony.300
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				has_country_flag = EGS_EGC_CONNECTION_ROUND_ROBIN
+			}
+			
+			# Apprentice - Dipper - Hex - Steed - Ant -....
+			random_system = {
+				limit = {
+					has_star_flag = apprentice_cluster
+					has_natural_wormhole = no
+				}
+				save_event_target_as = egs_wormhole_1
+			}
+
+			random_system = {
+				limit = {
+					has_star_flag = big_dipper_cluster
+					has_natural_wormhole = no
+				}
+				save_event_target_as = egs_wormhole_2
+			}
+			create_and_link_wormholes = yes
+
+
+			random_system = {
+				limit = {
+					has_star_flag = big_dipper_cluster
+					has_natural_wormhole = no
+				}
+				save_event_target_as = egs_wormhole_1
+			}
+
+			random_system = {
+				limit = {
+					has_star_flag = hexagon_cluster
+					has_natural_wormhole = no
+				}
+				save_event_target_as = egs_wormhole_2
+			}
+			create_and_link_wormholes = yes
+
+
+			random_system = {
+				limit = {
+					has_star_flag = hexagon_cluster
+					has_natural_wormhole = no
+				}
+				save_event_target_as = egs_wormhole_1
+			}
+
+			random_system = {
+				limit = {
+					has_star_flag = steed_cluster
+					has_natural_wormhole = no
+				}
+				save_event_target_as = egs_wormhole_2
+			}
+			create_and_link_wormholes = yes
+
+
+			random_system = {
+				limit = {
+					has_star_flag = steed_cluster
+					has_natural_wormhole = no
+				}
+				save_event_target_as = egs_wormhole_1
+			}
+
+			random_system = {
+				limit = {
+					has_star_flag = atronach_cluster
+					has_natural_wormhole = no
+				}
+				save_event_target_as = egs_wormhole_2
+			}
+			create_and_link_wormholes = yes
+
+			random_system = {
+				limit = {
+					has_star_flag = atronach_cluster
+					has_natural_wormhole = no
+				}
+				save_event_target_as = egs_wormhole_1
+			}
+
+			random_system = {
+				limit = {
+					has_star_flag = apprentice_cluster
+					has_natural_wormhole = no
+				}
+				save_event_target_as = egs_wormhole_2
+			}
+			create_and_link_wormholes = yes
+
+
+			#link to the player-starting extra-galatic cluster
+			random_system = {
+				limit = {
+					has_star_flag = egs_cluster
+					has_natural_wormhole = no
+					NOT = {
+						has_star_flag = egs_empire_home_system
+					}
+				}
+				save_event_target_as = egs_wormhole_1
+			}
+
+			random_system = {
+				limit = {
+					has_star_flag = extragalactic_cluster
+					has_natural_wormhole = no
+				}
+				save_event_target_as = egs_wormhole_2
+			}
+			create_and_link_wormholes = yes
+		}
+
+
+
+		# L-gate connectivity
+		if = {
+			limit = {
+				has_country_flag = EGS_EGC_CONNECTION_L_GATE
+			}
+
+			random_system = {
+				limit = {
+					has_star_flag = hexagon_cluster_09
+				}
+				create_and_share_l_gate = yes
+			}
+
+			random_system = {
+				limit = {
+					has_star_flag = steed_cluster_06
+				}
+				create_and_share_l_gate = yes
+			}
+
+			random_system = {
+				limit = {
+					has_star_flag = atronach_cluster_09
+				}
+				create_and_share_l_gate = yes
+			}
+
+			random_system = {
+				limit = {
+					has_star_flag = apprentice_cluster_08
+				}
+				create_and_share_l_gate = yes
+			}
+
+			random_system = {
+				limit = {
+					has_star_flag = big_dipper_cluster_01
+				}
+				create_and_share_l_gate = yes
+			}
+		}
+
+		country_event = { id = egs_colony.200 }
 	}
 }
 

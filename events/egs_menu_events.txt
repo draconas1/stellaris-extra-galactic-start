@@ -69,16 +69,25 @@ country_event = {
 	}
 
 	option = {
+		name = "egs_menu.1.option.egc"
+		hidden_effect = {
+			country_event = { id = egs_menu.700 }
+		}
+	}
+
+	option = {
+		name = "egs_menu.1.option.egc_connectivity"
+		trigger = {
+			has_country_flag = EGS_EGC_YES
+		}
+		hidden_effect = {
+			country_event = { id = egs_menu.800 }
+		}
+	}
+
+	option = {
 		name = "egs_menu.1.option.begin"
-		if = {
-			limit = {
-				has_global_flag = retile_active
-			}
-			country_event = { id = egs_menu.4 days = 1  }
-		}
-		else = {
-			country_event = { id = egs_menu.3 days = 1  }
-		}
+		country_event = { id = egs_menu.3 days = 1  }
 	}
 }
 
@@ -100,45 +109,18 @@ country_event = {
 		set_country_flag = EGS_GIGA_NO
 		set_country_flag = EGS_LINK_WORMHOLE
 		set_country_flag = EGS_SR_NO
+		set_country_flag = EGS_EGC_NO
+		set_country_flag = EGS_EGC_CONNECTION_DEFAULT
 		# make sure we don't spawn extrgalatic cluster by accident
 		set_global_flag = extragalactic_cluster_spawned
 		country_event = { id = egs_menu.1  }
 	}
 }
 
-# Trigger the galaxy spawn: Vanilla
-country_event = {
-	id = egs_menu.3    
-	hide_window = yes
-	fire_only_once = yes
-	is_triggered_only = yes
-	immediate = {
-		country_event = {
-			id = egs_menu.5
-		}
-	}
-}
-
-
-# Trigger the galaxy spawn: Stellaris Immortal
-country_event = {
-	id = egs_menu.4
-	hide_window = yes
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	immediate = {
-		country_event = {
-			id = egs_menu.5
-		}
-	}
-}
-
-
 
 # Kickoff the event
 country_event = {
-	id = egs_menu.5    
+	id = egs_menu.3
 	hide_window = yes
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -164,7 +146,7 @@ country_event = {
 			}
 			else_if = {
 				limit = { has_country_flag = EGS_CLUSTER_BIG_DIPPER }				
-				country_event = { id = egs_bg_dipper.1 }
+				country_event = { id = egs_big_dipper.1 }
 			}
 			else = {
 				country_event = { id = egs_hexagon.1 }
@@ -704,6 +686,162 @@ country_event = {
 	}
 }
 
+#EGC Clusters
+country_event = {
+	id = egs_menu.700    
+	title = "egs_menu.700.name"
+	desc = "egs_menu.700.desc"
+	picture = GFX_evt_binary_stars
+	is_triggered_only = yes
+
+	option = {
+		name = "egs_menu.700.option.no"
+		trigger = {
+			NOT = { has_country_flag = EGS_EGC_NO }
+		}
+		hidden_effect = {
+			clear_egs_egc_flags = yes
+			set_country_flag = EGS_EGC_NO
+			country_event = { id = egs_menu.1 }
+		}
+	}
+
+	option = {
+		name = "egs_menu.700.option.no.on"
+		trigger = {
+			has_country_flag = EGS_EGC_NO
+		}
+		hidden_effect = {
+			clear_egs_egc_flags = yes
+			set_country_flag = EGS_EGC_NO
+			country_event = { id = egs_menu.1 }
+		}
+	}
+
+	option = {
+		name = "egs_menu.700.option.yes"
+		trigger = {
+			NOT = { has_country_flag = EGS_EGC_YES }
+		}
+		hidden_effect = {
+			clear_egs_egc_flags = yes
+			set_country_flag = EGS_EGC_YES
+			country_event = { id = egs_menu.1 }
+		}
+	}
+
+	option = {
+		name = "egs_menu.700.option.yes.on"
+		trigger = {
+			has_country_flag = EGS_EGC_YES
+		}
+		hidden_effect = {
+			clear_egs_egc_flags = yes
+			set_country_flag = EGS_EGC_YES
+			country_event = { id = egs_menu.1 }
+		}
+	}
+}
+
+# EGC Connectivity
+country_event = {
+	id = egs_menu.800    
+	title = "egs_menu.800.name"
+	desc = "egs_menu.800.desc"
+	picture = GFX_evt_federation_fleet
+	is_triggered_only = yes
+
+	option = {
+		name = "egs_menu.800.option.noegc"
+		trigger = {
+			NOT = { has_country_flag = EGS_EGC_YES }
+		}
+		hidden_effect = {
+			country_event = { id = egs_menu.1 }
+		}
+	}
+
+	option = {
+		name = "egs_menu.800.option.default"
+		trigger = {
+			has_country_flag = EGS_EGC_YES
+			NOT = { has_country_flag = EGS_EGC_CONNECTION_DEFAULT }
+		}
+		hidden_effect = {
+			clear_egs_egcconnection_flags = yes
+			set_country_flag = EGS_EGC_CONNECTION_DEFAULT
+			country_event = { id = egs_menu.1 }
+		}
+	}
+
+	option = {
+		name = "egs_menu.800.option.default.on"
+		trigger = {
+			has_country_flag = EGS_EGC_YES
+			has_country_flag = EGS_EGC_CONNECTION_DEFAULT
+		}
+		hidden_effect = {
+			clear_egs_egcconnection_flags = yes
+			set_country_flag = EGS_EGC_CONNECTION_DEFAULT
+			country_event = { id = egs_menu.1 }
+		}
+	}
+
+	option = {
+		name = "egs_menu.800.option.roundrobin"
+		trigger = {
+			has_country_flag = EGS_EGC_YES
+			NOT = { has_country_flag = EGS_EGC_CONNECTION_ROUND_ROBIN }
+		}
+		hidden_effect = {
+			clear_egs_egcconnection_flags = yes
+			set_country_flag = EGS_EGC_CONNECTION_ROUND_ROBIN
+			country_event = { id = egs_menu.1 }
+		}
+	}
+
+	option = {
+		name = "egs_menu.800.option.roundrobin.on"
+		trigger = {
+			has_country_flag = EGS_EGC_YES
+			has_country_flag = EGS_EGC_CONNECTION_ROUND_ROBIN
+		}
+		hidden_effect = {
+			clear_egs_egcconnection_flags = yes
+			set_country_flag = EGS_EGC_CONNECTION_ROUND_ROBIN
+			country_event = { id = egs_menu.1 }
+		}
+	}
+
+	option = {
+		name = "egs_menu.800.option.lgate"
+		trigger = {
+			has_country_flag = EGS_EGC_YES
+			NOT = { has_country_flag = EGS_EGC_CONNECTION_L_GATE }
+		}
+		hidden_effect = {
+			clear_egs_egcconnection_flags = yes
+			set_country_flag = EGS_EGC_CONNECTION_L_GATE
+			country_event = { id = egs_menu.1 }
+		}
+	}
+
+	option = {
+		name = "egs_menu.800.option.lgate.on"
+		trigger = {
+			has_country_flag = EGS_EGC_YES
+			has_country_flag = EGS_EGC_CONNECTION_L_GATE
+		}
+		hidden_effect = {
+			clear_egs_egcconnection_flags = yes
+			set_country_flag = EGS_EGC_CONNECTION_L_GATE
+			country_event = { id = egs_menu.1 }
+		}
+	}
+}
+
+
+#Compatability
 country_event = {
 	id = egs_menu.9
 	is_triggered_only = yes
@@ -793,3 +931,5 @@ planet_event = {
 		name = "egs_menu.10.option.close"
 	}
 }
+
+

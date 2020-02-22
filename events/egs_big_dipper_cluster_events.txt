@@ -1,7 +1,7 @@
-namespace = egs_bg_dipper
+namespace = egs_big_dipper
 @searchDistance1 = 70
 country_event = {
-	id = egs_bg_dipper.1
+	id = egs_big_dipper.1
 	is_triggered_only = yes
 	hide_window = yes
 	immediate = {
@@ -14,10 +14,10 @@ country_event = {
 			# ROOT
 			#
 			spawn_system = {
-				min_distance >=  545
-				max_distance <=  550
-				min_orientation_angle = 130
-				max_orientation_angle = 131
+				min_distance >= 545
+				max_distance <= 550
+				min_orientation_angle = 85
+				max_orientation_angle = 86
 				initializer = egs_cluster_initializer
 			}
 		}

@@ -18,3 +18,20 @@ suitable_egs_planet_for_sr = {
 		}
 	}
 }
+
+egs_suitable_system_for_wormhole = {
+	has_natural_wormhole = no
+	is_fe_cluster = no
+	NOR = {
+		has_star_flag = abandoned_gateway
+		has_star_flag = AI_hub
+		has_star_flag = empire_home_system
+		has_star_flag = empire_cluster
+		has_star_flag = hostile_system
+		has_star_flag = sol
+		has_star_flag = deneb_system
+		has_star_flag = egs_cluster
+		has_star_flag = marauder_system
+		has_star_flag = egs_wormhole
+	}
+}

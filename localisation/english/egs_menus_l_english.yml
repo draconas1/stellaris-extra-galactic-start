@@ -8,6 +8,8 @@
     egs_menu.1.option.giga:0 "Guarenteed Gigastructural Engineering stars?"
     egs_menu.1.option.link:0 "How the cluster will link to the galaxy?"
     egs_menu.1.option.sr:0 "Guarentee presence of Strategic Resources in cluster?"
+    egs_menu.1.option.egc:0 "Spawn all Constellations with goodies?"
+    egs_menu.1.option.egc_connectivity:0 "How other clusters will link to the galaxy"
     egs_menu.1.option.begin:0 "§YBegin§!"
 
     egs_menu.100.name:0 "Choose Constellation"
@@ -68,6 +70,25 @@
     egs_menu.600.option.yes:0 "Guarenteed Strategic Resources"
     egs_menu.600.option.no.on:0 "§Y$egs_menu.600.option.no$§!"
     egs_menu.600.option.yes.on:0 "§Y$egs_menu.600.option.yes$§!"
+
+    egs_menu.700.name:0 "Spawn All Extra Galactic Clusters"
+    egs_menu.700.desc:0 "Do you want to spawn ALL the extra-galactic clusters\n\nThey will spawn in one at a time over the course of the first year, ending with the Hexagon Cluster, there will be game lag every time one spawns.\n\nThese clusters are taken entirely from Extra-Galactic clusters mod, with all their mid->late game goodies inside.  The only changes are their galactic location and their access methods."
+    egs_menu.700.option.no:0 "No extra clusters"
+    egs_menu.700.option.yes:0 "Spawn all the clusters"
+    egs_menu.700.option.no.on:0 "§Y$egs_menu.700.option.no$§!"
+    egs_menu.700.option.yes.on:0 "§Y$egs_menu.700.option.yes$§!"
+
+    egs_menu.800.name:0 "Choose Extra Galactic Cluster Connectivity"
+    egs_menu.800.desc:0 "If you have enabled all the extra galactic clusters, choose how they will connect to the galaxy\n\nDefault: As per the original mod: wormholes to random systems\nRound Robin: 1 wormhole per cluster goes to the main galaxy, 2 will go to other clusters in a ring, Your spawning cluster will have a wormhole to a random other cluster in addition to its connection to the rest of the galaxy\nL-gate: they all have a single L-gate connection"    
+        
+    egs_menu.800.option.noegc:0 "You need to enable additional extra-galatic clusters"
+    egs_menu.800.option.default:0 "Default"
+    egs_menu.800.option.roundrobin:0 "Wormhole Round Robin"
+    egs_menu.800.option.lgate:0 "L-Gate"
+    egs_menu.800.option.default.on:0 "§Y$egs_menu.800.option.default$§!"
+    egs_menu.800.option.roundrobin.on:0 "§Y$egs_menu.800.option.roundrobin$§!"
+    egs_menu.800.option.lgate.on:0 "§Y$egs_menu.800.option.lgate$§!"
+
 
     egs_menu.10.name:0 "UNKNOWN PLANET TYPE DETECTED"
     egs_menu.10.desc:0 "The chosen home planet preference of your species comes from an unknown mod.  It is likely that you will be destroyed when you move cluster.\n\nPlease contact the mod author, letting them know the planet class and the mod it comes from and he will try to add it.\n\nIn the meantime select a vanilla or planetary diversity planet class."
