@@ -703,3 +703,93 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = egs_menu.9
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		owner = {
+			is_ai = no
+			has_civic = civic_egs
+		}
+	}
+	immediate = {
+		home_planet = {
+			planet_event = {
+				id = egs_menu.10
+			}
+		}
+	}
+}
+
+
+#Compatability
+planet_event = {
+	id = egs_menu.10    
+	title = "egs_menu.10.name"
+	desc = "egs_menu.10.desc"
+	picture = GFX_evt_debris
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			is_ai = no
+			has_civic = civic_egs
+		}
+		NOR = {
+			is_planet_class = pc_desert
+			is_planet_class = pc_arid
+			is_planet_class = pc_savannah
+			is_planet_class = pc_ocean
+			is_planet_class = pc_continental
+			is_planet_class = pc_tropical
+			is_planet_class = pc_tundra
+			is_planet_class = pc_arctic
+			is_planet_class = pc_alpine
+			is_planet_class = pc_nuked
+			is_planet_class = pc_gaia
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+			# Planetary Diversity
+			is_planet_class = pc_aquatic
+			is_planet_class = pc_prairie
+			is_planet_class = pc_antarctic
+			is_planet_class = pc_snow
+			is_planet_class = pc_glacial
+			is_planet_class = pc_frozen_desert
+			is_planet_class = pc_steppe
+			is_planet_class = pc_hadesert
+			is_planet_class = pc_boreal
+			is_planet_class = pc_sandsea
+			is_planet_class = pc_subarctic
+			is_planet_class = pc_cascadian
+			is_planet_class = pc_swamp
+			is_planet_class = pc_mangrove
+			is_planet_class = pc_desertislands
+			is_planet_class = pc_mesa
+			is_planet_class = pc_oasis
+			is_planet_class = pc_hajungle
+			is_planet_class = pc_mushroom
+			is_planet_class = pc_retinal
+			is_planet_class = pc_forest
+			is_planet_class = pc_med
+			is_planet_class = pc_primal
+			is_planet_class = pc_karst
+			is_planet_class = pc_superhabitable
+			is_planet_class = pc_tidallylocked
+			is_planet_class = pc_geothermal
+			is_planet_class = pc_biolumen
+			is_planet_class = pc_salt
+			is_planet_class = pc_crystal
+			is_planet_class = pc_floating
+			is_planet_class = pc_graveyard
+			is_planet_class = pc_technoorganic
+			is_planet_class = pc_archive
+		}
+	}
+
+	option = {
+		name = "egs_menu.10.option.close"
+	}
+}

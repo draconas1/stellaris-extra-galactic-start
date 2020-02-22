@@ -68,3 +68,7 @@
     egs_menu.600.option.yes:0 "Guarenteed Strategic Resources"
     egs_menu.600.option.no.on:0 "§Y$egs_menu.600.option.no$§!"
     egs_menu.600.option.yes.on:0 "§Y$egs_menu.600.option.yes$§!"
+
+    egs_menu.10.name:0 "UNKNOWN PLANET TYPE DETECTED"
+    egs_menu.10.desc:0 "The chosen home planet preference of your species comes from an unknown mod.  It is likely that you will be destroyed when you move cluster.\n\nPlease contact the mod author, letting them know the planet class and the mod it comes from and he will try to add it.\n\nIn the meantime select a vanilla or planetary diversity planet class."
+    egs_menu.10.option.close:0 "Ok"

@@ -312,6 +312,48 @@ match_planet_class = {
 					change_pc = pc_biolumen
 				}
 			}
+
+			pc_salt = {
+				event_target:egs_target_planet = {
+					change_pc = pc_salt
+				}
+			}
+
+			pc_crystal = {
+				event_target:egs_target_planet = {
+					change_pc = pc_crystal
+				}
+			}
+
+			pc_floating = {
+				event_target:egs_target_planet = {
+					change_pc = pc_floating
+				}
+			}
+
+			pc_graveyard = {
+				event_target:egs_target_planet = {
+					change_pc = pc_graveyard
+				}
+			}
+
+			pc_technoorganic = {
+				event_target:egs_target_planet = {
+					change_pc = pc_technoorganic
+				}
+			}
+
+			pc_archive = {
+				event_target:egs_target_planet = {
+					change_pc = pc_archive
+				}
+			}
+
+			pc_technoorganic = {
+				event_target:egs_target_planet = {
+					change_pc = pc_technoorganic
+				}
+			}
 		}
 	}
 

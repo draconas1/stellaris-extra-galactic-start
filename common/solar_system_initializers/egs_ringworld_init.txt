@@ -1,7 +1,7 @@
 egs_ringworld_init = {
 	class = "sc_neutron_star"
 
-	flags = { egs_ringworld egs_empire_home_system }
+	flags = { egs_ringworld egs_empire_home_system ring_world_built }
 
 	planet = {
 		class = star

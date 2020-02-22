@@ -1,6 +1,6 @@
 ﻿l_english:
   civic_egs:0 "Extra Galatic Start"
-  civic_egs_desc:0 "Start in an Extra-Galactic cluster, like the L-system.\n\nA menu will appear on game start to let you customise your start.\n\nYour solar-system initaliser will be ignored"
+  civic_egs_desc:0 "Start in an Extra-Galactic cluster, like the L-system.\n\nA menu will appear on game start to let you customise your start.\n\nYour home system will be based on what you select in that menu, not what you pick here.\n\n§RWARNING\n\n§HYour Species preferred planet type MUST be compatible with this mod, or you will die on day 1!  Currently all Vanilla and Planetary Diversity planet classes are supported.  To add your favourite mod, contact the author§!"
 
   d_egs_rw_motes:0 "Ringworld Maintenance Supply Node"
   d_egs_rw_motes_desc:0 "Nobody knows how this thing works, only that it powers the infrastructure of the district, best not to fiddle with it"

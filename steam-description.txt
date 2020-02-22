@@ -41,6 +41,9 @@ No vanilla files were harmed in the making of this mod, but as it does a lot of 
 
 This mod is completely compatible with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1891758612]Stellaris Immortal[/url] and the resulting cluster and planets will use SI values if SI is installed.  (SI should load afterwards)
 
+[h1]HELP!  I DIED ON DAY 1[/h1]
+This is most frequently caused by a modded species home planet, I have to code every home planet manually.  If you are a non vanilla, non planetary diversity planet type for your homeworld preference then I can't set it when you move.  Post a comment letting me know the planet type and which mod it came from and I'll add it.  
+
 [h1]Bug Reporting[/h1]
 The only way to achieve a lot of the effects is with a large amount of copy and paste code, so if you have a bug I really need to know the following information, even something so trivial as Spawning Kerbals or not falls down an entirely different branch of the cluster generation and so may have bug where the non kerbals don't.[list]
 [*] What cluster you started with

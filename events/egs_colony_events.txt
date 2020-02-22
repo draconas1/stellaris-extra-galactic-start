@@ -498,3 +498,19 @@ country_event = {
 		}
 	}
 }
+
+
+#move the home sysem
+country_event = {
+	id = egs_colony.999
+	hide_window = yes
+	fire_only_once = yes
+	immediate = {
+		random_system = {
+			limit = {
+				has_star_flag = egs_ringworld
+			}
+			set_star_flag = ring_world_built
+		}
+	}
+}
