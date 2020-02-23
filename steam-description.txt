@@ -1,5 +1,5 @@
 [h1]Start in an Isolated Extra-Galactic Constellations[/h1]
-This mod takes the excellent constellations from [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1523039190]Extra Galactic Clusters[/url] and makes it possible to have any of them as a starting location for your civilisation (Note only the Constellation, not the contents.  EGC has them packed with goodies for late game civs to find, these are more plain for starting out).
+This mod takes the excellent constellations from [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1523039190]Extra Galactic Clusters[/url] and makes it possible to have any of them as a starting location for your civilisation (Note only the Constellation, not the contents).  You can also spawn the other EGC's for your civ to later find and explore.  
 
 It is done via a new civic: Extra-Galatic Cluster.
 If your civilisation takes that then a menu will appear on game start for you to customise your cluster.  The AI never will. 
@@ -10,6 +10,7 @@ If your civilisation takes that then a menu will appear on game start for you to
 [*] Starting  System Initaliser (Sol, Deneb, Random, Ring World)
 [*] Guarantee that strategic resources and specific stars for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1121692237]Giagastructures[/url] will spawn
 [*] Access to your cluster? (Wormhole, Many Wormholes, the L-Gate Network)
+[*] Spawn all the clusters from [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1523039190]Extra Galactic Clusters[/url], and optionally link them in an extra-galatic wormhole ring or to the L-cluster.
 [/list]
 
 [h1]Gameplay[/h1]
@@ -19,14 +20,15 @@ I cannot set your sector governor with a script, so you will need to manually re
 
 Your constellation will not have precursors.  If you want to learn about your precursor civilisation you will need to get back to your original point in the galaxy where the evidence of their passage was left.
 
-You can Experimental Subspace Navigation your science vessels to your old home system (and L-Gates if selected), that is deliberate.  Be warned the AI expands towards your home cluster quickly as it has a glut of nice planets and resources.  
+You can Experimental Subspace Navigation your science vessels to your old home system (and L-Gates if selected), that is deliberate.  Be warned the AI expands towards your home cluster quickly as it has a glut of nice planets and resources.
+
+If you select for the rest of the Extra Galatic Cluster to spawn in they will spawn in over time in the first year, to avoid galaxy generation issues.  This means you will get lag and freeze spikes until about August when the last one, Hexagon, spawns.  Hexagon spawns at the edge of the addressable universe so you may need to hide the outlier to select it.
 
 This mod was also inspired by [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1796380598]Isolated Cluster Start[/url]
 
 [h1]Future Work[/h1][list]
-[*] L-Gate start - start in the actual L-System cluster.
-[*] Extra-Compatibility with Extragalatic Clusters allow you to spawn the others on top of the one you started with
-[*] Adjust Ring World Start to have 3 repairable sections and 1 habitable (is actually quite tricky as repairable sections are megastructures, and habitable/broken ones are planets, so they do not play nice together.  This may wait until 2.6 where the devs show me the exact arrangement of spawn positions to make it look right)
+[*] Multiplayer Compatability
+[*] Adjust Ring World Start to have 3 repairable sections and 1 habitable (post 2.6)
 [/list]
 
 Post 2.6 this will become an origin so become incompatible with all other origins, for now you can enjoy it with the vanilla origin civic starts.
@@ -36,10 +38,10 @@ No vanilla files were harmed in the making of this mod, but as it does a lot of 
 
 [list]
 [*]This mod is incompatible with things that change the planet/system start, and so has been disabled for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1743133825]Starborn[/url]
-[*]In theory it is compatible with Planetary Diversity planet starts, but I've not tested it extensively.  It will cheerfully ignore the PD "habitable planets to be same type instead of exact match" option.  
+[*]It is compatible with Planetary Diversity planet starts, but I've not tested it extensively.  It will cheerfully ignore the PD "habitable planets to be same type instead of exact match" option.  
+[*]Completely compatible with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1891758612]Stellaris Immortal[/url] and the resulting cluster and planets will use SI values if SI is installed.  (SI should load afterwards)
+[*]Compatible with Guillis Planet Modifiers
 [/list]
-
-This mod is completely compatible with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1891758612]Stellaris Immortal[/url] and the resulting cluster and planets will use SI values if SI is installed.  (SI should load afterwards)
 
 [h1]HELP!  I DIED ON DAY 1[/h1]
 This is most frequently caused by a modded species home planet, I have to code every home planet manually.  If you are a non vanilla, non planetary diversity planet type for your homeworld preference then I can't set it when you move.  Post a comment letting me know the planet type and which mod it came from and I'll add it.  
