@@ -494,7 +494,6 @@ country_event = {
 		}
 
 		country_event = { id = extragalactic_cluster.100 days = 30 }
-		
 	}
 }
 
@@ -665,8 +664,6 @@ country_event = {
 				create_and_share_l_gate = yes
 			}
 		}
-
-		country_event = { id = egs_colony.200 }
 	}
 }
 
