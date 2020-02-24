@@ -9,6 +9,7 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		has_country_flag = EGS_EGC_YES
+		has_civic = civic_egs
 	}
 	immediate = {
 		country_event = {

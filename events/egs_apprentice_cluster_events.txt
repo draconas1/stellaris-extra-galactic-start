@@ -125,7 +125,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				has_country_flag = EGS_GIGA_YES
+				egs_gigastructures = yes
 			}
 			event_target:egs_cluster_01 = {
 				spawn_system = {
@@ -432,7 +432,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				has_country_flag = EGS_GIGA_YES
+				egs_gigastructures = yes
 			}
 			event_target:egs_cluster_07 = {
 				spawn_system = {
