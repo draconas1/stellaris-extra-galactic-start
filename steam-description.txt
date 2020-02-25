@@ -11,6 +11,7 @@ If your civilisation takes that then a menu will appear on game start for you to
 [*] Guarantee that strategic resources and specific stars for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1121692237]Giagastructures[/url] will spawn
 [*] Access to your cluster? (Wormhole, Many Wormholes, the L-Gate Network)
 [*] Spawn all the clusters from [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1523039190]Extra Galactic Clusters[/url], and optionally link them in an extra-galatic wormhole ring or to the L-cluster.
+[*] Multiplayer support for upto 2 players to start in clusters
 [/list]
 
 [h1]Gameplay[/h1]
@@ -26,8 +27,9 @@ If you select for the rest of the Extra Galatic Cluster to spawn in they will sp
 
 This mod was also inspired by [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1796380598]Isolated Cluster Start[/url]
 
+In multiplayer Player 1 should take the regular EGS civic, player 2 should take the "Mulitplayer EGS" civic, which has the grey default icon.  See [url=https://steamcommunity.com/workshop/filedetails/discussion/1999512770/1751275263836781191/]here[/url] for details.
+
 [h1]Future Work[/h1][list]
-[*] Multiplayer Compatability
 [*] Adjust Ring World Start to have 3 repairable sections and 1 habitable (post 2.6)
 [/list]
 
@@ -38,9 +40,9 @@ No vanilla files were harmed in the making of this mod, but as it does a lot of 
 
 [list]
 [*]This mod is incompatible with things that change the planet/system start, and so has been disabled for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1743133825]Starborn[/url]
-[*]It is compatible with Planetary Diversity planet starts, but I've not tested it extensively.  It will cheerfully ignore the PD "habitable planets to be same type instead of exact match" option.  
-[*]Completely compatible with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1891758612]Stellaris Immortal[/url] and the resulting cluster and planets will use SI values if SI is installed.  (SI should load afterwards)
-[*]Compatible with Guillis Planet Modifiers
+[*]It is compatible with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=819148835]Planetary Diversity[/url] planet starts, but I've not tested it extensively.  It will cheerfully ignore the PD "habitable planets to be same type instead of exact match" option.  
+[*]Compatible with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=865040033]Guillis Planet Modifiers[/url]
+[*]Completely compatible with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1891758612]Stellaris Immortal[/url] and the resulting cluster and planets will use SI values if SI is installed.
 [/list]
 
 [h1]HELP!  I DIED ON DAY 1[/h1]
