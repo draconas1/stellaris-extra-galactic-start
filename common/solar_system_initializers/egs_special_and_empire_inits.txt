@@ -1,3 +1,4 @@
+@jumps=1
 
 egs_cluster_initializer = {
 	class = sc_black_hole

@@ -1,4 +1,4 @@
-
+@jumps=1
 egs_p2_cluster_initializer = {
 	class = sc_black_hole
 	name = "NAME_Great_Wound"

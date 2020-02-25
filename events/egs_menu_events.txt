@@ -22,7 +22,6 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		is_ai = no
 		has_civic = civic_egs
 	}
 
@@ -155,7 +154,6 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		is_ai = no
 		has_civic = civic_egs
 	}
 
@@ -889,7 +887,6 @@ country_event = {
 	hide_window = yes
 	trigger = {
 		owner = {
-			is_ai = no
 			OR = { 
 				has_civic = civic_egs
 				has_civic = civic_egs2
@@ -916,7 +913,6 @@ planet_event = {
 
 	trigger = {
 		owner = {
-			is_ai = no
 			OR = { 
 				has_civic = civic_egs
 				has_civic = civic_egs2
