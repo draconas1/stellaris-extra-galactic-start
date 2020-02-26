@@ -518,6 +518,40 @@ country_event = {
 				}
 			}
 		}
+
+		# Set a planet suitable for an attack planet
+		if = {
+			limit = {
+				egs_gigastructures = yes
+			}
+			if = {
+				limit = {
+					NOT = {
+						any_planet = {
+							solar_system = { egs_select_all_relevant_systems = yes }
+							planet_size >= 24
+							OR = {
+								is_planet_class = pc_barren
+								is_planet_class = pc_barren_cold
+							}
+						}
+					}
+				}
+				random_planet = {
+					limit = {
+						solar_system = { 
+							egs_select_all_relevant_systems = yes 
+							egs_home_system = no
+						}
+						OR = {
+							is_planet_class = pc_barren
+							is_planet_class = pc_barren_cold
+						}						
+					}
+					set_planet_size = 25
+				}
+			}
+		}
 		
 		country_event = { id = extragalactic_cluster.100 days = 30 }
 	}

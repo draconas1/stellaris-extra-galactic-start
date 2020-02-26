@@ -1,0 +1,13 @@
+﻿l_french:
+  civic_egs:0 "Extra Galatic Start"
+  civic_egs_desc:0 "Start in an Extra-Galactic cluster, like the L-system.\n\nA menu will appear on game start to let you customise your start.\n\nYour home system will be based on what you select in that menu, not what you pick here.\n\n§RWARNING\n\n§HYour Species preferred planet type MUST be compatible with this mod, or you will die on day 1!  Currently all Vanilla and Planetary Diversity planet classes are supported.  To add your favourite mod, contact the author§!"
+
+  d_egs_rw_motes:0 "Ringworld Maintenance Supply Node"
+  d_egs_rw_motes_desc:0 "Nobody knows how this thing works, only that it powers the infrastructure of the district, best not to fiddle with it"
+
+  d_egs_rw_crystal:0 "$d_egs_rw_motes$"
+  d_egs_rw_crystal_desc:0 "$d_egs_rw_motes_desc$"
+
+
+  civic_egs2:0 "Multiplayer Extra Galatic Start Player 2"
+  civic_egs2_desc:0 "§RMULTIPLAYER ONLY:§! To have a 2nd player start in an extra-galatic cluster, 1 player should take §H$civic_egs$§! while the 2nd player takes this civic.  Certain start options will be locked when there are 2 players.  The mod does not support more than 2 players in extra galatic clusters sorry."

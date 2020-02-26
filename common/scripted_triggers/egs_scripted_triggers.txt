@@ -98,6 +98,13 @@ egs_select_all_relevant_systems = {
 	}
 }
 
+egs_home_system = {
+	OR = {
+		has_star_flag = egs_empire_home_system
+		has_star_flag = egs_p2_empire_home
+	}
+}
+
 egs_county_player1 = {
 	root = {
 		has_civic = civic_egs
