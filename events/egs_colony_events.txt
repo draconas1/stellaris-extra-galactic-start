@@ -214,6 +214,13 @@ country_event = {
 				}
 				generate_start_buildings_and_districts = yes
 			}
+
+			if = {
+				limit = {
+					has_global_flag = planetarydiversity
+				}
+				generate_pd_start_deposits_and_blockers = yes
+			}
 		}
 
 		event_target:egs_home_system = {
@@ -302,6 +309,15 @@ country_event = {
 
 		country_event = {
 			id = egs_colony.100
+		}
+		country_event = {		
+			id = egs_pdengine.05
+		}
+		country_event = {
+			id = egs_pdengine.08
+		}
+		country_event = {
+			id = egs_pdengine.03
 		}
 	}
 }
@@ -466,7 +482,7 @@ country_event = {
 		}
 
 		country_event = { id = egs_colony.200 }
-		country_event = { id = egs_colony.400 }
+		country_event = { id = egs_gpm_engine.400 }
 	}
 }
 
@@ -815,156 +831,6 @@ country_event = {
 				has_star_flag = egs_ringworld
 			}
 			set_star_flag = ring_world_built
-		}
-	}
-}
-
-# Modification of guillis primary spawn event because it only fires once
-country_event = {
-	id = egs_colony.400
-	is_triggered_only = yes
-	hide_window = yes
-	trigger = {
-		has_global_flag = guillis_planet_modifiers_active
-	}
-	immediate = {
-		country_event = { id = gpm_game_start.1 }
-		country_event = { id = gpm_game_start.2 }
-		country_event = { id = gpm_game_start.3 }
-		country_event = { id = gpm_game_start.4 }
-		country_event = { id = gpm_game_start.5 }
-
-		country_event = { id = gpm_colony.4000 }
-
-
-		every_planet = {
-			limit = {
-				solar_system = {
-					egs_select_all_relevant_systems = yes
-				}
-			}
-
-			# Check for Ego the living world system
-			if = { limit = { solar_system = { has_star_flag = gpm_guardians_ego_system } }
-				planet_event = { id = gpm_guardian.1 days = 1 } # spawn Ego
-			}
-
-			# special sol stuff
-			if = {
-				limit = {
-					solar_system = {
-						has_star_flag = sol_system
-						NOT = { has_star_flag = gpm_oppertunity_lives }
-					}
-				}
-				solar_system = {
-					set_star_flag = gpm_oppertunity_lives
-					random_system_planet = {
-						limit = {
-							is_capital = no
-							is_ringworld = no
-							is_asteroid = no
-							is_star = no
-							# has_modifier = terraforming_candidate 
-							is_planet_class = pc_barren
-							is_moon = no
-						}
-						add_modifier = { modifier = gpm_oppertunity days = -1 }
-					}
-				}
-			}
-
-			# Primary check to exclude planets and/or systems entirely
-			if = {
-				limit = {
-					solar_system = { 
-						NOT = { has_star_flag = gpm_guardians_ego_system }
-					}
-				}
-
-				# Encounter fallen empire planer: spawn modifiers
-				if = {
-					limit = {
-						exists = owner
-						OR = {
-							gpm_is_planet_habitable = yes
-							gpm_is_planet_machine = yes
-							gpm_is_planet_ringworld = yes
-							gpm_is_planet_habitat = yes
-						}
-						is_fallen_empire_planet = yes
-						NOT = { has_global_flag = gpm_modifiers_fallen_empire_disabled }
-					}
-					planet_event = { id = gpm_spawn_engine.1 days = 5}	# Fallen Empire Planet Modifiers + Effects
-				}
-				
-				# Encounter regular planet: spawn modifiers
-				if = {
-					limit = {
-						NOR = {
-							gpm_is_planet_star = yes 
-							gpm_is_planet_asteroid = yes
-							gpm_is_planet_ringworld = yes
-							AND = {
-								is_capital = yes
-								owner = { NOT = { is_country_type = primitive } }
-							}
-							AND = {
-								exists = owner
-								is_fallen_empire_planet = yes
-								OR = {
-									is_colony = yes
-									is_capital = yes
-								}
-							}
-						}
-					}
-
-					# first we roll for a planetary ring. Low low chance. This is done here to keep the average rings the same regardless of nr of modifiers spawned.
-					# compatibility with other planetary rings in mods will be added here
-	
-					planet_event = { id = gpm_spawn_engine.2 days = 2 }	# Standard Planet Modifiers + Effects
-				}
-				
-				# Encounter asteroid: spawn modifiers
-				if = {
-					limit = {
-						gpm_is_planet_asteroid = yes
-					}
-					planet_event = { id = gpm_spawn_engine.3 days = 3 }	# Asteroid Modifiers + Effects
-				}
-				
-				# Encounter star: spawn modifiers
-				if = {
-					limit = {
-						gpm_is_planet_star = yes
-					}
-					planet_event = { id = gpm_spawn_engine.4 days = 3 }	# Star Modifiers + Effects
-				}
-
-				# Encounter ringworld: spawn modifiers
-				if = {
-					limit = {
-						gpm_is_planet_ringworld = yes
-						solar_system = {
-							NOT = { exists = space_owner }
-						}
-						NOT = { has_global_flag = gpm_modifiers_ringworlds_disabled }
-					}
-					planet_event = { id = gpm_spawn_engine.6 days = 4 }	# Ringworld Modifiers + Effects
-				}
-			
-				# Remove x% of uncontrolled space mineral and energy deposits from specific planets to balance out increased deposit spawns.
-				if = {
-					limit = {
-						solar_system = {
-							NOT = { exists = space_owner }
-						}
-						NOT = { has_global_flag = gpm_planetary_rings_disabled }
-					}
-					gpm_deposit_reduction_generator = yes
-				}
-			}
 		}
 	}
 }
