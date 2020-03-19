@@ -72,7 +72,7 @@
     egs_menu.600.option.yes.on:0 "§Y$egs_menu.600.option.yes$§!"
 
     egs_menu.700.name:0 "Spawn All Extra Galactic Clusters"
-    egs_menu.700.desc:0 "Do you want to spawn ALL the extra-galactic clusters\n\nThey will spawn in one at a time over the course of the first year, ending with the Hexagon Cluster, there will be game lag every time one spawns.\n\nThese clusters are taken entirely from Extra-Galactic clusters mod, with all their mid->late game goodies, monsters and megastrctures inside.  The only changes are their galactic location and their access methods."
+    egs_menu.700.desc:0 "Do you want to spawn ALL the extra-galactic clusters\n\nThey will spawn in one at a time over the course of the first year, ending with the Hexagon Cluster, there will be game lag every time one spawns.\n\nThese clusters are taken entirely from Extra-Galactic clusters mod, with all their mid->late game goodies, monsters and megastrctures inside.  The only changes are their galactic location and their access methods.!\n\n§HYou May experience significant lag and freezes throughout the first year until late August when the Hexagon cluster spawns in§!"
     egs_menu.700.option.no:0 "No extra clusters"
     egs_menu.700.option.yes:0 "Spawn all the clusters"
     egs_menu.700.option.no.on:0 "§Y$egs_menu.700.option.no$§!"

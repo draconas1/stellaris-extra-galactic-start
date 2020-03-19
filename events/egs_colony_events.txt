@@ -92,6 +92,16 @@ country_event = {
 			smart_match_planet_class = yes
 		}
 
+		#setup system modifiers for SI
+		if = {
+			limit = {
+				has_global_flag = retile_active 
+			}
+			country_event = {
+				id = egs_retile_generate.4
+			}
+		}
+
 
 		# Set up the spaceport
 		if = {
@@ -135,7 +145,6 @@ country_event = {
 				}
 			}
 		}
-		
 
 		# Set up the capital planet
 		event_target:egs_home_planet = {
@@ -144,10 +153,12 @@ country_event = {
 			remove_planet_flag = starting_mining_target
 			remove_planet_flag = starting_research_target
 			clear_planet_modifiers = yes
+			clear_blockers = yes
 			set_owner = root
 			set_controller = root
 			set_capital = yes
 			if = {
+				# Ringworld setup
 				limit = {
 					OR = {
 						has_planet_flag = egs_ringworld
@@ -155,38 +166,71 @@ country_event = {
 					}
 				}
 				generate_start_buildings_and_districts = yes
-				remove_all_districts = yes
-
 				if = { 
 					limit = {
 						has_global_flag = retile_active 
-					}				
+					}
 
-					add_district = district_rw_generator
-					add_district = district_rw_mining
-					
-					if = {
+					# always add 3 modules
+					set_variable = { which = module_count value = 3 }
+							
+					if = {	# robots
 						limit = {
-							root = { is_machine_empire = yes }							
+							owner = {
+								is_machine_empire = yes
+							}
 						}
-						#TODO NO ROBOTS IN SI YET
-						add_district = district_rw_hive
-						add_district = district_rw_generator
+						if = {
+							limit = { owner = { OR = {
+								has_country_flag = biological_subspecies
+								has_country_flag = plantoid_subspecies
+							} } }
+							add_deposit = retile_module_generator_active
+							add_deposit = retile_module_farm_active
+							add_deposit = retile_module_mine_active
+						} else = {
+							add_deposit = retile_module_generator_active
+							add_deposit = retile_module_generator_active
+							add_deposit = retile_module_mine_active
+						}
 					}
-					else = {
-						add_district = district_rw_farming
-					}
-					if = {
+
+					if = { # Lithoids
 						limit = {
-							root = {  is_hive_empire = yes }
+							owner = {
+								is_lithoid_empire = yes
+							}
 						}
-						add_district = district_rw_hive
+						if = {
+							limit = { owner = { OR = {
+								has_country_flag = biological_subspecies
+								has_country_flag = plantoid_subspecies
+							} } }
+							add_deposit = retile_module_generator_active
+							add_deposit = retile_module_farm_active
+							add_deposit = retile_module_mine_active
+						} else = {
+							add_deposit = retile_module_generator_active
+							add_deposit = retile_module_mine_active
+							add_deposit = retile_module_mine_active
+						}
 					}
-					else = {
-						add_district = district_rw_city
+
+					if = { # Biologicals/Plants
+						limit = {
+							owner = {
+								is_lithoid_empire = no
+								is_machine_empire = no
+							}
+						}
+						add_deposit = retile_module_generator_active
+						add_deposit = retile_module_farm_active
+						add_deposit = retile_module_mine_active
 					}
+
 				}
-				else = {					
+				else = {		
+					remove_all_districts = yes			
 					if = {
 						limit = {
 							root = {
@@ -203,6 +247,13 @@ country_event = {
 				}
 			}
 			else = {
+				#Normal Setup
+				if = {
+					limit = {
+						has_global_flag = retile_active 
+					}
+					#reroll_deposits = yes
+				}
 				if = {
 					limit = {
 						has_planet_flag = planet_earth
@@ -212,15 +263,18 @@ country_event = {
 				else = {
 					generate_start_deposits_and_blockers = yes
 				}
-				generate_start_buildings_and_districts = yes
-			}
 
-			if = {
-				limit = {
-					has_global_flag = planetarydiversity
+				if = {
+					limit = {
+						has_global_flag = planetarydiversity
+					}
+					generate_pd_start_deposits_and_blockers = yes
 				}
-				generate_pd_start_deposits_and_blockers = yes
+
+				generate_start_buildings_and_districts = yes
+				
 			}
+			generate_start_pops = yes
 		}
 
 		event_target:egs_home_system = {
@@ -263,13 +317,6 @@ country_event = {
 			set_location = event_target:egs_home_system_loc
 		}
 		event_target:previous_home_planet = {
-			every_owned_pop = {
-				resettle_pop = {
-					pop = this
-					planet = event_target:egs_home_planet
-				}
-				unemploy_pop = yes
-			}
 			remove_planet = yes
 		}
 		event_target:previous_home_system = {
@@ -292,10 +339,14 @@ country_event = {
 				set_name = random
 			}
 		}
-		every_owned_pop_species = {
-			set_species_homeworld = event_target:egs_home_planet
-		}
 
+		owner_species = { 
+			set_species_homeworld = event_target:egs_home_planet 
+		}
+		every_owned_pop_species = {
+            set_species_homeworld = event_target:egs_home_planet
+        }
+		
 		if = {
 			limit = {
 				has_country_flag = EGS_START_RINGWORLD

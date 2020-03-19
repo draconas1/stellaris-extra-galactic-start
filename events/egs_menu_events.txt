@@ -22,7 +22,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		has_civic = civic_egs
+		has_origin = origin_egs
 	}
 
 	option = {
@@ -92,7 +92,7 @@ country_event = {
 		hidden_effect = {
 			random_country = {
 				limit = {
-					has_civic = civic_egs2
+					has_origin = origin_egs2
 				}
 				if = {
 					limit = {
@@ -119,7 +119,7 @@ country_event = {
 
 	trigger = {
 		is_ai = no
-		has_civic = civic_egs
+		has_origin = origin_egs
 	}
 
 	immediate = {
@@ -154,7 +154,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		has_civic = civic_egs
+		has_origin = origin_egs
 	}
 
 	immediate = {
@@ -888,8 +888,8 @@ country_event = {
 	trigger = {
 		owner = {
 			OR = { 
-				has_civic = civic_egs
-				has_civic = civic_egs2
+				has_origin = origin_egs
+				has_origin = origin_egs2
 			}
 		}
 	}
@@ -914,8 +914,8 @@ planet_event = {
 	trigger = {
 		owner = {
 			OR = { 
-				has_civic = civic_egs
-				has_civic = civic_egs2
+				has_origin = origin_egs
+				has_origin = origin_egs2
 			}
 		}
 		NOR = {

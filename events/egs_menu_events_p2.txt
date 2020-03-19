@@ -29,7 +29,7 @@ country_event = {
 
 	trigger = {
 		is_ai = no
-		has_civic = civic_egs2
+		has_origin = origin_egs2
 	}
 
 	immediate = {
