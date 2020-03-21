@@ -1,7 +1,7 @@
 [h1]Start in an Isolated Extra-Galactic Constellations[/h1]
 This mod takes the excellent constellations from [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1523039190]Extra Galactic Clusters[/url] and makes it possible to have any of them as a starting location for your civilisation (Note only the Constellation, not the contents).  You can also spawn the other EGC's for your civ to later find and explore.  
 
-It is done via a new civic: Extra-Galatic Cluster.
+It is done via a new Origin: Extra-Galatic Cluster.
 If your civilisation takes that then a menu will appear on game start for you to customise your cluster.  The AI never will. 
 
 [h1]Options[/h1]
@@ -27,13 +27,11 @@ If you select for the rest of the Extra Galatic Cluster to spawn in they will sp
 
 This mod was also inspired by [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1796380598]Isolated Cluster Start[/url]
 
-In multiplayer Player 1 should take the regular EGS civic, player 2 should take the "Mulitplayer EGS" civic, which has the grey default icon.  See [url=https://steamcommunity.com/workshop/filedetails/discussion/1999512770/1751275263836781191/]here[/url] for details.
+In multiplayer Player 1 should take the regular EGS origin, player 2 should take the "Mulitplayer EGS" origin.  See [url=https://steamcommunity.com/workshop/filedetails/discussion/1999512770/1751275263836781191/]here[/url] for details.
 
 [h1]Future Work[/h1][list]
 [*] Adjust Ring World Start to have 3 repairable sections and 1 habitable (post 2.6)
 [/list]
-
-Post 2.6 this will become an origin so become incompatible with all other origins, for now you can enjoy it with the vanilla origin civic starts.
 
 [h1]Compatibility[/h1]
 No vanilla files were harmed in the making of this mod, but as it does a lot of work shifting a colony will have issues with other mods that do the same or things that add planet classes at starting
@@ -41,9 +39,10 @@ No vanilla files were harmed in the making of this mod, but as it does a lot of 
 [list]
 [*]This mod is incompatible with things that change the planet/system start, and so has been disabled for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1743133825]Starborn[/url]
 [*]It is compatible with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=819148835]Planetary Diversity[/url] planet starts, except for tidally locked.  It will cheerfully ignore the PD "habitable planets to be same type instead of exact match" option.  
-[*]Compatible with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=865040033]Guillis Planet Modifiers[/url]
 [*]Completely compatible with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1891758612]Stellaris Immortal[/url] and the resulting cluster and planets will use SI values if SI is installed.
 [/list]
+
+Currently [url=https://steamcommunity.com/sharedfiles/filedetails/?id=865040033]Guillis Planet Modifiers[/url] Modifiers do not appear on EGS planets due to updates to GPM for 2.6, will fix in a bit.
 
 [h1]HELP!  I DIED ON DAY 1[/h1]
 This is most frequently caused by a modded species home planet, I have to code every home planet manually.  If you are a non vanilla, non planetary diversity planet type for your homeworld preference then I can't set it when you move.  Post a comment letting me know the planet type and which mod it came from and I'll add it.  
