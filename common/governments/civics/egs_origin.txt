@@ -12,12 +12,10 @@ origin_egs = {
 		}
 	}
 
-	max_once_global = yes
-	advanced_start = yes
 	description = "origin_egs_effects"
-	random_weight = {
-		base = 0
-	}
+
+	# No random weights because weight = 0 does not actually mean 0 and the AI still takes it.
+	# No random_weight block removes it from the lists
 }
 
 origin_egs2 = {
@@ -34,10 +32,8 @@ origin_egs2 = {
 		}
 	}
 
-	advanced_start = yes
-	max_once_global = yes
 	description = "origin_egs2_effects"
-	random_weight = {
-		base = 0
-	}
+
+	# No random weights because weight = 0 does not actually mean 0 and the AI still takes it.
+	# No random_weight block removes it from the lists
 }
