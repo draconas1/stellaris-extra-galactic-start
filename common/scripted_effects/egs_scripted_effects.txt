@@ -31,6 +31,11 @@ clear_egs_clusterlink_flags = {
 	remove_country_flag = EGS_LINK_L_GATE
 }
 
+clear_egs_diplo_hack_flags = {
+	remove_country_flag = EGS_DIPLO_HACK_YES
+	remove_country_flag = EGS_DIPLO_HACK_NO
+}
+
 
 clear_egs_resource_flags = {
 	remove_country_flag = EGS_SR_YES

@@ -1,4 +1,4 @@
-﻿l_english:
+﻿l_polish:
     egs_menu.1.name:0 "Choose Extra Galatic Start Options"
     egs_menu.1.desc:0 "These options let you customise your extra galaxy cluster start.\n\n§RThe move will happen AFTER day 1, so you need to start time.  The game may lag when moving you§!\n\nDon't forget to reassign your govenor!\n\n\nNote: When claiming systems you may find that the borders are not rendered, this is a Stellaris issue (often happens with the L-Cluster), and they should render after reloading the game.!\n\n§HLarge and Huge Galaxies may experience significant lag when moving§!"
     egs_menu.1.desc.retile:0 "$egs_menu.1.desc$"
@@ -7,7 +7,6 @@
     egs_menu.1.option.kerbal:0 "Share cluster with the Kerbal Space Program?"
     egs_menu.1.option.giga:0 "Guarenteed Gigastructural Engineering stars?"
     egs_menu.1.option.link:0 "How the cluster will link to the galaxy?"
-    egs_menu.1.option.diplomacy:0 "Hack fix for PDX distance weighting underflow bug"
     egs_menu.1.option.sr:0 "Guarentee presence of Strategic Resources in cluster?"
     egs_menu.1.option.egc:0 "Spawn all Constellations?"
     egs_menu.1.option.egc_connectivity:0 "How other clusters will link to the galaxy"
@@ -38,7 +37,7 @@
     egs_menu.200.option.random.on:0 "§Y$egs_menu.200.option.random$§!"
     egs_menu.200.option.randombinry.on:0 "§Y$egs_menu.200.option.randombinry$§!"
     egs_menu.200.option.randomtrinary.on:0 "§Y$egs_menu.200.option.randomtrinary$§!"
-    egs_menu.200.option.sol.on:0 "§Y$egs_menu.200.option.sol$§!"
+    egs_menu.200.option.sol.on:0 "§Yegs_menu.200.option.sol$§!"
     egs_menu.200.option.deneb.on:0 "§Y$egs_menu.200.option.deneb$§!"
     egs_menu.200.option.ringworld.on:0 "§Y$egs_menu.200.option.ringworld$§!"
 
@@ -90,12 +89,6 @@
     egs_menu.800.option.roundrobin.on:0 "§Y$egs_menu.800.option.roundrobin$§!"
     egs_menu.800.option.lgate.on:0 "§Y$egs_menu.800.option.lgate$§!"
 
-    egs_menu.900.name:0 "Leave Original System Intact"
-    egs_menu.900.desc:0 "There is a PDX underflow bug where if you have no foothold in the main galaxy the "distance" diplomatic penalty goes so low it underflows into a massive bonus and the AI becomes despirate to be your friend.  This is a hack fix while I try to figure out a better one.\nYou will keep control of your original system and diplomatic weight will be calculated to there."
-    egs_menu.900.option.no:0 "Release Original System (Default)"
-    egs_menu.900.option.yes:0 "Maintain Control of Original System"
-    egs_menu.900.option.no.on:0 "§Y$egs_menu.900.option.no$§!"
-    egs_menu.900.option.yes.on:0 "§Y$egs_menu.900.option.yes$§!"
 
     egs_menu.10.name:0 "UNKNOWN PLANET TYPE DETECTED"
     egs_menu.10.desc:0 "The chosen home planet preference of your species comes from an unknown mod.  It is likely that you will be destroyed when you move cluster.\n\nPlease contact the mod author, letting them know the planet class and the mod it comes from and he will try to add it.\n\nIn the meantime select a vanilla or planetary diversity planet class."

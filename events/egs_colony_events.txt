@@ -327,18 +327,22 @@ country_event = {
 				}
 				set_name = solar_system
 			}
-			every_fleet_in_system = {
-				delete_fleet = this
-			}
+			
 			remove_star_flag = sol
 			remove_star_flag = deneb_system
-			every_system_planet = {
-				limit = {
-					is_star = no
-				}
-				set_name = random
-			}
 		}
+
+		if = {
+			limit = {
+				NOT = { has_country_flag = EGS_DIPLO_HACK_YES }
+			}
+			event_target:previous_home_system = {
+				every_fleet_in_system = {
+					delete_fleet = this
+				}
+            }
+		}
+
 
 		owner_species = { 
 			set_species_homeworld = event_target:egs_home_planet 
