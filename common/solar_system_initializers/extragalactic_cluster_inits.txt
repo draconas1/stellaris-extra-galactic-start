@@ -3140,7 +3140,6 @@ atronach_cluster_01 = {
       }
       create_country = {
         name = "United Kiith of Kharak"
-        adjective = "Kharakan"
         authority = "auth_democratic"
         day_zero_contact = no
         civics = {

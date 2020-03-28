@@ -191,7 +191,6 @@ country_event = {
 }
 
 
-
 #Cluster Menu
 country_event = {
 	id = egs_menu.100    

@@ -740,10 +740,6 @@ egs_neighbor_t1_first_colony = {
 		}
 	}
 	
-	neighbor_system = {
-		hyperlane_jumps = { min = 1 max = @jumps }
-		initializer = "neighbor_t2"
-	}
 }
 
 egs_neighbor_t2_second_colony = {

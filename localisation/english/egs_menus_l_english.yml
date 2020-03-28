@@ -121,3 +121,13 @@
     egs_menu_p2.200.option.sol.on:0 "§Yegs_menu.200.option.sol$§!"
     egs_menu_p2.200.option.deneb.on:0 "§Y$egs_menu.200.option.deneb$§!"
     egs_menu_p2.200.option.ringworld.on:0 "§Y$egs_menu.200.option.ringworld$§!"
+
+
+    edict_egs_egc_default:0 "Spawn Extra Galactic Clusters: Default"
+    edict_egs_egc_default_desc:0 "This will spawn all the extra galatic clusters over the next 8 months, there will be game lag spikes as each one spawns.\nEach will be linked by some wormholes to the main galaxy."
+
+    edict_egs_egc_round_robin:0 "Spawn Extra Galactic Clusters: Round Robin"
+    edict_egs_egc_round_robin_desc:0 "This will spawn all the extra galatic clusters over the next 8 months, there will be game lag spikes as each one spawns.\nEach will be linked by a single wormhole to the main galaxy and 2 other wormholes to other clusters."
+
+    edict_egs_egc_lgate:0 "Spawn Extra Galactic Clusters: L-Gate"
+    edict_egs_egc_lgate_desc:0 "This will spawn all the extra galatic clusters over the next 8 months, there will be game lag spikes as each one spawns.\nEach will have a single L-Gate."

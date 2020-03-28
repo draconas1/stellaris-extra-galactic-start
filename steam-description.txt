@@ -39,10 +39,11 @@ No vanilla files were harmed in the making of this mod, but as it does a lot of 
 [list]
 [*]This mod is incompatible with things that change the planet/system start, and so has been disabled for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1743133825]Starborn[/url]
 [*]It is compatible with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=819148835]Planetary Diversity[/url] planet starts, except for tidally locked.  It will cheerfully ignore the PD "habitable planets to be same type instead of exact match" option.  
+[*]Compatible with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=865040033]Guillis Planet Modifiers[/url].
 [*]Completely compatible with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1891758612]Stellaris Immortal[/url] and the resulting cluster and planets will use SI values if SI is installed.
 [/list]
 
-Currently [url=https://steamcommunity.com/sharedfiles/filedetails/?id=865040033]Guillis Planet Modifiers[/url] Modifiers do not appear on EGS planets due to updates to GPM for 2.6, will fix in a bit.
+
 
 [h1]HELP!  I DIED ON DAY 1[/h1]
 This is most frequently caused by a modded species home planet, I have to code every home planet manually.  If you are a non vanilla, non planetary diversity planet type for your homeworld preference then I can't set it when you move.  Post a comment letting me know the planet type and which mod it came from and I'll add it.  

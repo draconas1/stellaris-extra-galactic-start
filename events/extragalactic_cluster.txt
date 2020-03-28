@@ -18,6 +18,49 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = extragalactic_cluster.101
+	hide_window = yes
+	fire_only_once = yes
+	is_triggered_only = yes	
+	immediate = {
+		set_global_flag = EGS_EGC_SPAWNED
+		set_country_flag = EGS_EGC_CONNECTION_DEFAULT
+		country_event = {
+			id = extragalactic_cluster.5
+		}
+	}
+}
+
+country_event = {
+	id = extragalactic_cluster.102
+	hide_window = yes
+	fire_only_once = yes
+	is_triggered_only = yes	
+	immediate = {
+		set_global_flag = EGS_EGC_SPAWNED
+		set_country_flag = EGS_EGC_CONNECTION_ROUND_ROBIN
+		country_event = {
+			id = extragalactic_cluster.5
+		}
+	}
+}
+
+country_event = {
+	id = extragalactic_cluster.103
+	hide_window = yes
+	fire_only_once = yes
+	is_triggered_only = yes	
+	immediate = {
+		set_global_flag = EGS_EGC_SPAWNED
+		set_country_flag = EGS_EGC_CONNECTION_L_GATE
+		country_event = {
+			id = extragalactic_cluster.5
+		}
+	}
+}
+
+
 # Spawn the Hexagon Cluster
 country_event = {
 	id = extragalactic_cluster.1

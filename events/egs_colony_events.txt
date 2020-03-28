@@ -264,13 +264,6 @@ country_event = {
 					generate_start_deposits_and_blockers = yes
 				}
 
-				if = {
-					limit = {
-						has_global_flag = planetarydiversity
-					}
-					generate_pd_start_deposits_and_blockers = yes
-				}
-
 				generate_start_buildings_and_districts = yes
 				
 			}
@@ -365,14 +358,37 @@ country_event = {
 		country_event = {
 			id = egs_colony.100
 		}
-		country_event = {		
-			id = egs_pdengine.05
+
+		if = {
+			limit = {
+				has_global_flag = planetarydiversity
+			}
+			country_event = {
+				id = egs_pdengine.03
+			}
+			country_event = {		
+				id = egs_pdengine.05
+			}
+			country_event = {
+				id = egs_pdengine.08
+			}
 		}
-		country_event = {
-			id = egs_pdengine.08
-		}
-		country_event = {
-			id = egs_pdengine.03
+
+		# put GPM modifiers on everything
+		if = {
+			limit = {
+				has_global_flag = guillis_planet_modifiers_active
+			}
+			every_system = {
+				limit = {
+					egs_select_all_relevant_systems = yes
+				}
+				every_system_planet = {
+					planet_event = {
+						id = gpm_engine.1
+					}
+				}
+			}
 		}
 	}
 }
@@ -537,7 +553,6 @@ country_event = {
 		}
 
 		country_event = { id = egs_colony.200 }
-		country_event = { id = egs_gpm_engine.400 }
 	}
 }
 

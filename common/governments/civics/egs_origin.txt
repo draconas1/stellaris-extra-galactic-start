@@ -2,16 +2,6 @@ origin_egs = {
 	is_origin = yes
 	icon = "gfx/interface/icons/origins/origins_default.dds"
 	picture = GFX_origin_egs
-	possible = {
-		civics = {
-			NOR = {
-				value = civic_the_void #dyson swarm
-				value = civic_starborn
-				value = origin_egs2
-			}
-		}
-	}
-
 	description = "origin_egs_effects"
 
 	# No random weights because weight = 0 does not actually mean 0 and the AI still takes it.
@@ -22,16 +12,6 @@ origin_egs2 = {
 	is_origin = yes
 	icon = "gfx/interface/icons/origins/origins_default.dds"
 	picture = GFX_origin_egs
-	possible = {
-		civics = {
-			NOR = {
-				value = civic_the_void #dyson swarm
-				value = civic_starborn
-				value = origin_egs
-			}
-		}
-	}
-
 	description = "origin_egs2_effects"
 
 	# No random weights because weight = 0 does not actually mean 0 and the AI still takes it.
