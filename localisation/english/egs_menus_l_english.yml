@@ -27,13 +27,14 @@
     egs_menu.100.option.bigdipper.on:0 "§Y$egs_menu.100.option.bigdipper$§!"
 
     egs_menu.200.name:0 "Choose Starting System Initaliser"
-    egs_menu.200.desc:0 "Works just the same as the option on the start screen, setting the details of your starting system.\n\nAvailable Choices:\n\nRandom System (default)\nRandom Binary\nRandom Trinary\nSol\nDeneb\nRing World: Start on a ring world.  You will have additional starting funds, as the ringworlds costs are greater than a starting empire can provide.  Unlike ZOFE there are no story events around this, you're just there."
+    egs_menu.200.desc:0 "Works just the same as the option on the start screen, setting the details of your starting system.\n\nAvailable Choices:\n\nRandom System (default)\nRandom Binary\nRandom Trinary\nSol\nDeneb\nRing World: Start on a ring world.  You will have additional starting funds, as the ringworlds costs are greater than a starting empire can provide.  Unlike ZOFE there are no story events around this, you're just there.\nStarborn: Same as the Starborn Origin.  (Requires the Starborn Mod)"
     egs_menu.200.option.random:0 "Random System"
     egs_menu.200.option.randombinry:0 "$custom_starting_init_03_NAME$"
     egs_menu.200.option.randomtrinary:0 "$custom_starting_init_01_NAME$"
     egs_menu.200.option.sol:0 "Sol"
     egs_menu.200.option.deneb:0 "Deneb"
     egs_menu.200.option.ringworld:0 "Ring World"
+    egs_menu.200.option.starborn:0 "Starborn"
 
     egs_menu.200.option.random.on:0 "§Y$egs_menu.200.option.random$§!"
     egs_menu.200.option.randombinry.on:0 "§Y$egs_menu.200.option.randombinry$§!"
@@ -41,6 +42,7 @@
     egs_menu.200.option.sol.on:0 "§Y$egs_menu.200.option.sol$§!"
     egs_menu.200.option.deneb.on:0 "§Y$egs_menu.200.option.deneb$§!"
     egs_menu.200.option.ringworld.on:0 "§Y$egs_menu.200.option.ringworld$§!"
+    egs_menu.200.option.starborn.on:0 "§Y$egs_menu.200.option.starborn$§!"
 
     egs_menu.300.name:0 "Enable Kerbal Space Program"
     egs_menu.300.desc:0 "An homage to the ExtraGalatic Clusters mod from where the cluster spawn coordinates have been taken.\n\nYou can share your cluster with the primitive Kerbal Space Program\n\nAre they the source of the devestation that caused the Great Rift?  Are they just crazy?  Will they join the galatic stage or wipe themselves out?  Who knows"
@@ -57,7 +59,7 @@
     egs_menu.400.option.yes.on:0 "§Y$egs_menu.400.option.yes$§!"
 
     egs_menu.500.name:0 "Choose Cluster Connectivity"
-    egs_menu.500.desc:0 "Select how you want your cluster to connect to the rest of the galaxy\n\nA single wormhole\nServal Wormholes - these will go to random points in the galaxy and be based in random systems in the cluster.\nL-Gate: you will have an L-Gate node that can be researched and opened to Terminal Ingress as normal \n\n§RIn the case of L-Gate you will know about all L-Gate systems in the galaxy.  Check the main galaxy carefully, the L-Gate icon may not appear (because you haven't visited it), but you should see the system name (it will be a black hole) and can target it as a destination.§!"    
+    egs_menu.500.desc:0 "Select how you want your cluster to connect to the rest of the galaxy\n\nA single wormhole\nServal Wormholes - these will go to random points in the galaxy and be based in random systems in the cluster.\nL-Gate: you will have an L-Gate node that can be researched and opened to Terminal Ingress as normal (Requires Distant Stars DLC) \n\n§RIn the case of L-Gate you will know about all L-Gate systems in the galaxy.  Check the main galaxy carefully, the L-Gate icon may not appear (because you haven't visited it), but you should see the system name (it will be a black hole) and can target it as a destination.§!"    
     egs_menu.500.option.wormhole:0 "Single Wormhole"
     egs_menu.500.option.manywormhole:0 "Many Wormholes"
     egs_menu.500.option.lgate:0 "L-Gate"
@@ -73,17 +75,17 @@
     egs_menu.600.option.yes.on:0 "§Y$egs_menu.600.option.yes$§!"
 
     egs_menu.700.name:0 "Spawn All Extra Galactic Clusters"
-    egs_menu.700.desc:0 "Do you want to spawn ALL the extra-galactic clusters\n\nThey will spawn in one at a time over the course of the first year, ending with the Hexagon Cluster, there will be game lag every time one spawns.\n\nThese clusters are taken entirely from Extra-Galactic clusters mod, with all their mid->late game goodies, monsters and megastrctures inside.  The only changes are their galactic location and their access methods.!\n\n§HYou May experience significant lag and freezes throughout the first year until late August when the Hexagon cluster spawns in§!"
+    egs_menu.700.desc:0 "Do you want to spawn ALL the extra-galactic clusters\n\nThey will spawn in one at a time over the course of the first year, ending with the Hexagon Cluster, there will be game lag every time one spawns.\n\nThese clusters are taken entirely from Extra-Galactic clusters mod, with all their mid->late game goodies, monsters and megastrctures inside.  The only changes are their galactic location and their access methods.!\n\n§HYou may experience significant lag and freezes throughout the first year until late August when the Hexagon cluster spawns in§!"
     egs_menu.700.option.no:0 "No extra clusters"
     egs_menu.700.option.yes:0 "Spawn all the clusters"
     egs_menu.700.option.no.on:0 "§Y$egs_menu.700.option.no$§!"
     egs_menu.700.option.yes.on:0 "§Y$egs_menu.700.option.yes$§!"
 
     egs_menu.800.name:0 "Choose Extra Galactic Cluster Connectivity"
-    egs_menu.800.desc:0 "If you have enabled all the extra galactic clusters, choose how they will connect to the galaxy\n\nDefault: As per the original mod: wormholes to random systems\nRound Robin: 1 wormhole per cluster goes to the main galaxy, 2 will go to other clusters in a ring, Your spawning cluster will have a wormhole to a random other cluster in addition to its connection to the rest of the galaxy\nL-gate: they all have a single L-gate connection"    
+    egs_menu.800.desc:0 "If you have enabled all the extra galactic clusters, choose how they will connect to the galaxy\n\nSingle Wormhole: Each cluster has one wormhole to random system in the galaxy\nRound Robin: 1 wormhole per cluster goes to the main galaxy, 2 will go to other clusters in a ring, Your spawning cluster will have a wormhole to a random other cluster in addition to its connection to the rest of the galaxy\nL-gate: they all have a single L-gate connection (Requires Distant Stars DLC)\n\n§HWARNING: Round Robin can cause game breaking pathing issues and crippling lag in the mid-late game on large and huge galaxies.  You are strongly advised to only use it on medium or smaller galaxies§!"    
         
     egs_menu.800.option.noegc:0 "You need to enable additional extra-galatic clusters"
-    egs_menu.800.option.default:0 "Default"
+    egs_menu.800.option.default:0 "Single Wormhole"
     egs_menu.800.option.roundrobin:0 "Wormhole Round Robin"
     egs_menu.800.option.lgate:0 "L-Gate"
     egs_menu.800.option.default.on:0 "§Y$egs_menu.800.option.default$§!"
@@ -127,7 +129,7 @@
     edict_egs_egc_default_desc:0 "This will spawn all the extra galatic clusters over the next 8 months, there will be game lag spikes as each one spawns.\nEach will be linked by some wormholes to the main galaxy."
 
     edict_egs_egc_round_robin:0 "Spawn Extra Galactic Clusters: Round Robin"
-    edict_egs_egc_round_robin_desc:0 "This will spawn all the extra galatic clusters over the next 8 months, there will be game lag spikes as each one spawns.\nEach will be linked by a single wormhole to the main galaxy and 2 other wormholes to other clusters."
+    edict_egs_egc_round_robin_desc:0 "This will spawn all the extra galatic clusters over the next 8 months, there will be game lag spikes as each one spawns.\nEach will be linked by a single wormhole to the main galaxy and 2 other wormholes to other clusters.\n\n§HWARNING: Round Robin can cause game breaking pathing issues and crippling lag in the mid-late game on large and huge galaxies.  You are strongly advised to only use it on medium or smaller galaxies§!"
 
     edict_egs_egc_lgate:0 "Spawn Extra Galactic Clusters: L-Gate"
     edict_egs_egc_lgate_desc:0 "This will spawn all the extra galatic clusters over the next 8 months, there will be game lag spikes as each one spawns.\nEach will have a single L-Gate."
