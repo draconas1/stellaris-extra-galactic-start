@@ -30,8 +30,6 @@ This mod was also inspired by [url=https://steamcommunity.com/sharedfiles/filede
 
 In multiplayer Player 1 should take the regular EGS origin, player 2 should take the "Mulitplayer EGS" origin.  See [url=https://steamcommunity.com/workshop/filedetails/discussion/1999512770/1751275263836781191/]here[/url] for details.
 
-To get the Starborn starti, you need my starborn mod: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1743133825]Starborn[/url]
-
 [h1]Future Work[/h1][list]
 [*] Adjust Ring World Start to have 3 repairable sections and 1 habitable (post 2.6)
 [/list]
@@ -41,6 +39,7 @@ No vanilla files were harmed in the making of this mod, but as it does a lot of 
 
 [list]
 [*]This mod is incompatible with things that change the planet/system start, there is a long description why in the discussions section
+[*]Supports [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1743133825]Starborn[/url] Habitat starts, for an improved Voidtouched starting.
 [*]It is compatible with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=819148835]Planetary Diversity[/url] planet starts, except for tidally locked.  It will cheerfully ignore the PD "habitable planets to be same type instead of exact match" option.  
 [*]Compatible with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=865040033]Guillis Planet Modifiers[/url].
 [*]Completely compatible with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1891758612]Stellaris Immortal[/url] and the resulting cluster and planets will use SI values if SI is installed.
