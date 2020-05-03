@@ -487,6 +487,9 @@ country_event = {
 			has_global_flag = starborn_installed
 			NOT = { has_country_flag = EGS_START_STARBORN }
 		}
+		allow = {
+			is_machine_empire = no
+		}
 		hidden_effect = {
 			clear_egs_start_system_flags = yes
 			set_country_flag = EGS_START_STARBORN
@@ -499,6 +502,9 @@ country_event = {
 		trigger = {
 			has_global_flag = starborn_installed
 			has_country_flag = EGS_START_STARBORN
+		}
+		allow = {
+			is_machine_empire = no
 		}
 		hidden_effect = {
 			clear_egs_start_system_flags = yes
