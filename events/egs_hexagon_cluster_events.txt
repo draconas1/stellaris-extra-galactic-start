@@ -594,9 +594,76 @@ country_event = {
 			from = event_target:egs_cluster_14
 			to = event_target:egs_cluster_07
 		}
+
+		country_event = {
+			id = egs_hexagon.2
+		}
+
 		set_spawn_system_batch = end
 		country_event = {
 			id = egs_colony.1
+		}
+	}
+}
+
+country_event = {
+	id = egs_hexagon.2
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_country_flag = EGS_SILLY_YES
+	}
+
+	immediate = {
+		#
+		# Base off Star 12 - unique worlds
+		#
+		# create the star
+		event_target:egs_cluster_12 = {
+			spawn_system = {
+				min_distance >= 25
+				max_distance <= 28
+				min_orientation_angle = 220
+				max_orientation_angle = 230
+				initializer = egs_pd_unique
+			}
+		}
+		# find the star
+		random_system = {
+			limit = {
+				has_star_flag = egs_silly
+			}
+			save_event_target_as = egs_cluster_silly
+			set_star_flag = egs_cluster
+		}
+
+
+		#
+		# Base off Star 11 - shroud worlds
+		#
+		# create the star
+		event_target:egs_cluster_11 = {
+			spawn_system = {
+				min_distance >= 25
+				max_distance <= 28
+				min_orientation_angle = 180
+				max_orientation_angle = 220
+				initializer = egs_pd_shroud
+			}
+		}
+		# find the star
+		random_system = {
+			limit = {
+				has_star_flag = egs_silly_shroud
+			}
+			save_event_target_as = egs_cluster_silly_shroud
+			set_star_flag = egs_cluster
+		}
+
+		add_hyperlane = {
+			from = event_target:egs_cluster_11
+			to = event_target:egs_cluster_silly_shroud
 		}
 	}
 }

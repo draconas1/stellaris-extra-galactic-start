@@ -37,6 +37,10 @@ clear_egs_diplo_hack_flags = {
 	remove_country_flag = EGS_DIPLO_HACK_NO
 }
 
+clear_egs_silly_flags = {
+	remove_country_flag = EGS_SILLY_YES
+	remove_country_flag = EGS_SILLY_NO
+}
 
 clear_egs_resource_flags = {
 	remove_country_flag = EGS_SR_YES
@@ -108,6 +112,12 @@ smart_match_planet_class = {
 				OR = {
 					is_planet_class = pc_habitat
 					is_planet_class = pc_ringworld_habitable
+					root = {
+						OR = {
+							has_country_flag = EGS_START_RINGWORLD
+							has_country_flag = EGS_START_STARBORN
+						}
+					}
 				}
 			}
 			event_target:egs_target_planet = {

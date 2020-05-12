@@ -4,6 +4,7 @@
     egs_menu.1.desc.retile:0 "$egs_menu.1.desc$"
     egs_menu.1.option.cluster:0 "Choose Extragalatic Constellation"
     egs_menu.1.option.system:0 "Choose Home System Details"
+    egs_menu.1.option.silly:0 "Add OP system of PD Unique Worlds"
     egs_menu.1.option.kerbal:0 "Share cluster with the Kerbal Space Program?"
     egs_menu.1.option.giga:0 "Guarenteed Gigastructural Engineering stars?"
     egs_menu.1.option.link:0 "How the cluster will link to the galaxy?"
@@ -99,8 +100,15 @@
     egs_menu.900.option.no.on:0 "§Y$egs_menu.900.option.no$§!"
     egs_menu.900.option.yes.on:0 "§Y$egs_menu.900.option.yes$§!"
 
+    egs_menu.1000.name:0 "Planetary Diversity and GPM OP Silliness"
+    egs_menu.1000.desc:0 "§HWARNING: Requires Planetary Diversity: Unique Worlds & Shroud Worlds MODS§!\n\nWhile I can check for PD, there is no way to check that you have the sub-mods for PD.  Thus if you use this without those mods you may get unpredictable behaviour!\n\nAdds some new systems to the Hex Cluster that have the Unique Worlds from Planetary Diversity, with the precursor modifiers from Guillis Planetary Modifiers on them\n\nVery OP, and quite silly.  \nOnly works with the hex cluster."
+    egs_menu.1000.option.no:0 "No OP Worlds"
+    egs_menu.1000.option.yes:0 "Spawn OP Worlds"
+    egs_menu.1000.option.no.on:0 "§Y$egs_menu.1000.option.no$§!"
+    egs_menu.1000.option.yes.on:0 "§Y$egs_menu.1000.option.yes$§!"
+
     egs_menu.10.name:0 "UNKNOWN PLANET TYPE DETECTED"
-    egs_menu.10.desc:0 "The chosen home planet preference of your species comes from an unknown mod.  It is likely that you will be destroyed when you move cluster.\n\nPlease contact the mod author, letting them know the planet class and the mod it comes from and he will try to add it.\n\nIn the meantime select a vanilla or planetary diversity planet class."
+    egs_menu.10.desc:0 "The chosen home planet preference of your species comes from an unknown mod.  It is likely that you will be destroyed when you move cluster.\n\nPlease contact the mod author, letting them know the planet class and the mod it comes from and he will try to add it.\n\nIn the meantime start a new game with a vanilla or planetary diversity planet class."
     egs_menu.10.option.close:0 "Ok"
 
     egs_menu_p2.1.name:0 "Choose Extra Galatic Start Options"

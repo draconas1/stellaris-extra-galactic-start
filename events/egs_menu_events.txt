@@ -42,6 +42,20 @@ country_event = {
 	option = {
 		trigger = {
 			egs_multiplayer = no
+			NOT = { has_global_flag = retile_active }
+			has_global_flag = planetarydiversity
+			has_global_flag = has_guillis_planet_modifiers_mod
+			has_country_flag = EGS_CLUSTER_HEXAGON
+		}
+		name = "egs_menu.1.option.silly"
+		hidden_effect = {
+			country_event = { id = egs_menu.1000 }
+		}
+	}
+
+	option = {
+		trigger = {
+			egs_multiplayer = no
 		}
 		name = "egs_menu.1.option.kerbal"
 		hidden_effect = {
@@ -138,6 +152,7 @@ country_event = {
 		set_country_flag = EGS_EGC_NO
 		set_country_flag = EGS_EGC_CONNECTION_DEFAULT
 		set_country_flag = EGS_DIPLO_HACK_NO
+		set_country_flag = EGS_SILLY_NO
 		if = {
 			limit = {
 				egs_multiplayer = yes
@@ -980,6 +995,64 @@ country_event = {
 	}
 }
 
+
+
+# Enable Silliness
+country_event = {
+	id = egs_menu.1000    
+	title = "egs_menu.1000.name"
+	desc = "egs_menu.1000.desc"
+	picture = GFX_evt_federation_fleet
+	is_triggered_only = yes
+
+	option = {
+		name = "egs_menu.1000.option.no"
+		trigger = {
+			NOT = { has_country_flag = EGS_SILLY_NO }
+		}
+		hidden_effect = {
+			clear_egs_silly_flags = yes
+			set_country_flag = EGS_SILLY_NO
+			country_event = { id = egs_menu.1 }
+		}
+	}
+
+	option = {
+		name = "egs_menu.1000.option.no.on"
+		trigger = {
+			has_country_flag = EGS_SILLY_NO
+		}
+		hidden_effect = {
+			clear_egs_silly_flags = yes
+			set_country_flag = EGS_SILLY_NO
+			country_event = { id = egs_menu.1 }
+		}
+	}
+
+	option = {
+		name = "egs_menu.1000.option.yes"
+		trigger = {
+			NOT = { has_country_flag = EGS_SILLY_YES }
+		}
+		hidden_effect = {
+			clear_egs_silly_flags = yes
+			set_country_flag = EGS_SILLY_YES
+			country_event = { id = egs_menu.1 }
+		}
+	}
+
+	option = {
+		name = "egs_menu.1000.option.yes.on"
+		trigger = {
+			clear_egs_silly_flags = EGS_SILLY_YES
+		}
+		hidden_effect = {
+			clear_egs_diplo_hack_flags = yes
+			set_country_flag = EGS_SILLY_YES
+			country_event = { id = egs_menu.1 }
+		}
+	}
+}
 
 #Compatability
 country_event = {

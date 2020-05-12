@@ -98,6 +98,32 @@ country_event = {
 				}
 				save_event_target_as = egs_target_planet
 				smart_match_planet_class = yes
+
+				if = {
+					limit = {
+						root = {
+							has_country_flag = EGS_START_RINGWORLD
+							has_country_flag = EGS_START_STARBORN
+							has_country_flag = EGS_SILLY_YES
+						}
+					}
+					event_target:egs_target_planet = {
+						change_pc = pc_relic
+					}
+
+					event_target:egs_target_planet = {
+						reroll_planet = yes
+						clear_deposits = yes
+						add_deposit = d_relic_dense_ruins
+						add_deposit = d_collapsed_spire
+						add_deposit = d_massive_crevice
+						add_deposit = d_shattered_solar_array
+						add_deposit = d_flooded_reactor_pits
+						add_deposit = d_crumbling_mining_tunnels
+						add_deposit = d_relic_metal_boneyard
+					}
+				}
+
 			}
 		}
 		
@@ -254,6 +280,7 @@ country_event = {
 						add_district = district_rw_farming
 						add_deposit = d_egs_rw_motes
 					}
+					set_planet_size = 5
 				}
 			}
 			else = {
