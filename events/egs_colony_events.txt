@@ -429,7 +429,6 @@ country_event = {
 			every_owned_pop = {
 				modify_species = {
 					species = this
-					base = none
 					add_trait = trait_starborn_positive
 					ideal_planet_class = pc_starborn_habitat_start
 				}

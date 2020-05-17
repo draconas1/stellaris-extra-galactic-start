@@ -28,7 +28,7 @@
     egs_menu.100.option.bigdipper.on:0 "§Y$egs_menu.100.option.bigdipper$§!"
 
     egs_menu.200.name:0 "Choose Starting System Initaliser"
-    egs_menu.200.desc:0 "Works just the same as the option on the start screen, setting the details of your starting system.\n\nAvailable Choices:\n\nRandom System (default)\nRandom Binary\nRandom Trinary\nSol\nDeneb\nRing World: Start on a ring world.  You will have additional starting funds, as the ringworlds costs are greater than a starting empire can provide.  Unlike ZOFE there are no story events around this, you're just there.\nStarborn: Same as the Starborn Origin.  (Requires the Starborn Mod)"
+    egs_menu.200.desc:0 "Works just the same as the option on the start screen, setting the details of your starting system.\n\nAvailable Choices:\n\nRandom System (default)\nRandom Binary\nRandom Trinary\nSol\nDeneb\nRing World: Start on a ring world.  You will have additional starting funds, as the ringworlds costs are greater than a starting empire can provide.  Unlike ZOFE there are no story events around this, you're just there.\nStarborn: Same as the Starborn Origin.  (Requires the Starborn Mod - Game Limitation: your pops will have starborn trait as a subspecies not the main one)"
     egs_menu.200.option.random:0 "Random System"
     egs_menu.200.option.randombinry:0 "$custom_starting_init_03_NAME$"
     egs_menu.200.option.randomtrinary:0 "$custom_starting_init_01_NAME$"
