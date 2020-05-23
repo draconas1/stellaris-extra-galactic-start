@@ -111,10 +111,8 @@ smart_match_planet_class = {
 			limit = {
 				OR = {
 					is_planet_class = pc_habitat
-					is_planet_class = pc_ringworld_habitable
 					root = {
 						OR = {
-							has_country_flag = EGS_START_RINGWORLD
 							has_country_flag = EGS_START_STARBORN
 						}
 					}
@@ -425,6 +423,24 @@ match_planet_class = {
 			pc_technoorganic = {
 				event_target:egs_target_planet = {
 					change_pc = pc_technoorganic
+				}
+			}
+
+			pc_ash = {
+				event_target:egs_target_planet = {
+					change_pc = pc_ash
+				}
+			}
+
+			pc_methane = {
+				event_target:egs_target_planet = {
+					change_pc = pc_methane
+				}
+			}
+
+			pc_ammonia = {
+				event_target:egs_target_planet = {
+					change_pc = pc_ammonia
 				}
 			}
 		}
