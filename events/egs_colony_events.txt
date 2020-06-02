@@ -327,7 +327,10 @@ country_event = {
 			if = {
 				limit = {
 					root = {
-						NOT = { has_civic = civic_machine_servitor }
+						NOR = { 
+							has_civic = civic_machine_servitor 
+							has_civic = civic_machine_assimilator 
+						}
 					}
 				}
 				generate_start_pops = yes
@@ -378,7 +381,10 @@ country_event = {
 			if = {
 				limit = {
 					root = { 
-						has_civic = civic_machine_servitor
+						OR = { 
+							has_civic = civic_machine_servitor 
+							has_civic = civic_machine_assimilator 
+						}
 					}
 				}
 				every_owned_pop = {
