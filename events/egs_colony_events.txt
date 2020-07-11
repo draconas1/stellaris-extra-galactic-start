@@ -322,19 +322,6 @@ country_event = {
 					generate_start_buildings_and_districts = yes
 				}
 			}
-
-			# rogue servitors get pops moved, veryone else gets them regenerated to avoid unemployment
-			if = {
-				limit = {
-					root = {
-						NOR = { 
-							has_civic = civic_machine_servitor 
-							has_civic = civic_machine_assimilator 
-						}
-					}
-				}
-				generate_start_pops = yes
-			}
 		}
 
 		event_target:egs_home_system = {
@@ -377,26 +364,30 @@ country_event = {
 			set_location = event_target:egs_home_system_loc
 		}
 		event_target:previous_home_planet = {
-			# non gestalts get new pops, gestalts get pops moved to make servitors work
-			if = {
-				limit = {
-					root = { 
-						OR = { 
-							has_civic = civic_machine_servitor 
-							has_civic = civic_machine_assimilator 
-						}
-					}
+			# move pops
+			every_owned_pop = {
+				resettle_pop = {
+					pop = this
+					planet = event_target:egs_home_planet
 				}
-				every_owned_pop = {
-					resettle_pop = {
-						pop = this
-						planet = event_target:egs_home_planet
-					}
-					unemploy_pop = yes
-				}
+				unemploy_pop = yes
 			}
+			# then get rid of the planet
 			remove_planet = yes
 		}
+		# 2.6 introduced a change to the every_owned_pop = { resettle_pop = { loop where it would recalculate jobs between
+		# and end up with unemployed rulers.  
+		# 2.7 has given some simple effects to fix this: force an unemploy, demote to worker and then rerun the employment calculation
+		event_target:egs_home_planet = {
+			every_owned_pop = {
+				unemploy_pop = yes
+				clear_pop_category = yes
+			}
+			check_planet_employment = yes
+		}
+
+
+
 		event_target:previous_home_system = {
 			set_name = random
 			random_system_planet = {
