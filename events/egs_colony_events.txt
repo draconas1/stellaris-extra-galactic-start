@@ -127,57 +127,29 @@ country_event = {
 			}
 		}
 		
-
-		#setup system modifiers for SI
-		if = {
-			limit = {
-				has_global_flag = retile_active 
-			}
-			country_event = {
-				id = egs_retile_generate.4
-			}
-		}
-
-
 		# Set up the spaceport
 		if = {
 			limit = {
-				has_global_flag = retile_active
+				is_gestalt = yes
 			}
 			event_target:egs_home_system = {
 				create_starbase = {
 					size = "starbase_starport"
 					module = "shipyard"
-					building = "default_network"
-					building = "fleet_hangar"
+					module = "solar_panel_network"
+					building = "crew_quarters"
 					owner = root
 				}
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					is_gestalt = yes
-				}
-				event_target:egs_home_system = {
-					create_starbase = {
-						size = "starbase_starport"
-						module = "shipyard"
-						module = "solar_panel_network"
-						building = "crew_quarters"
-						owner = root
-					}
-				}
-			}
-			else = {
-				event_target:egs_home_system = {
-					create_starbase = {
-						size = "starbase_starport"
-						module = "shipyard"
-						module = "trading_hub"
-						building = "crew_quarters"
-						owner = root
-					}
+			event_target:egs_home_system = {
+				create_starbase = {
+					size = "starbase_starport"
+					module = "shipyard"
+					module = "trading_hub"
+					building = "crew_quarters"
+					owner = root
 				}
 			}
 		}
@@ -202,89 +174,24 @@ country_event = {
 					}
 				}
 				generate_start_buildings_and_districts = yes
-				if = { 
+				remove_all_districts = yes			
+				if = {
 					limit = {
-						has_global_flag = retile_active 
-					}
-
-					# always add 3 modules
-					set_variable = { which = module_count value = 3 }
-							
-					if = {	# robots
-						limit = {
-							owner = {
-								is_machine_empire = yes
-							}
-						}
-						if = {
-							limit = { owner = { OR = {
-								has_country_flag = biological_subspecies
-								has_country_flag = plantoid_subspecies
-							} } }
-							add_deposit = retile_module_generator_active
-							add_deposit = retile_module_farm_active
-							add_deposit = retile_module_mine_active
-						} else = {
-							add_deposit = retile_module_generator_active
-							add_deposit = retile_module_generator_active
-							add_deposit = retile_module_mine_active
-						}
-					}
-
-					if = { # Lithoids
-						limit = {
-							owner = {
+						root = {
+							OR = {
+								is_robot_empire = yes
 								is_lithoid_empire = yes
-							}
-						}
-						if = {
-							limit = { owner = { OR = {
-								has_country_flag = biological_subspecies
-								has_country_flag = plantoid_subspecies
-							} } }
-							add_deposit = retile_module_generator_active
-							add_deposit = retile_module_farm_active
-							add_deposit = retile_module_mine_active
-						} else = {
-							add_deposit = retile_module_generator_active
-							add_deposit = retile_module_mine_active
-							add_deposit = retile_module_mine_active
+							}								
 						}
 					}
-
-					if = { # Biologicals/Plants
-						limit = {
-							owner = {
-								is_lithoid_empire = no
-								is_machine_empire = no
-							}
-						}
-						add_deposit = retile_module_generator_active
-						add_deposit = retile_module_farm_active
-						add_deposit = retile_module_mine_active
-					}
-
+					add_district = district_rw_generator
+					add_deposit = d_egs_rw_crystals
 				}
-				else = {		
-					remove_all_districts = yes			
-					if = {
-						limit = {
-							root = {
-								OR = {
-									is_robot_empire = yes
-									is_lithoid_empire = yes
-								}								
-							}
-						}
-						add_district = district_rw_generator
-						add_deposit = d_egs_rw_crystals
-					}
-					else = {
-						add_district = district_rw_farming
-						add_deposit = d_egs_rw_motes
-					}
-					set_planet_size = 5
+				else = {
+					add_district = district_rw_farming
+					add_deposit = d_egs_rw_motes
 				}
+				set_planet_size = 5
 			}
 			else = {
 				if = {
@@ -303,12 +210,6 @@ country_event = {
 				}
 				else = {
 					#Normal Setup
-					if = {
-						limit = {
-							has_global_flag = retile_active 
-						}
-						#reroll_deposits = yes
-					}
 					if = {
 						limit = {
 							has_planet_flag = planet_earth
@@ -440,7 +341,6 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = EGS_START_RINGWORLD
-				NOT = { has_global_flag = retile_active }
 			}
 			add_resource = {
 				energy = 5000

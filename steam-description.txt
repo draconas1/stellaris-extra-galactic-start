@@ -39,7 +39,6 @@ No vanilla files were harmed in the making of this mod, but as it does a lot of 
 [*]Supports [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1743133825]Starborn[/url] Habitat starts, for an improved Voidtouched starting.
 [*]It is compatible with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=819148835]Planetary Diversity[/url] planet starts, except for tidally locked.  It will cheerfully ignore the PD "habitable planets to be same type instead of exact match" option.  
 [*]Compatible with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=865040033]Guillis Planet Modifiers[/url].
-[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=1891758612]Stellaris Immortal[/url] is not compatible with 2.7, will be updated once SI moves to 2.7
 [/list]
 
 
@@ -55,7 +54,13 @@ The only way to achieve a lot of the effects is with a large amount of copy and 
 [*] What other mods are you using
 [/list]
 
+[h1]Localisation[/h1]
+[list]
+[*] Russian by Inzeron:  https://steamcommunity.com/sharedfiles/filedetails/?id=1375388095
+[/list]
+
 [b]Please Rate and Subscribe as it helps others find the mods[/b]
+
 [img]https://i.imgur.com/fVVaDCS.gif[/img]
 
 [url=https://discordapp.com/invite/CMjnnET][img]https://i.imgur.com/4Und3QN.png[/img][/url]

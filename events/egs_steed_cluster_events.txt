@@ -19,6 +19,7 @@ country_event = {
 				min_orientation_angle = 90
 				max_orientation_angle = 100
 				initializer = egs_cluster_initializer
+				hyperlane = no
 			}
 		}
 		#Find the star
