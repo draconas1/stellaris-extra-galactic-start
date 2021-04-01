@@ -527,6 +527,32 @@ country_event = {
 			country_event = { id = egs_menu.1 }
 		}
 	}
+
+	option = {
+		name = "egs_menu.200.option.alderson"
+		trigger = {
+			has_global_flag = gigastructures_enabled
+			NOT = { has_country_flag = EGS_START_ALDERSON }
+		}
+		hidden_effect = {
+			clear_egs_start_system_flags = yes
+			set_country_flag = EGS_START_ALDERSON
+			country_event = { id = egs_menu.1 }
+		}
+	}
+
+	option = {
+		name = "egs_menu.200.option.alderson.on"
+		trigger = {
+			has_global_flag = gigastructures_enabled
+			has_country_flag = EGS_START_ALDERSON
+		}
+		hidden_effect = {
+			clear_egs_start_system_flags = yes
+			set_country_flag = EGS_START_ALDERSON
+			country_event = { id = egs_menu.1 }
+		}
+	}
 }
 
 

@@ -13,3 +13,6 @@
   origin_egs2:0 "Multiplayer Extra Galatic Start Player 2"
   origin_egs2_desc:0 "§RMULTIPLAYER ONLY:§! To have a 2nd player start in an extra-galatic cluster, 1 player should take §H$origin_egs$§! while the 2nd player takes this origin.  Certain start options will be locked when there are 2 players.  The mod does not support more than 2 players in extra galatic clusters sorry."
   origin_egs2_effects:0 "On day 1 you will be moved into a custom extra-galatic cluster based on options of you and whoever choose the main EGS origin"
+
+  egs_giga.2.name:0 "Hyperlane Sensor Glitches"
+  egs_giga.2.desc:0 "When we suddenly spotted that black hole after the archeology project it originally looked like it connected to the rest of the galaxy.\n\nThat was just a sensor glitch that has now been fixed, there is no connecting hyperlane."

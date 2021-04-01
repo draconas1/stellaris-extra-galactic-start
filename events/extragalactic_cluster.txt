@@ -79,6 +79,7 @@ country_event = {
 				min_orientation_angle = 9				#20
 				max_orientation_angle = 10				#30
 				initializer = hexagon_cluster_01
+				hyperlane = no
 			}
 			random_system = {
 				limit = {
@@ -462,6 +463,7 @@ country_event = {
 				min_orientation_angle = 240
 				max_orientation_angle = 241
 				initializer = steed_cluster_01
+				hyperlane = no
 			}
 			random_system = {
 				limit = {
@@ -679,6 +681,7 @@ country_event = {
 				min_orientation_angle = 145
 				max_orientation_angle = 150
 				initializer = atronach_cluster_01
+				hyperlane = no
 			}
 			random_system = {
 				limit = {
@@ -936,6 +939,7 @@ country_event = {
 				min_orientation_angle = 230
 				max_orientation_angle = 231
 				initializer = apprentice_cluster_01
+				hyperlane = no
 			}
 			random_system = {
 				limit = {
@@ -1201,6 +1205,7 @@ country_event = {
 				min_orientation_angle = 109
 				max_orientation_angle = 110
 				initializer = big_dipper_cluster_01
+				hyperlane = no
 			}
 			random_system = {
 				limit = {

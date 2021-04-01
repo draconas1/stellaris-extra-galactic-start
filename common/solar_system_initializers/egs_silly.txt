@@ -121,38 +121,6 @@ egs_pd_unique = {
 				}
 
 				gpm_spawn_precursor_features = yes
-
-				create_country = {
-					name = "Tiyanki Matriarchs"
-					type = faction
-				}
-				last_created_country = {
-					set_country_flag = tiyanki_country
-					create_fleet = {
-						name = "Tiyanki Matriarchs"
-						settings = { spawn_debris = no }
-						effect = {
-							set_owner = PREV
-							set_fleet_flag = tiyanki_fleet						
-							create_ship = {
-								design = "NAME_The_Matriarch"
-							}	
-							while = {
-								count = 6
-								create_ship = {
-									name = random
-									design = last_created_design
-								}
-							}	
-							set_aggro_range = 50			
-							set_location = event_target:graveyard_planet
-							add_modifier = {
-								modifier = sanctuary_power
-								days = -1														
-							}
-						}
-					}
-				}
 			}
 		}
 		moon = {			

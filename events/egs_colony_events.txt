@@ -47,10 +47,28 @@ country_event = {
 		}
 
 		#tag our old home planet
-		random_owned_planet = {
+		capital_scope = {
 			save_event_target_as = previous_home_planet
 			solar_system = {
 				save_event_target_as = previous_home_system
+			}
+			# taken from gigastructures.  Go gigas!
+			if = {
+				limit = { exists = sector }
+				sector = {
+					leader = {
+						unassign_leader = this
+						save_event_target_as = sector_gov
+					}
+				}
+			}
+			else = {
+				root = {
+					random_owned_leader = {
+						limit = { leader_class = governor }
+						save_event_target_as = sector_gov
+					}
+				}
 			}
 		}
 
@@ -102,8 +120,11 @@ country_event = {
 				if = {
 					limit = {
 						root = {
-							has_country_flag = EGS_START_RINGWORLD
-							has_country_flag = EGS_START_STARBORN
+							OR = {
+								has_country_flag = EGS_START_RINGWORLD
+								has_country_flag = EGS_START_STARBORN
+								has_country_flag = EGS_START_ALDERSON
+							}
 							has_country_flag = EGS_SILLY_YES
 						}
 					}
@@ -123,7 +144,6 @@ country_event = {
 						add_deposit = d_relic_metal_boneyard
 					}
 				}
-
 			}
 		}
 		
@@ -165,7 +185,21 @@ country_event = {
 			set_owner = root
 			set_controller = root
 			set_capital = yes
+			set_sector_capital = yes
+			sector = { assign_leader = event_target:sector_gov }
 			if = {
+				limit = {
+					has_planet_flag = egs_alderson
+				}
+				change_pc = pc_alderson_slice_gaia
+				owner = { 
+					country_event = {
+						id = egs_giga_alderson.001
+					}
+				}
+				add_deposit = d_birch_start
+			}
+			else_if = {
 				# Ringworld setup
 				limit = {
 					OR = {
@@ -193,36 +227,34 @@ country_event = {
 				}
 				set_planet_size = 5
 			}
+			else_if = {
+				limit = {
+					has_planet_flag = starborn_orbital_city
+				}					
+				root = {
+					country_event = {
+						id = starborn_init.1
+					}
+				}
+				generate_start_buildings_and_districts = yes
+				planet_event = {
+					id = starborn_init.8
+				}	
+			}
 			else = {
+				#Normal Setup
 				if = {
 					limit = {
-						has_planet_flag = starborn_orbital_city
-					}					
-					root = {
-						country_event = {
-							id = starborn_init.1
-						}
+						has_planet_flag = planet_earth
 					}
-					generate_start_buildings_and_districts = yes
-					planet_event = {
-						id = starborn_init.8
-					}	
+					generate_earth_deposits_and_blockers = yes
 				}
 				else = {
-					#Normal Setup
-					if = {
-						limit = {
-							has_planet_flag = planet_earth
-						}
-						generate_earth_deposits_and_blockers = yes
-					}
-					else = {
-						generate_start_deposits_and_blockers = yes
-					}
-
-					generate_start_buildings_and_districts = yes
+					generate_start_deposits_and_blockers = yes
 				}
-			}
+
+				generate_start_buildings_and_districts = yes
+			}			
 		}
 
 		event_target:egs_home_system = {
@@ -286,8 +318,6 @@ country_event = {
 			}
 			check_planet_employment = yes
 		}
-
-
 
 		event_target:previous_home_system = {
 			set_name = random

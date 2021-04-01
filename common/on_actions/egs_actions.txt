@@ -5,3 +5,9 @@ on_game_start_country = {
 		egs_menu_p2.2  #spawn the player 2 egs menu
 	}
 }
+
+on_yearly_pulse_country = {
+	events = {
+		egs_giga.1 # fix EHOF hyperlanes
+	}
+}
