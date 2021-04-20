@@ -8,19 +8,16 @@ egs_ringworld_init = {
 			type = "ring_world_ruined"
 			orbit_angle = 0
 			orbit_distance = 45
-			location = planet
 		}
 		spawn_megastructure = {
 			type = "ring_world_ruined"
 			orbit_angle = 90
 			orbit_distance = 45
-			location = planet
 		}
 		spawn_megastructure = {
 			type = "ring_world_ruined"
 			orbit_angle = 180
 			orbit_distance = 45
-			location = planet
 		}
 	}
 

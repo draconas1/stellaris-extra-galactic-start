@@ -13,16 +13,13 @@ If your civilisation takes that then a menu will appear on game start for you to
 [*] Spawn all the clusters from [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1523039190]Extra Galactic Clusters[/url], and optionally link them in an extra-galatic wormhole ring or to the L-cluster.
 [*] Multiplayer support for upto 2 players to start in clusters
 [*] If nobody takes the origin you can still spawn all the other clusters using an edict
-[*] Very silly OP system if you have Planetary Diversity, Unique Worlds and Guillis Planet Modifiers
 [/list]
 
 [h1]Gameplay[/h1]
 Your civilisation will move into its new cluster home on day 2 to avoid issues with galaxy generation.  Select your options then start time, the game will freeze and lag while it generates the cluster, which might take a while on large galaxies, be patient, it will start.  
+ original point in the galaxy where the evidence of their passage was left.
 
-I cannot set your sector governor with a script, so you will need to manually reassign them post move.
-
-Your constellation will not have precursors.  If you want to learn about your precursor civilisation you will need to get back to your original point in the galaxy where the evidence of their passage was left.
-
+Your constellation will not have precursors.  If you want to learn about your precursor civilisation you will need to get back to your
 You can Experimental Subspace Navigation your science vessels to your old home system (and L-Gates if selected), that is deliberate.  Be warned the AI expands towards your home cluster quickly as it has a glut of nice planets and resources.
 
 If you select for the rest of the Extra Galatic Cluster to spawn in they will spawn in over time in the first year, to avoid galaxy generation issues.  This means you will get lag and freeze spikes until about August when the last one, Hexagon, spawns.  Hexagon spawns at the edge of the addressable universe so you may need to hide the outlier to select it.
