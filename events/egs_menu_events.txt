@@ -518,6 +518,7 @@ country_event = {
 		name = "egs_menu.200.option.alderson"
 		trigger = {
 			has_global_flag = gigastructures_enabled
+			has_country_flag = EGS_CLUSTER_HEXAGON
 			NOT = { has_country_flag = EGS_START_ALDERSON }
 		}
 		hidden_effect = {
@@ -531,6 +532,7 @@ country_event = {
 		name = "egs_menu.200.option.alderson.on"
 		trigger = {
 			has_global_flag = gigastructures_enabled
+			has_country_flag = EGS_CLUSTER_HEXAGON
 			has_country_flag = EGS_START_ALDERSON
 		}
 		hidden_effect = {
@@ -1171,6 +1173,7 @@ planet_event = {
 			is_planet_class = pc_semiarid 
 			is_planet_class = pc_hadesert
 			is_planet_class = pc_mud 
+			is_planet_class = pc_irradiated
 
 		}
 	}

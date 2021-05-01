@@ -470,6 +470,11 @@ match_planet_class = {
 					change_pc = pc_mud
 				}
 			}
+			pc_irradiated  = {
+				event_target:egs_target_planet = {
+					change_pc = pc_irradiated 
+				}
+			}
 		}
 	}
 	event_target:egs_target_planet = {
