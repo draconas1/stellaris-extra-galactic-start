@@ -6,8 +6,8 @@
   d_egs_rw_motes:0 "Ringworld Maintenance Supply Node"
   d_egs_rw_motes_desc:0 "Nobody knows how this thing works, only that it powers the infrastructure of the district, best not to fiddle with it"
 
-  d_egs_rw_crystal:0 "$d_egs_rw_motes$"
-  d_egs_rw_crystal_desc:0 "$d_egs_rw_motes_desc$"
+  d_egs_rw_crystals:0 "$d_egs_rw_motes$"
+  d_egs_rw_crystals_desc:0 "$d_egs_rw_motes_desc$"
 
 
   origin_egs2:0 "Multiplayer Extra Galatic Start Player 2"

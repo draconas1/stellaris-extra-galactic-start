@@ -721,6 +721,8 @@ egs_sol_system_initializer = {
 			prevent_anomaly = yes
 			generate_empire_home_planet = yes
 			set_planet_flag = egs_home_planet_marker
+			set_planet_flag = pd_ignore
+			set_planet_flag = hot_zone				# Real Space (Prevents Rings)
 		}
 		
 		moon = {

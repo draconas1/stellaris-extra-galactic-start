@@ -142,6 +142,7 @@ country_event = {
 							add_deposit = d_flooded_reactor_pits
 							add_deposit = d_crumbling_mining_tunnels
 							add_deposit = d_relic_metal_boneyard
+							set_planet_flag = pd_ignore
 						}
 					}
 				}
@@ -198,7 +199,6 @@ country_event = {
 						id = egs_giga_alderson.001
 					}
 				}
-				add_deposit = d_birch_start
 			}
 			else_if = {
 				# Ringworld setup
@@ -425,7 +425,16 @@ country_event = {
 					add_deposit  = d_pdgaia 
 				}
 				else = {
-					generate_pd_start_deposits_and_blockers = yes
+					if = {
+						limit = {
+							NOR = {
+								has_planet_flag = giga_alderson_gaia								
+								has_planet_flag = planet_earth
+								is_planet_class = pc_ringworld_habitable
+							}		
+						}
+						generate_pd_start_deposits_and_blockers = yes
+					}					
 				}
 			}
 
