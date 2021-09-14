@@ -1,4 +1,4 @@
-[h1]Start in an Isolated Extra-Galactic Constellations.  3.1 Compatible[/h1]
+[h1]Start in an Isolated Extra-Galactic Constellations.  (3.1)[/h1]
 This mod takes the excellent constellations from [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1523039190]Extra Galactic Clusters[/url] and makes it possible to have any of them as a starting location for your civilisation (Note only the Constellation, not the contents).  You can also spawn the other EGC's for your civ to later find and explore.  
 
 It is done via a new Origin: Extra-Galatic Cluster.
@@ -38,6 +38,13 @@ No vanilla files were harmed in the making of this mod, but as it does a lot of 
 [*]Compatible with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=865040033]Guillis Planet Modifiers[/url].
 [/list]
 
+[h1]My Other Mods[/h1]
+[list]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1743133825]Starborn[/url]: Mod that did Voidtouched before PDX did
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2288046502]Planetary Population Restrictions[/url]: Stop certain species breeding where you don't want them.
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2562023076]Station Solar System Exploitation[/url]: Starbase enhancements for mining, research and planet production.
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2548902172]Assimilate Robots[/url]: Synthetic empires can assimilate robots into Synths
+[/list]
 
 [h1]HELP!  I DIED ON DAY 1[/h1]
 This is most frequently caused by a modded species home planet, I have to code every home planet manually.  If you are a non vanilla, non planetary diversity planet type for your homeworld preference then I can't set it when you move.  Post a comment letting me know the planet type and which mod it came from and I'll add it.  
