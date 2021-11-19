@@ -193,12 +193,12 @@ country_event = {
 				limit = {
 					has_planet_flag = egs_alderson
 				}
-				change_pc = pc_alderson_slice_gaia
 				owner = { 
 					country_event = {
 						id = egs_giga_alderson.001
 					}
 				}
+				set_planet_flag = ignore_startup_effect # important, otherise the disc gets cleared by the solar system initaliser generate_home_system_resources below
 			}
 			else_if = {
 				# Ringworld setup

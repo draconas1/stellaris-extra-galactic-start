@@ -1,4 +1,4 @@
-giga_alderson_start = {
+egs_giga_alderson_start = {
 	class = rl_starting_stars
 	usage = origin
 	flags = { empire_home_system giga_origin_alderson egs_empire_home_system }

@@ -495,6 +495,36 @@ match_planet_class = {
 					change_pc = pc_ash 
 				}
 			}
+			pc_fog = {
+				event_target:egs_target_planet = {
+					change_pc = pc_fog 
+				}
+			}
+			pc_coastal = {
+				event_target:egs_target_planet = {
+					change_pc = pc_coastal 
+				}
+			}
+			pc_snowball = {
+				event_target:egs_target_planet = {
+					change_pc = pc_snowball 
+				}
+			}
+			pc_basalt = {
+				event_target:egs_target_planet = {
+					change_pc = pc_basalt 
+				}
+			}
+			pc_badlands = {
+				event_target:egs_target_planet = {
+					change_pc = pc_badlands 
+				}
+			}
+			pc_cenote = {
+				event_target:egs_target_planet = {
+					change_pc = pc_cenote 
+				}
+			}
 		}
 	}
 	event_target:egs_target_planet = {

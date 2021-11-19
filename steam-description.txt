@@ -43,7 +43,7 @@ No vanilla files were harmed in the making of this mod, but as it does a lot of 
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1743133825]Starborn[/url]: Mod that did Voidtouched before PDX did
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2288046502]Planetary Population Restrictions[/url]: Stop certain species breeding where you don't want them.
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2562023076]Station Solar System Exploitation[/url]: Starbase enhancements for mining, research and planet production.
-[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2548902172]Assimilate Robots[/url]: Synthetic empires can assimilate robots into Synths
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2548902172]Robot QoL: auto-resettle and assimilate[/url]: Synthetic empires can assimilate robots into Synths & robots can auto-resettle
 [/list]
 
 [h1]HELP!  I DIED ON DAY 1[/h1]

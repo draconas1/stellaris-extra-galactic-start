@@ -299,7 +299,7 @@ country_event = {
 					max_distance <= 42
 					min_orientation_angle = 79
 					max_orientation_angle = 81
-					initializer = giga_alderson_start
+					initializer = egs_giga_alderson_start
 				}
 			}
 		}

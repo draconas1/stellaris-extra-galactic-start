@@ -1,7 +1,6 @@
 d_egs_rw_motes = {
 	icon = "unused/d_strategic_resources"
 	category = deposit_cat_rare
-	is_for_colonizeable = yes
 	
 	potential = {
 		always = no
@@ -19,7 +18,6 @@ d_egs_rw_motes = {
 d_egs_rw_crystals = {
 	icon = "unused/d_strategic_resources"
 	category = deposit_cat_rare
-	is_for_colonizeable = yes
 	
 	potential = {
 		always = no
