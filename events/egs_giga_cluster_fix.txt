@@ -14,7 +14,6 @@ country_event = {
         capital_scope = {
             solar_system = {
                 any_neighbor_system = {                   
-                    ignore_hyperlanes = no
                     has_star_flag = ehof_blackhole_@root
                 }
             }
@@ -30,7 +29,6 @@ country_event = {
                     }
 
                     every_neighbor_system = {
-                        ignore_hyperlanes = no
                         limit = {
                             NOT = {
                                 has_star_flag = egs_cluster

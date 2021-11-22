@@ -27,25 +27,21 @@ hexagon_cluster_01 = {
 			type = "ring_world_ruined"
 			orbit_angle = 0
 			orbit_distance = 45
-			location = planet
 		}
 		spawn_megastructure = {
 			type = "ring_world_ruined"
 			orbit_angle = 90
 			orbit_distance = 45
-			location = planet
 		}
 		spawn_megastructure = {
 			type = "ring_world_ruined"
 			orbit_angle = 180
 			orbit_distance = 45
-			location = planet
 		}
 		spawn_megastructure = {
 			type = "ring_world_ruined"
 			orbit_angle = 270
 			orbit_distance = 45
-			location = planet
 		}
     spawn_megastructure = {
 			type = "gateway_ruined"
@@ -734,7 +730,6 @@ hexagon_cluster_04 = {
   init_effect = {
 		spawn_megastructure = {
 			type = "think_tank_ruined"
-			location = event_target:nexus_planet_1
 
 			init_effect = {
 				create_ambient_object = {
@@ -2476,19 +2471,16 @@ steed_cluster_03 = {
 			type = "ring_world_ruined"
 			orbit_angle = 90
 			orbit_distance = 45
-			location = planet
 		}
 		spawn_megastructure = {
 			type = "ring_world_ruined"
 			orbit_angle = 180
 			orbit_distance = 45
-			location = planet
 		}
 		spawn_megastructure = {
 			type = "ring_world_ruined"
 			orbit_angle = 270
 			orbit_distance = 45
-			location = planet
 		}
 	}
 }
@@ -4064,7 +4056,7 @@ atronach_cluster_05 = {
   			}
   			while = {
   				limit = {
-  					count_pops = {
+  					count_owned_pop = {
   						limit = { is_sapient = no }
   						count < 3
   					}
@@ -6303,7 +6295,6 @@ apprentice_cluster_10 = {
   init_effect = {
     spawn_megastructure = {
 			type = "think_tank_ruined"
-			location = event_target:nexus_planet_2
     }
     create_drone_country = yes
     random_system_planet = {
