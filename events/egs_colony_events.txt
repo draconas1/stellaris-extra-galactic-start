@@ -74,8 +74,8 @@ country_event = {
 		}
 
 		#set the correct planet class for home planet
-		# hooray for 3.2!  and for Alfray Stryke (QA) & Caligula on discord for showing me how to shove a species into change_pc!
-		owner_species = { 
+		# hooray for 3.2!  and for Alfray Stryke (QA) & Caligula on discord for showing me how to shove a planet/species into change_pc!
+		event_target:previous_home_planet = {
 			event_target:egs_home_planet = {
 				save_event_target_as = egs_target_planet
 				print_scope_effect = yes
@@ -92,84 +92,76 @@ country_event = {
 					reroll_planet_modifiers = yes
 				}
 			}
-		}
-	
+		}	
 		
 
-		if = {
-			limit = {
-				NOT = {
-					has_country_flag = EGS_START_STARBORN
-				}
-			}
-			#Set the correct class for secondary planets
-			#Go developers putting a bloody flag on the secondary planet!
-			# starborn do not get secondary planets
-			# species scope first to set the planet class
-			owner_species = {
-				every_system = {
-					limit = {
-						OR = {
-							AND = {
-								has_star_flag = egs_cluster
-								egs_county_player1 = yes
-							}
-							AND = {
-								has_star_flag = egs_p2_cluster
-								egs_county_player2 = yes
-							}
+		#Set the correct class for secondary planets
+		#Go developers putting a bloody flag on the secondary planet!
+		# starborn do not get secondary planets
+		# species scope first to set the planet class
+		event_target:previous_home_planet = {
+			every_system = {
+				limit = {
+					OR = {
+						AND = {
+							has_star_flag = egs_cluster
+							egs_county_player1 = yes
+						}
+						AND = {
+							has_star_flag = egs_p2_cluster
+							egs_county_player2 = yes
 						}
 					}
-					every_system_planet = {
+				}
+				every_system_planet = {
+					limit = {
+						has_planet_flag = prescripted_ideal	
+					}
+					save_event_target_as = egs_target_planet
+
+					if = {
 						limit = {
-							has_planet_flag = prescripted_ideal	
-						}
-						save_event_target_as = egs_target_planet
-
-						if = {
-							limit = {
-								root = {
-									OR = {
-										has_country_flag = EGS_START_STARBORN
-									}
+							root = {
+								OR = {
+									has_country_flag = EGS_START_STARBORN
 								}
 							}
-							change_pc = pc_nuked
 						}
-						else = {
-							change_pc = prevprev
-						}
-						
-						reroll_deposits = yes
-						reroll_planet_modifiers = yes
+						change_pc = pc_nuked
+					}
+					else = {
+						change_pc = prevprev
+					}
+					
+					reroll_deposits = yes
+					reroll_planet_modifiers = yes
 
-						if = {
-							limit = {
-								root = {
-									OR = {
-										has_country_flag = EGS_START_RINGWORLD
-										has_country_flag = EGS_START_STARBORN
-										has_country_flag = EGS_START_ALDERSON
-									}
-									has_country_flag = EGS_SILLY_YES
+					if = {
+						limit = {
+							root = {
+								OR = {
+									has_country_flag = EGS_START_RINGWORLD
+									has_country_flag = EGS_START_STARBORN
+									has_country_flag = EGS_START_ALDERSON
 								}
+								has_country_flag = EGS_SILLY_YES
 							}
-							event_target:egs_target_planet = {
-								change_pc = pc_relic
-							}
-		
-							event_target:egs_target_planet = {
-								reroll_planet = yes
-								clear_deposits = yes
-								add_deposit = d_relic_dense_ruins
-								add_deposit = d_collapsed_spire
-								add_deposit = d_massive_crevice
-								add_deposit = d_shattered_solar_array
-								add_deposit = d_flooded_reactor_pits
-								add_deposit = d_crumbling_mining_tunnels
-								add_deposit = d_relic_metal_boneyard
-								set_planet_flag = pd_ignore
-							}
+						}
+						event_target:egs_target_planet = {
+							change_pc = pc_relic
+						}
+	
+						event_target:egs_target_planet = {
+							reroll_planet = yes
+							clear_deposits = yes
+							add_deposit = d_relic_dense_ruins
+							add_deposit = d_collapsed_spire
+							add_deposit = d_massive_crevice
+							add_deposit = d_shattered_solar_array
+							add_deposit = d_flooded_reactor_pits
+							add_deposit = d_crumbling_mining_tunnels
+							add_deposit = d_relic_metal_boneyard
+							set_planet_flag = pd_ignore
 						}
 					}
 				}
