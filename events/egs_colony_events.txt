@@ -355,12 +355,18 @@ country_event = {
 		# 2.6 introduced a change to the every_owned_pop = { resettle_pop = { loop where it would recalculate jobs between
 		# and end up with unemployed rulers.  
 		# 2.7 has given some simple effects to fix this: force an unemploy, demote to worker and then rerun the employment calculation
+		# 3.3 checnged the pop recalc to only do 1 pop at a time, so to fix need to loop over all pops, but return to planet scope.  
 		event_target:egs_home_planet = {
 			every_owned_pop = {
 				unemploy_pop = yes
 				clear_pop_category = yes
 			}
-			check_planet_employment = yes
+			every_owned_pop = {
+				prev = {
+					check_planet_employment = yes
+				}				
+			}
+			
 		}
 
 		event_target:previous_home_system = {
