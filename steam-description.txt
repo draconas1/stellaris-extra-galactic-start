@@ -1,4 +1,4 @@
-[h1]Start in an Isolated Extra-Galactic Constellations.  (3.2)[/h1]
+[h1]Start in an Isolated Extra-Galactic Constellations.  (3.3)[/h1]
 This mod takes the excellent constellations from [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1523039190]Extra Galactic Clusters[/url] and makes it possible to have any of them as a starting location for your civilisation (Note only the Constellation, not the contents).  You can also spawn the other EGC's for your civ to later find and explore.  
 
 It is done via a new Origin: Extra-Galatic Cluster.
