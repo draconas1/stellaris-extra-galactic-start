@@ -7,5 +7,5 @@ dependencies={
 }
 name="Extragalactic Cluster Start"
 picture="thumbnail.png"
-supported_version="3.4.*"
+supported_version="3.5.*"
 remote_file_id="1999512770"
