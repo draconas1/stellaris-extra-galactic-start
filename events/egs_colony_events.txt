@@ -205,9 +205,7 @@ country_event = {
 			clear_blockers = yes
 			set_owner = root
 			set_controller = root
-			set_capital = yes
-			set_sector_capital = yes
-			sector = { assign_leader = event_target:sector_gov }
+			set_capital = yes			
 			if = {
 				limit = {
 					has_planet_flag = egs_alderson
@@ -366,7 +364,8 @@ country_event = {
 					check_planet_employment = yes
 				}				
 			}
-			
+			set_sector_capital = yes
+			#sector = { assign_leader = event_target:sector_gov }
 		}
 
 		event_target:previous_home_system = {
@@ -974,22 +973,6 @@ country_event = {
 				}
 				create_and_share_l_gate = yes
 			}
-		}
-	}
-}
-
-
-#move the home sysem
-country_event = {
-	id = egs_colony.999
-	hide_window = yes
-	fire_only_once = yes
-	immediate = {
-		random_system = {
-			limit = {
-				has_star_flag = egs_ringworld
-			}
-			set_star_flag = ring_world_built
 		}
 	}
 }
