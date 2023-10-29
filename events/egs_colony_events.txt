@@ -269,20 +269,6 @@ country_event = {
 					add_deposit = d_egs_rw_motes
 				}
 			}
-			else_if = {
-				limit = {
-					has_planet_flag = starborn_orbital_city
-				}					
-				root = {
-					country_event = {
-						id = starborn_init.1
-					}
-				}
-				generate_start_buildings_and_districts = yes
-				planet_event = {
-					id = starborn_init.8
-				}	
-			}
 			else = {
 				#Normal Setup
 				if = {
@@ -398,22 +384,6 @@ country_event = {
 		every_owned_pop_species = {
             set_species_homeworld = event_target:egs_home_planet
         }
-		if = {
-			limit = {
-				has_country_flag = EGS_START_STARBORN
-			}
-			every_owned_pop = {
-				modify_species = {
-					species = this
-					add_trait = trait_starborn_positive
-					ideal_planet_class = pc_starborn_habitat_start
-				}
-				species = { save_event_target_as = target_species }
-			}
-			root = {
-				change_dominant_species = { species = event_target:target_species change_all = yes }
-			}
-		}
 
 
 		if = {

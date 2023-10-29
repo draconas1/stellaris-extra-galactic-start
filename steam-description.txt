@@ -1,4 +1,4 @@
-[h1]Start in an Isolated Extra-Galactic Constellations (3.8)[/h1]
+[h1]Start in an Isolated Extra-Galactic Constellations (3.9)[/h1]
 This mod takes the excellent constellations from [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1523039190]Extra Galactic Clusters[/url] and makes it possible to have any of them as a starting location for your civilisation (Note only the Constellation, not the contents).  You can also spawn the other EGC's for your civ to later find and explore.  
 
 It is done via a new Origin: Extra-Galatic Cluster.
@@ -7,7 +7,7 @@ If your civilisation takes that then a menu will appear on game start for you to
 [h1]Options[/h1]
 [list]
 [*] Constellation Shape
-[*] Starting  System Initaliser (Sol, Deneb, Random, Ring World, Starborn)
+[*] Starting  System Initaliser (Sol, Deneb, Random, Ring World)
 [*] Guarantee that strategic resources and specific stars for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1121692237]Giagastructures[/url] will spawn
 [*] Access to your cluster? (Wormhole, Many Wormholes, the L-Gate Network)
 [*] Spawn all the clusters from [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1523039190]Extra Galactic Clusters[/url], and optionally link them in an extra-galatic wormhole ring or to the L-cluster.
@@ -33,14 +33,12 @@ No vanilla files were harmed in the making of this mod, but as it does a lot of 
 
 [list]
 [*]This mod is incompatible with things that change the planet/system start, there is a long description why in the discussions section
-[*]Supports [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1743133825]Starborn[/url] Habitat starts, for an improved Voidtouched starting.
 [*]It is compatible with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=819148835]Planetary Diversity[/url] planet starts, except for tidally locked.  It will cheerfully ignore the PD "habitable planets to be same type instead of exact match" option.  
 [*]Compatible with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=865040033]Guillis Planet Modifiers[/url].
 [/list]
 
 [h1]My Other Mods[/h1]
 [list]
-[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1743133825]Starborn[/url]: Mod that did Voidtouched before PDX did
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2288046502]Planetary Population Restrictions[/url]: Stop certain species breeding where you don't want them.
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2562023076]Station Solar System Exploitation[/url]: Starbase enhancements for mining, research and planet production.
 [/list]

@@ -115,35 +115,11 @@ egs_kerbal_space_program = {
 		last_created_country = {
 		  set_graphical_culture = industrial_01
 		  set_country_flag = early_space_age
-		  set_primitive_age = early_space_age
+			set_pre_ftl_age = early_space_age
 		}
 		set_owner = last_created_country
-		create_primitive_blockers = yes
-		if = {
-			limit = {
-				has_global_flag = retile_active
-			}
-			while = {
-				count = 15
-				create_pop = {
-					species = last_created
-				}
-			}
-		}
-		else = {
-			while = {
-				count = 30
-				create_pop = {
-					species = last_created
-				}
-			}
-		}
-		add_building = building_primitive_capital
-		add_building = building_urban_dwellings
-		add_building = building_primitive_farm
-		add_building = building_primitive_factory
-		add_building = building_primitive_mine
-		add_building = building_primitive_power_plant	
+		setup_pre_ftl_planet = yes
+		pre_ftl_clean_up_effect = yes
 		
 		while = {
 		  count = 6
