@@ -1,9 +1,9 @@
 egs_egc_default = {
-    length = 0
+    length = 1
     resources = {
         category = edicts
         cost = {
-            influence = 0
+            influence = 1
         }
     }
     
@@ -26,11 +26,11 @@ egs_egc_default = {
 }
 
 egs_egc_round_robin = {
-    length = 0
+    length = 1
     resources = {
         category = edicts
         cost = {
-            influence = 0
+            influence = 1
         }
     }
     
@@ -53,11 +53,11 @@ egs_egc_round_robin = {
 }
 
 egs_egc_lgate = {
-    length = 0
+    length = 1
     resources = {
         category = edicts
         cost = {
-            influence = 0
+            influence = 1
         }
     }
     
