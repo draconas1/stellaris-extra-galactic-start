@@ -5,18 +5,7 @@ country_event = {
 	id = egs_menu.1    
 	title = "egs_menu.1.name"
 
-	desc = {
-		trigger = {
-			NOT = { has_global_flag = retile_active }
-		}
-		text = egs_menu.1.desc
-	}
-	desc = {
-		trigger = {
-			has_global_flag = retile_active
-		}
-		text = egs_menu.1.desc.retile
-	}
+	desc = egs_menu.1.desc
 
 	picture = GFX_evt_ancient_databank
 	is_triggered_only = yes
@@ -485,13 +474,16 @@ country_event = {
 	option = {
 		name = "egs_menu.200.option.alderson"
 		trigger = {
-			has_global_flag = gigastructures_enabled
-			has_country_flag = EGS_CLUSTER_HEXAGON
-			NOT = { has_country_flag = EGS_START_ALDERSON }
+			has_global_flag = OPS_ACTIVE
+			OR = {
+				has_country_flag = EGS_CLUSTER_HEXAGON
+				has_country_flag = EGS_CLUSTER_BIG_DIPPER
+			}
+			NOT = { has_country_flag = EGS_START_OPS }
 		}
 		hidden_effect = {
 			clear_egs_start_system_flags = yes
-			set_country_flag = EGS_START_ALDERSON
+			set_country_flag = EGS_START_OPS
 			country_event = { id = egs_menu.1 }
 		}
 	}
@@ -499,13 +491,16 @@ country_event = {
 	option = {
 		name = "egs_menu.200.option.alderson.on"
 		trigger = {
-			has_global_flag = gigastructures_enabled
-			has_country_flag = EGS_CLUSTER_HEXAGON
-			has_country_flag = EGS_START_ALDERSON
+			has_global_flag = OPS_ACTIVE
+			OR = {
+				has_country_flag = EGS_CLUSTER_HEXAGON
+				has_country_flag = EGS_CLUSTER_BIG_DIPPER
+			}
+			has_country_flag = EGS_START_OPS
 		}
 		hidden_effect = {
 			clear_egs_start_system_flags = yes
-			set_country_flag = EGS_START_ALDERSON
+			set_country_flag = EGS_START_OPS
 			country_event = { id = egs_menu.1 }
 		}
 	}

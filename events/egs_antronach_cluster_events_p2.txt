@@ -406,8 +406,8 @@ country_event = {
 				limit = {
 					num_guaranteed_colonies >= 1
 				}
+				set_star_flag = egs_p2_habitable_spawn
 			}
-			set_star_flag = egs_p2_habitable_spawn
 		}
 
 	

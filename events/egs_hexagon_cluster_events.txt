@@ -291,7 +291,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				has_country_flag = EGS_START_ALDERSON
+				has_country_flag = EGS_START_OPS
 			}
 			event_target:egs_cluster_08 = {
 				spawn_system = {
@@ -299,22 +299,15 @@ country_event = {
 					max_distance <= 42
 					min_orientation_angle = 79
 					max_orientation_angle = 81
-					initializer = egs_giga_alderson_start
+					initializer = ops_system_connected
 				}
 			}
-		}
-		else_if = {
-			limit = {
-				has_country_flag = EGS_START_STARBORN
-			}
-			event_target:egs_cluster_08 = {
-				spawn_system = {
-					min_distance >= 40
-					max_distance <= 42
-					min_orientation_angle = 79
-					max_orientation_angle = 81
-					initializer = starborn_system
+			random_system = {
+				limit = {
+					has_star_flag = ops_home
+					NOT = { has_star_flag = ops_home_done}
 				}
+				set_star_flag = egs_empire_home_system
 			}
 		}
 		else_if = {

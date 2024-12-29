@@ -1,6 +1,6 @@
 namespace = egs_giga
 
-# The EHOF black hole oftne spawns and connects the EGS with the main galaxy.  
+# The EHOF black hole often spawns and connects the EGS with the main galaxy.
 # Unconnect it.  
 country_event = {
 	id = egs_giga.1

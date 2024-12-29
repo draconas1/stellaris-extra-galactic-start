@@ -3,7 +3,7 @@
 egs_cluster_initializer = {
 	class = sc_black_hole
 	name = "NAME_Great_Wound"
-	flags = { egs_cluster, egs_init_system, egs_1 }
+	flags = { egs_cluster egs_init_system egs_1 }
 	planet = {
 		class = star
 		orbit_distance = 0

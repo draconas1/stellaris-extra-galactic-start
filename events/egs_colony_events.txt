@@ -56,17 +56,23 @@ country_event = {
 			# taken from gigastructures.  Go gigas!
 			if = {
 				limit = { exists = sector }
-				sector = {
-					leader = {
-						unassign_leader = this
-						save_event_target_as = sector_gov
+				if = {
+					limit = { exists = sector }
+					sector.sector_capital = {
+						leader = {
+							unassign_leader = this
+							save_event_target_as = sector_gov
+						}
 					}
 				}
 			}
 			else = {
 				root = {
 					random_owned_leader = {
-						limit = { leader_class = governor }
+						limit = {
+							is_ruler = no
+							leader_class = official
+						}
 						save_event_target_as = sector_gov
 					}
 				}
@@ -75,24 +81,37 @@ country_event = {
 
 		#set the correct planet class for home planet
 		# hooray for 3.2!  and for Alfray Stryke (QA) & Caligula on discord for showing me how to shove a planet/species into change_pc!
-		event_target:previous_home_planet = {
-			event_target:egs_home_planet = {
-				save_event_target_as = egs_target_planet
-				print_scope_effect = yes
-				if = {
-					limit = {
-						NOR = { 
-							has_planet_flag = egs_ringworld 
-							has_planet_flag = egs_p2_ringworld
-							has_planet_flag = starborn_orbital_city
+		if = {
+			limit = { has_country_flag = EGS_START_OPS }
+			event_target:egs_home_planet = { change_pc = event_target:previous_home_planet }
+			event_target:egs_home_system = {
+				every_system_planet = {
+					limit = { has_planet_flag = ops_starter }
+					change_pc = event_target:previous_home_planet
+				}
+				system_event = { id = ops_events.10 }
+			}
+		}
+		else = {
+			event_target:previous_home_planet = {
+				event_target:egs_home_planet = {
+					save_event_target_as = egs_target_planet
+					if = {
+						limit = {
+							NOR = {
+								has_planet_flag = egs_ringworld
+								has_planet_flag = egs_p2_ringworld
+								has_planet_flag = starborn_orbital_city
+							}
 						}
+						change_pc = prev
+						reroll_deposits = yes
+						reroll_planet_modifiers = yes
 					}
-					change_pc = prev
-					reroll_deposits = yes
-					reroll_planet_modifiers = yes
 				}
 			}
-		}	
+		}
+
 		
 
 		#Set the correct class for secondary planets
@@ -142,7 +161,7 @@ country_event = {
 								OR = {
 									has_country_flag = EGS_START_RINGWORLD
 									has_country_flag = EGS_START_STARBORN
-									has_country_flag = EGS_START_ALDERSON
+									has_country_flag = EGS_START_OPS
 								}
 								has_country_flag = EGS_SILLY_YES
 							}
@@ -195,6 +214,7 @@ country_event = {
 			}
 		}
 
+
 		# Set up the capital planet
 		event_target:egs_home_planet = {
 			remove_deposit = yes
@@ -207,15 +227,10 @@ country_event = {
 			set_controller = root
 			set_capital = yes			
 			if = {
-				limit = {
-					has_planet_flag = egs_alderson
-				}
-				owner = { 
-					country_event = {
-						id = egs_giga_alderson.001
-					}
-				}
-				set_planet_flag = ignore_startup_effect # important, otherise the disc gets cleared by the solar system initaliser generate_home_system_resources below
+				limit = { has_planet_flag = egs_ops_home }
+				ops_init_home_planet = yes
+				generate_start_buildings_and_districts = yes
+				set_planet_flag = ignore_startup_effect # important, otherise gets cleared by the solar system initaliser generate_home_system_resources below
 			}
 			else_if = {
 				# Ringworld setup
@@ -286,8 +301,10 @@ country_event = {
 		}
 
 		event_target:egs_home_system = {
-			#need to regen as the home planet will have been barren and so probably got a resource deposit
-			generate_home_system_resources = yes
+			if = {
+				limit = { ROOT = { NOT = { has_country_flag = EGS_START_OPS }}}
+				generate_home_system_resources = yes
+			}
 			random_system_planet = {
 				limit = {
 					is_star = yes
@@ -351,7 +368,10 @@ country_event = {
 				}				
 			}
 			set_sector_capital = yes
-			#sector = { assign_leader = event_target:sector_gov }
+			if = {
+				limit = { exists = event_target:sector_gov}
+				assign_leader = event_target:sector_gov
+			}
 		}
 
 		event_target:previous_home_system = {
