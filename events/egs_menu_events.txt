@@ -476,7 +476,7 @@ country_event = {
 		trigger = {
 			has_global_flag = OPS_ACTIVE
 			OR = {
-				has_country_flag = EGS_CLUSTER_HEXAGON
+				#has_country_flag = EGS_CLUSTER_HEXAGON
 				has_country_flag = EGS_CLUSTER_BIG_DIPPER
 			}
 			NOT = { has_country_flag = EGS_START_OPS }
@@ -493,7 +493,7 @@ country_event = {
 		trigger = {
 			has_global_flag = OPS_ACTIVE
 			OR = {
-				has_country_flag = EGS_CLUSTER_HEXAGON
+				#has_country_flag = EGS_CLUSTER_HEXAGON
 				has_country_flag = EGS_CLUSTER_BIG_DIPPER
 			}
 			has_country_flag = EGS_START_OPS

@@ -1,21 +1,21 @@
 ﻿l_japanese:
-    egs_menu.1.name:0 "Choose Extra Galatic Start Options"
+    egs_menu.1.name:0 "Choose Extra Galactic Start Options"
     egs_menu.1.desc:0 "These options let you customise your extra galaxy cluster start.\n\n§RThe move will happen AFTER day 1, so you need to start time.  The game may lag when moving you§!\n\nDon't forget to reassign your govenor!\n\n\nNote: When claiming systems you may find that the borders are not rendered, this is a Stellaris issue (often happens with the L-Cluster), and they should render after reloading the game.!\n\n§HLarge and Huge Galaxies may experience significant lag when moving§!"
     egs_menu.1.desc.retile:0 "$egs_menu.1.desc$"
-    egs_menu.1.option.cluster:0 "Choose Extragalatic Constellation"
+    egs_menu.1.option.cluster:0 "Choose Extragalactic Constellation"
     egs_menu.1.option.system:0 "Choose Home System Details"
     egs_menu.1.option.silly:0 "Add OP system of PD Unique Worlds"
     egs_menu.1.option.kerbal:0 "Share cluster with the Kerbal Space Program?"
-    egs_menu.1.option.giga:0 "Guarenteed Gigastructural Engineering stars?"
+    egs_menu.1.option.giga:0 "Guaranteed Gigastructural Engineering stars?"
     egs_menu.1.option.link:0 "How the cluster will link to the galaxy?"
     egs_menu.1.option.diplomacy:0 "Hack fix for PDX distance weighting underflow bug"
-    egs_menu.1.option.sr:0 "Guarentee presence of Strategic Resources in cluster?"
+    egs_menu.1.option.sr:0 "Guarantee presence of Strategic Resources in cluster?"
     egs_menu.1.option.egc:0 "Spawn all Constellations?"
     egs_menu.1.option.egc_connectivity:0 "How other clusters will link to the galaxy"
     egs_menu.1.option.begin:0 "§YBegin§!"
 
     egs_menu.100.name:0 "Choose Constellation"
-    egs_menu.100.desc:0 "These layouts were all originally pioneered by the Extragalatic Cluster Mod, which you should get and enjoy - in that the clusters are packed full of goodies to find and use.\n\nAvailable Choices:\n\nThe Apprentice (11 stars)\nHexagon (14 stars)\nSteed (8 Stars)\nAtronach (10 stars)\nThe Big Dipper (7 stars)"
+    egs_menu.100.desc:0 "These layouts were all originally pioneered by the Extragalactic Cluster Mod, which you should get and enjoy - in that the clusters are packed full of goodies to find and use.\n\nAvailable Choices:\n\nThe Apprentice (11 stars)\nHexagon (14 stars)\nSteed (8 Stars)\nAtronach (10 stars)\nThe Big Dipper (7 stars)"
     egs_menu.100.option.apprentice:0 "Apprentice"
     egs_menu.100.option.hexagon:0 "Hexagon"
     egs_menu.100.option.steed:0 "Steed"
@@ -28,7 +28,7 @@
     egs_menu.100.option.bigdipper.on:0 "§Y$egs_menu.100.option.bigdipper$§!"
 
     egs_menu.200.name:0 "Choose Starting System Initaliser"
-    egs_menu.200.desc:0 "Works just the same as the option on the start screen, setting the details of your starting system.\n\nAvailable Choices:\n\nRandom System (default)\nRandom Binary\nRandom Trinary\nSol\nDeneb\nRing World: Start on a ring world.  You will have additional starting funds, as the ringworlds costs are greater than a starting empire can provide.  Unlike ZOFE there are no story events around this, you're just there.\nStarborn: Same as the Starborn Origin.  (Requires the Starborn Mod - Game Limitation: your pops will have starborn trait as a subspecies not the main one)\nAlderson Disk (Requires Gigastructural Engineering)"
+    egs_menu.200.desc:0 "Works just the same as the option on the start screen, setting the details of your starting system.\n\nAvailable Choices:\n\nRandom System (default)\nRandom Binary\nRandom Trinary\nSol\nDeneb\nRing World: Start on a ring world.  You will have additional starting funds, as the ringworlds costs are greater than a starting empire can provide.  \nOP Outside System (Requires: OP Isolated Start)"
     egs_menu.200.option.random:0 "Random System"
     egs_menu.200.option.randombinry:0 "$custom_starting_init_03_NAME$"
     egs_menu.200.option.randomtrinary:0 "$custom_starting_init_01_NAME$"
@@ -36,7 +36,7 @@
     egs_menu.200.option.deneb:0 "Deneb"
     egs_menu.200.option.ringworld:0 "Ring World"
     egs_menu.200.option.starborn:0 "Starborn"
-    egs_menu.200.option.alderson:0 "Alderson Disk"
+    egs_menu.200.option.alderson:0 "OP System"
 
     egs_menu.200.option.random.on:0 "§Y$egs_menu.200.option.random$§!"
     egs_menu.200.option.randombinry.on:0 "§Y$egs_menu.200.option.randombinry$§!"
@@ -48,7 +48,7 @@
     egs_menu.200.option.alderson.on:0 "§Y$egs_menu.200.option.alderson$§!"
 
     egs_menu.300.name:0 "Enable Kerbal Space Program"
-    egs_menu.300.desc:0 "An homage to the ExtraGalatic Clusters mod from where the cluster spawn coordinates have been taken.\n\nYou can share your cluster with the primitive Kerbal Space Program\n\nAre they the source of the devestation that caused the Great Rift?  Are they just crazy?  Will they join the galatic stage or wipe themselves out?  Who knows"
+    egs_menu.300.desc:0 "An homage to the ExtraGalactic Clusters mod from where the cluster spawn coordinates have been taken.\n\nYou can share your cluster with the primitive Kerbal Space Program\n\nAre they the source of the devestation that caused the Great Rift?  Are they just crazy?  Will they join the galactic stage or wipe themselves out?  Who knows"
     egs_menu.300.option.no:0 "No Kerbals"
     egs_menu.300.option.yes:0 "Spawn the Kerbals"
     egs_menu.300.option.no.on:0 "§Y$egs_menu.300.option.no$§!"
@@ -70,10 +70,10 @@
     egs_menu.500.option.manywormhole.on:0 "§Y$egs_menu.500.option.manywormhole$§!"
     egs_menu.500.option.lgate.on:0 "§Y$egs_menu.500.option.lgate$§!"
 
-    egs_menu.600.name:0 "Guarenteed Strategic Resources"
-    egs_menu.600.desc:0 "Guarentees that there we be at least one deposit of each strategic resource in the cluster.\n\nIf you select $egs_menu.600.option.no.on$ then the random resource distribution may still give you some, but it is not guarenteed\n\nIf you select yes you will also get the engineering research option on living metal at game start so you can use your deposit"
-    egs_menu.600.option.no:0 "No Guarenteed Resources"
-    egs_menu.600.option.yes:0 "Guarenteed Strategic Resources"
+    egs_menu.600.name:0 "Guaranteed Strategic Resources"
+    egs_menu.600.desc:0 "Guarantees that there we be at least one deposit of each strategic resource in the cluster.\n\nIf you select $egs_menu.600.option.no.on$ then the random resource distribution may still give you some, but it is not guarenteed\n\nIf you select yes you will also get the engineering research option on living metal at game start so you can use your deposit"
+    egs_menu.600.option.no:0 "No Guaranteed Resources"
+    egs_menu.600.option.yes:0 "Guaranteed Strategic Resources"
     egs_menu.600.option.no.on:0 "§Y$egs_menu.600.option.no$§!"
     egs_menu.600.option.yes.on:0 "§Y$egs_menu.600.option.yes$§!"
 
@@ -87,7 +87,7 @@
     egs_menu.800.name:0 "Choose Extra Galactic Cluster Connectivity"
     egs_menu.800.desc:0 "If you have enabled all the extra galactic clusters, choose how they will connect to the galaxy\n\nSingle Wormhole: Each cluster has one wormhole to random system in the galaxy\nRound Robin: 1 wormhole per cluster goes to the main galaxy, 2 will go to other clusters in a ring, Your spawning cluster will have a wormhole to a random other cluster in addition to its connection to the rest of the galaxy\nL-gate: they all have a single L-gate connection (Requires Distant Stars DLC)\n\n§HWARNING: Round Robin can cause game breaking pathing issues and crippling lag in the mid-late game on large and huge galaxies.  You are strongly advised to only use it on medium or smaller galaxies§!"    
         
-    egs_menu.800.option.noegc:0 "You need to enable additional extra-galatic clusters"
+    egs_menu.800.option.noegc:0 "You need to enable additional extra-galactic clusters"
     egs_menu.800.option.default:0 "Single Wormhole"
     egs_menu.800.option.roundrobin:0 "Wormhole Round Robin"
     egs_menu.800.option.lgate:0 "L-Gate"
@@ -113,8 +113,8 @@
     egs_menu.10.desc:0 "The chosen home planet preference of your species comes from an unknown mod.  It is likely that you will be destroyed when you move cluster.\n\nPlease contact the mod author, letting them know the planet class and the mod it comes from and he will try to add it.\n\nIn the meantime start a new game with a vanilla or planetary diversity planet class."
     egs_menu.10.option.close:0 "Ok"
 
-    egs_menu_p2.1.name:0 "Choose Extra Galatic Start Options"
-    egs_menu_p2.1.desc:0 "Hello Player 2.  All you get to pick is your home system, the other Extra Galatic Options are decided by player 1!"
+    egs_menu_p2.1.name:0 "Choose Extra Galactic Start Options"
+    egs_menu_p2.1.desc:0 "Hello Player 2.  All you get to pick is your home system, the other Extra Galactic Options are decided by player 1!"
     egs_menu_p2.1.option.system:0 "Choose Home System Details"
     egs_menu_p2.1.option.begin:0 "§YBegin§!"
 
@@ -136,10 +136,10 @@
 
 
     edict_egs_egc_default:0 "Spawn Extra Galactic Clusters: Default"
-    edict_egs_egc_default_desc:0 "This will spawn all the extra galatic clusters over the next 8 months, there will be game lag spikes as each one spawns.\nEach will be linked by some wormholes to the main galaxy."
+    edict_egs_egc_default_desc:0 "This will spawn all the extra galactic clusters over the next 8 months, there will be game lag spikes as each one spawns.\nEach will be linked by some wormholes to the main galaxy."
 
     edict_egs_egc_round_robin:0 "Spawn Extra Galactic Clusters: Round Robin"
-    edict_egs_egc_round_robin_desc:0 "This will spawn all the extra galatic clusters over the next 8 months, there will be game lag spikes as each one spawns.\nEach will be linked by a single wormhole to the main galaxy and 2 other wormholes to other clusters.\n\n§HWARNING: Round Robin can cause game breaking pathing issues and crippling lag in the mid-late game on large and huge galaxies.  You are strongly advised to only use it on medium or smaller galaxies§!"
+    edict_egs_egc_round_robin_desc:0 "This will spawn all the extra galactic clusters over the next 8 months, there will be game lag spikes as each one spawns.\nEach will be linked by a single wormhole to the main galaxy and 2 other wormholes to other clusters.\n\n§HWARNING: Round Robin can cause game breaking pathing issues and crippling lag in the mid-late game on large and huge galaxies.  You are strongly advised to only use it on medium or smaller galaxies§!"
 
     edict_egs_egc_lgate:0 "Spawn Extra Galactic Clusters: L-Gate"
-    edict_egs_egc_lgate_desc:0 "This will spawn all the extra galatic clusters over the next 8 months, there will be game lag spikes as each one spawns.\nEach will have a single L-Gate."
+    edict_egs_egc_lgate_desc:0 "This will spawn all the extra galactic clusters over the next 8 months, there will be game lag spikes as each one spawns.\nEach will have a single L-Gate."

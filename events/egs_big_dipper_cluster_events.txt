@@ -14,10 +14,10 @@ country_event = {
 			# ROOT
 			#
 			spawn_system = {
-				min_distance >= 545
-				max_distance <= 550
-				min_orientation_angle = 85
-				max_orientation_angle = 86
+				min_distance >= 505
+				max_distance <= 510
+				min_orientation_angle = 95
+				max_orientation_angle = 100
 				initializer = egs_cluster_initializer
 				hyperlane = no
 			}
@@ -31,6 +31,145 @@ country_event = {
 		}
 
 		#
+		# STAR 6
+		#
+		# create the star
+		if = {
+			limit = {
+				has_country_flag = EGS_GIGA_YES
+			}
+			event_target:egs_cluster_01 = {
+				spawn_system = {
+					min_distance >= 18
+					max_distance <= 23
+					min_orientation_angle = 65
+					max_orientation_angle = 70
+					initializer = egs_special_init_08				#neutron
+				}
+			}
+		}
+		else = {
+			event_target:egs_cluster_01 = {
+				spawn_system = {
+					min_distance >= 18
+					max_distance <= 23
+					min_orientation_angle = 65
+					max_orientation_angle = 70
+					initializer = egs_basic_init_06_3
+				}
+			}
+		}
+
+		# find the star
+		random_system = {
+			limit = { has_star_flag = egs_big_6 }
+			save_event_target_as = egs_cluster_06
+			set_star_flag = egs_cluster
+			set_star_flag = egs_6
+			set_star_flag = egs_habitable_spawn
+		}
+
+		#
+		# STAR 3
+		#
+		# create the star
+		if = {
+			limit = {
+				has_country_flag = EGS_GIGA_YES
+			}
+			event_target:egs_cluster_06 = {
+				spawn_system = {
+					min_distance >= 23
+					max_distance <= 29
+					min_orientation_angle = 30
+					max_orientation_angle = 35
+					initializer = egs_special_init_09
+				}
+			}
+
+		}
+		else = {
+			event_target:egs_cluster_06 = {
+				spawn_system = {
+					min_distance >= 23
+					max_distance <= 29
+					min_orientation_angle = 30
+					max_orientation_angle = 35
+					initializer = egs_basic_init_06
+				}
+			}
+		}
+
+		# find the star
+		random_system = {
+			limit = { has_star_flag = egs_big_3 }
+			save_event_target_as = egs_cluster_03
+			set_star_flag = egs_cluster
+			set_star_flag = egs_3
+		}
+
+
+		#
+		# STAR 7
+		#
+		# create the star
+		if = {
+			limit = {
+				num_guaranteed_colonies >= 2
+			}
+			event_target:egs_cluster_03 = {
+				spawn_system = {
+					min_distance >= 23
+					max_distance <= 29
+					min_orientation_angle = 30
+					max_orientation_angle = 35
+					initializer = egs_neighbor_t2_second_colony
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = EGS_GIGA_YES
+			}
+			event_target:egs_cluster_03 = {
+				spawn_system = {
+					min_distance >= 23
+					max_distance <= 29
+					min_orientation_angle = 30
+					max_orientation_angle = 35
+					initializer = egs_special_init_01					# black hole
+				}
+			}
+		}
+		else = {
+			event_target:egs_cluster_03 = {
+				spawn_system = {
+					min_distance >= 23
+					max_distance <= 29
+					min_orientation_angle = 30
+					max_orientation_angle = 35
+					initializer = egs_trinary_init_02
+				}
+			}
+		}
+
+		# find the star
+		random_system = {
+			limit = { has_star_flag = egs_big_7 }
+			save_event_target_as = egs_cluster_07
+			set_star_flag = egs_cluster
+			set_star_flag = egs_7
+			if = {
+				limit = {
+					num_guaranteed_colonies >= 2
+				}
+				set_star_flag = egs_habitable_spawn
+			}
+		}
+
+
+
+		#
 		# STAR 2
 		#
 		# create the star
@@ -38,7 +177,7 @@ country_event = {
 			limit = {
 				has_country_flag = EGS_KERBAL_YES
 			}
-			event_target:egs_cluster_01 = {
+			event_target:egs_cluster_07 = {
 				spawn_system = {
 					min_distance >= 44
 					max_distance <= 49
@@ -49,13 +188,13 @@ country_event = {
 			}
 		}
 		else = {
-			event_target:egs_cluster_01 = {
+			event_target:egs_cluster_07 = {
 				spawn_system = {
 					min_distance >= 44
 					max_distance <= 49
 					min_orientation_angle = 70
 					max_orientation_angle = 74
-					initializer = egs_basic_init_05
+					initializer = egs_arc_init
 				}
 			}
 		}
@@ -69,45 +208,7 @@ country_event = {
 		}
 
 		
-		#
-		# STAR 3
-		#
-		# create the star
-		if = {
-			limit = {
-				has_country_flag = EGS_GIGA_YES 
-			}
-			event_target:egs_cluster_01 = {
-				spawn_system = {
-					min_distance >= 23
-					max_distance <= 29
-					min_orientation_angle = 210
-					max_orientation_angle = 215
-					initializer = egs_special_init_09
-				}
-			}
-			
-		}
-		else = {
-			event_target:egs_cluster_01 = {
-				spawn_system = {
-					min_distance >= 23
-					max_distance <= 29
-					min_orientation_angle = 210
-					max_orientation_angle = 215
-					initializer = egs_basic_init_06
-				}
-			}
-		}
-		
-		
-		# find the star
-		random_system = {
-			limit = { has_star_flag = egs_big_3 }
-			save_event_target_as = egs_cluster_03
-			set_star_flag = egs_cluster
-			set_star_flag = egs_3
-		}
+
 		#
 		# STAR 4
 		#
@@ -116,7 +217,7 @@ country_event = {
 			limit = {
 				has_country_flag = EGS_START_SOL 
 			}
-			event_target:egs_cluster_01 = {
+			event_target:egs_cluster_07 = {
 				spawn_system = {
 					min_distance >= 21
 					max_distance <= 25
@@ -130,7 +231,7 @@ country_event = {
 			limit = {
 				has_country_flag = EGS_START_DENEB 
 			}
-			event_target:egs_cluster_01 = {
+			event_target:egs_cluster_07 = {
 				spawn_system = {
 					min_distance >= 21
 					max_distance <= 25
@@ -144,7 +245,7 @@ country_event = {
 			limit = {
 				has_country_flag = EGS_START_RINGWORLD 
 			}
-			event_target:egs_cluster_01 = {
+			event_target:egs_cluster_07 = {
 				spawn_system = {
 					min_distance >= 21
 					max_distance <= 25
@@ -158,7 +259,7 @@ country_event = {
 			limit = {
 				has_country_flag = EGS_START_OPS
 			}
-			event_target:egs_cluster_01 = {
+			event_target:egs_cluster_07 = {
 				spawn_system = {
 					min_distance >= 21
 					max_distance <= 25
@@ -179,7 +280,7 @@ country_event = {
 			limit = {
 				has_country_flag = EGS_START_RANDOM_TRINARY 
 			}
-			event_target:egs_cluster_01 = {
+			event_target:egs_cluster_07 = {
 				spawn_system = {
 					min_distance >= 21
 					max_distance <= 25
@@ -193,7 +294,7 @@ country_event = {
 			limit = {
 				has_country_flag = EGS_START_RANDOM_BINARY 
 			}
-			event_target:egs_cluster_01 = {
+			event_target:egs_cluster_07 = {
 				spawn_system = {
 					min_distance >= 21
 					max_distance <= 25
@@ -204,7 +305,7 @@ country_event = {
 			}
 		}
 		else = {
-			event_target:egs_cluster_01 = {
+			event_target:egs_cluster_07 = {
 				spawn_system = {
 					min_distance >= 21
 					max_distance <= 25
@@ -285,103 +386,9 @@ country_event = {
 			}
 		}
 
-		#
-		# STAR 6
-		#
-		# create the star
-		if = {
-			limit = {
-				has_country_flag = EGS_GIGA_YES 
-			}
-			event_target:egs_cluster_03 = {
-				spawn_system = {
-					min_distance >= 18
-					max_distance <= 23
-					min_orientation_angle = 210
-					max_orientation_angle = 215
-					initializer = egs_special_init_08				#neutron
-				}
-			}			
-		}
-		else = {
-			event_target:egs_cluster_03 = {
-				spawn_system = {
-					min_distance >= 18
-					max_distance <= 23
-					min_orientation_angle = 210
-					max_orientation_angle = 215
-					initializer = egs_basic_init_06_3
-				}
-			}
-		}
-		
 
-		# find the star
-		random_system = {
-			limit = { has_star_flag = egs_big_6 }
-			save_event_target_as = egs_cluster_06
-			set_star_flag = egs_cluster
-			set_star_flag = egs_6
-			set_star_flag = egs_habitable_spawn
-		}
 
-		#
-		# STAR 7
-		#
-		# create the star
-		if = {
-			limit = {
-				num_guaranteed_colonies >= 2
-			}
-			event_target:egs_cluster_06 = {
-				spawn_system = {
-					min_distance >= 17
-					max_distance <= 22
-					min_orientation_angle = 251
-					max_orientation_angle = 255
-					initializer = egs_neighbor_t2_second_colony
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				has_country_flag = EGS_GIGA_YES
-			}
-			event_target:egs_cluster_06 = {
-				spawn_system = {
-					min_distance >= 17
-					max_distance <= 22
-					min_orientation_angle = 251
-					max_orientation_angle = 255
-					initializer = egs_special_init_01					# black hole
-				}
-			}
-		}
-		else = {
-			event_target:egs_cluster_06 = {
-				spawn_system = {
-					min_distance >= 17
-					max_distance <= 22
-					min_orientation_angle = 251
-					max_orientation_angle = 255
-					initializer = egs_trinary_init_02
-				}
-			}
-		}
 
-		# find the star
-		random_system = {
-			limit = { has_star_flag = egs_big_7 }
-			save_event_target_as = egs_cluster_07
-			set_star_flag = egs_cluster
-			set_star_flag = egs_7
-			if = {
-				limit = {
-					num_guaranteed_colonies >= 2
-				}
-				set_star_flag = egs_habitable_spawn
-			}
-		}
 		
 		
 		# clear all hyperlanes to and within the cluster
@@ -396,15 +403,15 @@ country_event = {
 		#create the cluster hyperlanes
 
 		add_hyperlane = {
-			from = event_target:egs_cluster_01
+			from = event_target:egs_cluster_07
 			to = event_target:egs_cluster_02
 		}
 		add_hyperlane = {
-			from = event_target:egs_cluster_01
+			from = event_target:egs_cluster_07
 			to = event_target:egs_cluster_03
 		}
 		add_hyperlane = {
-			from = event_target:egs_cluster_01
+			from = event_target:egs_cluster_07
 			to = event_target:egs_cluster_04
 		}
 		add_hyperlane = {
@@ -421,7 +428,7 @@ country_event = {
 		}
 		add_hyperlane = {
 			from = event_target:egs_cluster_06
-			to = event_target:egs_cluster_07
+			to = event_target:egs_cluster_01
 		}
 		
 		    
