@@ -10,16 +10,46 @@ country_event = {
 		set_spawn_system_batch = begin
 		# No scope puts our relative coordinate as the galatic centre
 		no_scope = {
+
 			#
 			# ROOT
 			#
-			spawn_system = {
-				min_distance >= 505
-				max_distance <= 510
-				min_orientation_angle = 95
-				max_orientation_angle = 100
-				initializer = egs_cluster_initializer
-				hyperlane = no
+			if = {
+				limit = {
+					OR = {
+						galaxy_size = tiny
+						galaxy_size = small
+					}
+				}
+				spawn_system = {
+					min_distance >= 360
+					max_distance <= 400
+					min_orientation_angle = 95
+					max_orientation_angle = 100
+					initializer = egs_cluster_initializer
+					hyperlane = no
+				}
+			}
+			else_if = {
+				limit = { galaxy_size = medium }
+				spawn_system = {
+					min_distance >= 420
+					max_distance <= 450
+					min_orientation_angle = 95
+					max_orientation_angle = 100
+					initializer = egs_cluster_initializer
+					hyperlane = no
+				}
+			}
+			else = {
+				spawn_system = {
+					min_distance >= 505
+					max_distance <= 510
+					min_orientation_angle = 95
+					max_orientation_angle = 100
+					initializer = egs_cluster_initializer
+					hyperlane = no
+				}
 			}
 		}
 		#Find the star
