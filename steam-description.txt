@@ -9,10 +9,8 @@ If your civilisation takes that then a menu will appear on game start for you to
 [*] Constellation Shape
 [*] Starting  System Initaliser (Sol, Deneb, Random, Ring World)
 [*] Guarantee that strategic resources and specific stars for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1121692237]Giagastructures[/url] will spawn
-[*] Access to your cluster? (Wormhole, Many Wormholes, the L-Gate Network)
-[*] Spawn all the clusters from [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1523039190]Extra Galactic Clusters[/url], and optionally link them in an extra-galatic wormhole ring or to the L-cluster.
+[*] Access to your cluster? (Wormhole, the L-Gate Network)
 [*] Multiplayer support for upto 2 players to start in clusters
-[*] If nobody takes the origin you can still spawn all the other clusters using an edict
 [/list]
 
 [h1]Gameplay[/h1]
@@ -39,14 +37,11 @@ No vanilla files were harmed in the making of this mod, but as it does a lot of 
 
 [h1]My Other Mods[/h1]
 [list]
-[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2288046502]Planetary Population Restrictions[/url]: Stop certain species breeding where you don't want them.
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2562023076]Station Solar System Exploitation[/url]: Starbase enhancements for mining, research and planet production.
-[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2900621825]Synths Keep Some Organic Pops[/url]: Keep a few of your original species when you Synthetically ascend.
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2836653877]Evolving Hyperlanes Redux[/url]: Galactic hyperlanes change over the course of the game.
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2805064456]Bulldose Planets & Create Thrall World[/url]: QoL improvements on creating a Thrall World and rapidly clearing buildings and districts on conquests.
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2805054830]OP Isolated Start[/url]: Start in an isolated system with multiple habitatable planets, modifiers and resources
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2907704328]Resettlement Tool Redux[/url]: Mass Resettle Pops quickly with a handy menu.
-[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2979799215]Genetic Assimilation[/url]: Genetic Ascension QoL: Can assimilate pops into a genetic template
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2909582424]All Ascension Paths[/url]: Take all 4 ascension paths: Psionic, Erudite, Cyborgs working with Synths
 [/list]
 

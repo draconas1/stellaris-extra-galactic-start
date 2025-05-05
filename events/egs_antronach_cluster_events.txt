@@ -301,20 +301,7 @@ country_event = {
 				}
 			}
 		}
-		else_if = {
-			limit = {
-				has_country_flag = EGS_START_STARBORN
-			}
-			event_target:egs_cluster_04 = {
-				spawn_system = {
-					min_distance >= 43
-					max_distance <= 48
-					min_orientation_angle = 275
-					max_orientation_angle = 280
-					initializer = starborn_system
-				}
-			}
-		}
+
 		else_if = {
 			limit = {
 				has_country_flag = EGS_START_RANDOM_TRINARY 
