@@ -294,10 +294,7 @@ country_event = {
 				}
 			}
 
-			every_owned_pop_group = {
-				unemploy_pop = yes
-			}
-
+			planet_event = { id = egs_colony.11 days = 1 }
 
 			if = {
 				limit = { has_planet_flag = egs_ops_home }
@@ -462,21 +459,44 @@ planet_event = {
 	is_triggered_only = yes
 	immediate = {
 		if = {
-			limit = {
-				NOT = { has_building = building_capital }
-			}
-			add_building = building_capital
-			remove_building = building_colony_shelter
-		}
-		if = {
-			limit = {
-				num_buildings = {
-					type = building_capital
-					value > 1
+			limit = { exists = owner }
+
+			if = {
+				limit = { owner = { is_machine_empire = yes } }
+				if = {
+					limit = { NOT = { has_building = building_machine_capital } }
+					add_building = building_machine_capital
+					remove_building = building_deployment_post
 				}
 			}
-			remove_building = building_capital
+			else_if = {
+				limit = { owner = { is_hive_empire = yes } }
+				if = {
+					limit = { NOT = { has_building = building_hive_capital } }
+					add_building = building_hive_capital
+				}
+			}
+			else = {
+				if = {
+					limit = { NOT = { has_building = building_capital } }
+					add_building = building_capital
+					remove_building = building_colony_shelter
+				}
+			}
 		}
+
+		egs_remove_duplicate_building = { BUILDING = building_capital }
+		egs_remove_duplicate_building = { BUILDING = building_machine_capital }
+		egs_remove_duplicate_building = { BUILDING = building_hive_capital }
+	}
+}
+
+planet_event = {
+	id = egs_colony.11
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		check_planet_employment = yes
 	}
 }
 

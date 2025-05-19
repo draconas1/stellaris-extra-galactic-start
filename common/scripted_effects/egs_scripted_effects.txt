@@ -100,3 +100,15 @@ create_and_link_wormholes = {
 		link_wormholes = event_target:egs_wormhole_1
 	}
 }
+
+egs_remove_duplicate_building = {
+	if = {
+		limit = {
+			num_buildings = {
+				type = $BUILDING$
+				value > 1
+			}
+		}
+		remove_building = $BUILDING$
+	}
+}

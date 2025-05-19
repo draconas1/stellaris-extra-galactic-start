@@ -1,6 +1,6 @@
 ﻿l_english:
     egs_menu.1.name:0 "Choose Extra Galactic Start Options"
-    egs_menu.1.desc:0 "These options let you customise your extra galaxy cluster start.\n\n§RThe move will happen AFTER day 1, so you need to start time.  The game may lag when moving you§!\n\nDon't forget to reassign your govenor!\n\n\nNote: When claiming systems you may find that the borders are not rendered, this is a Stellaris issue (often happens with the L-Cluster), and they should render after reloading the game.!\n\n§HLarge and Huge Galaxies may experience significant lag when moving§!"
+    egs_menu.1.desc:0 "These options let you customise your extra galaxy cluster start.\n\n§RThe move will happen AFTER day 1, so you need to start time.  The game may lag when moving you§!\n\nDon't forget to reassign your governor!\n\n\nNote: When claiming systems you may find that the borders are not rendered, this is a Stellaris issue (often happens with the L-Cluster), and they should render after reloading the game.!\n\n§HLarge and Huge Galaxies may experience significant lag when moving§!\n\n§HThere may be some unemployed pops, inefficient jobs, some not entirely accurate districts or weird issues with dual capital buildings, most of these should resolve at the end of the first month§!"
     egs_menu.1.desc.retile:0 "$egs_menu.1.desc$"
     egs_menu.1.option.cluster:0 "Choose Extragalactic Constellation"
     egs_menu.1.option.system:0 "Choose Home System Details"
@@ -27,8 +27,8 @@
     egs_menu.100.option.atronach.on:0 "§Y$egs_menu.100.option.atronach$§!"
     egs_menu.100.option.bigdipper.on:0 "§Y$egs_menu.100.option.bigdipper$§!"
 
-    egs_menu.200.name:0 "Choose Starting System Initaliser"
-    egs_menu.200.desc:0 "Works just the same as the option on the start screen, setting the details of your starting system.\n\nAvailable Choices:\n\nRandom System (default)\nRandom Binary\nRandom Trinary\nSol\nDeneb\nRing World: Start on a ring world.  You will have additional starting funds, as the ringworlds costs are greater than a starting empire can provide.  \nOP Outside System (Requires: OP Isolated Start)"
+    egs_menu.200.name:0 "Choose Starting System Initialiser"
+    egs_menu.200.desc:0 "Works just the same as the option on the start screen, setting the details of your starting system.\n\nAvailable Choices:\n\nRandom System (default)\nRandom Binary\nRandom Trinary\nSol\nDeneb\nOP Outside System (Requires: OP Isolated Start)"
     egs_menu.200.option.random:0 "Random System"
     egs_menu.200.option.randombinry:0 "$custom_starting_init_03_NAME$"
     egs_menu.200.option.randomtrinary:0 "$custom_starting_init_01_NAME$"
@@ -46,13 +46,6 @@
     egs_menu.200.option.ringworld.on:0 "§Y$egs_menu.200.option.ringworld$§!"
     egs_menu.200.option.starborn.on:0 "§Y$egs_menu.200.option.starborn$§!"
     egs_menu.200.option.alderson.on:0 "§Y$egs_menu.200.option.alderson$§!"
-
-    egs_menu.300.name:0 "Enable Kerbal Space Program"
-    egs_menu.300.desc:0 "An homage to the ExtraGalactic Clusters mod from where the cluster spawn coordinates have been taken.\n\nYou can share your cluster with the primitive Kerbal Space Program\n\nAre they the source of the devestation that caused the Great Rift?  Are they just crazy?  Will they join the galactic stage or wipe themselves out?  Who knows"
-    egs_menu.300.option.no:0 "No Kerbals"
-    egs_menu.300.option.yes:0 "Spawn the Kerbals"
-    egs_menu.300.option.no.on:0 "§Y$egs_menu.300.option.no$§!"
-    egs_menu.300.option.yes.on:0 "§Y$egs_menu.300.option.yes$§!"
 
     egs_menu.400.name:0 "Enable Guarenteed Gigastructual Engineering Stars"
     egs_menu.400.desc:0 "Guarentees that suitable stars will exist for Gigastructural Engineering.\n\nIf you desire lots of gigastructures you are advised to disable the kerbals and have only 1 guarenteed habitable colony, especially on the small constelations"
@@ -77,37 +70,12 @@
     egs_menu.600.option.no.on:0 "§Y$egs_menu.600.option.no$§!"
     egs_menu.600.option.yes.on:0 "§Y$egs_menu.600.option.yes$§!"
 
-    egs_menu.700.name:0 "Spawn All Extra Galactic Clusters"
-    egs_menu.700.desc:0 "Do you want to spawn ALL the extra-galactic clusters\n\nThey will spawn in one at a time over the course of the first year, ending with the Hexagon Cluster, there will be game lag every time one spawns.\n\nThese clusters are taken entirely from Extra-Galactic clusters mod, with all their mid->late game goodies, monsters and megastrctures inside.  The only changes are their galactic location and their access methods.!\n\n§HYou may experience significant lag and freezes throughout the first year until late August when the Hexagon cluster spawns in§!"
-    egs_menu.700.option.no:0 "No extra clusters"
-    egs_menu.700.option.yes:0 "Spawn all the clusters"
-    egs_menu.700.option.no.on:0 "§Y$egs_menu.700.option.no$§!"
-    egs_menu.700.option.yes.on:0 "§Y$egs_menu.700.option.yes$§!"
-
-    egs_menu.800.name:0 "Choose Extra Galactic Cluster Connectivity"
-    egs_menu.800.desc:0 "If you have enabled all the extra galactic clusters, choose how they will connect to the galaxy\n\nSingle Wormhole: Each cluster has one wormhole to random system in the galaxy\nRound Robin: 1 wormhole per cluster goes to the main galaxy, 2 will go to other clusters in a ring, Your spawning cluster will have a wormhole to a random other cluster in addition to its connection to the rest of the galaxy\nL-gate: they all have a single L-gate connection (Requires Distant Stars DLC)\n\n§HWARNING: Round Robin can cause game breaking pathing issues and crippling lag in the mid-late game on large and huge galaxies.  You are strongly advised to only use it on medium or smaller galaxies§!"    
-        
-    egs_menu.800.option.noegc:0 "You need to enable additional extra-galactic clusters"
-    egs_menu.800.option.default:0 "Single Wormhole"
-    egs_menu.800.option.roundrobin:0 "Wormhole Round Robin"
-    egs_menu.800.option.lgate:0 "L-Gate"
-    egs_menu.800.option.default.on:0 "§Y$egs_menu.800.option.default$§!"
-    egs_menu.800.option.roundrobin.on:0 "§Y$egs_menu.800.option.roundrobin$§!"
-    egs_menu.800.option.lgate.on:0 "§Y$egs_menu.800.option.lgate$§!"
-
     egs_menu.900.name:0 "Leave Original System Intact"
     egs_menu.900.desc:0 "There is a PDX underflow bug where if you have no foothold in the main galaxy the "distance" diplomatic penalty goes so low it underflows into a massive bonus and the AI becomes despirate to be your friend.  This is a hack fix while I try to figure out a better one.\nYou will keep control of your original system and diplomatic weight will be calculated to there."
     egs_menu.900.option.no:0 "Release Original System (Default)"
     egs_menu.900.option.yes:0 "Maintain Control of Original System"
     egs_menu.900.option.no.on:0 "§Y$egs_menu.900.option.no$§!"
     egs_menu.900.option.yes.on:0 "§Y$egs_menu.900.option.yes$§!"
-
-    egs_menu.1000.name:0 "Planetary Diversity and GPM OP Silliness"
-    egs_menu.1000.desc:0 "§HWARNING: Requires Planetary Diversity: Unique Worlds & Shroud Worlds MODS§!\n\nWhile I can check for PD, there is no way to check that you have the sub-mods for PD.  Thus if you use this without those mods you may get unpredictable behaviour!\n\nAdds some new systems to the Hex Cluster that have the Unique Worlds from Planetary Diversity, with the precursor modifiers from Guillis Planetary Modifiers on them\n\nVery OP, and quite silly.  \nOnly works with the hex cluster."
-    egs_menu.1000.option.no:0 "No OP Worlds"
-    egs_menu.1000.option.yes:0 "Spawn OP Worlds"
-    egs_menu.1000.option.no.on:0 "§Y$egs_menu.1000.option.no$§!"
-    egs_menu.1000.option.yes.on:0 "§Y$egs_menu.1000.option.yes$§!"
 
     egs_menu.10.name:0 "UNKNOWN PLANET TYPE DETECTED"
     egs_menu.10.desc:0 "The chosen home planet preference of your species comes from an unknown mod.  It is likely that you will be destroyed when you move cluster.\n\nPlease contact the mod author, letting them know the planet class and the mod it comes from and he will try to add it.\n\nIn the meantime start a new game with a vanilla or planetary diversity planet class."
@@ -118,7 +86,7 @@
     egs_menu_p2.1.option.system:0 "Choose Home System Details"
     egs_menu_p2.1.option.begin:0 "§YBegin§!"
 
-    egs_menu_p2.200.name:0 "Choose Starting System Initaliser"
+    egs_menu_p2.200.name:0 "Choose Starting System Initializer"
     egs_menu_p2.200.desc:0 "Works just the same as the option on the start screen, setting the details of your starting system.\n\nAvailable Choices:\n\nRandom System (default)\nRandom Binary\nRandom Trinary\nSol\nDeneb\nRing World: Start on a ring world.  You will have additional starting funds, as the ringworlds costs are greater than a starting empire can provide.  Unlike ZOFE there are no story events around this, you're just there."
     egs_menu_p2.200.option.random:0 "Random System"
     egs_menu_p2.200.option.randombinry:0 "$custom_starting_init_03_NAME$"
