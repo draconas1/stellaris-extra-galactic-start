@@ -478,63 +478,6 @@ country_event = {
 }
 
 
-#Kerbal Menu
-country_event = {
-	id = egs_menu.300    
-	title = "egs_menu.300.name"
-	desc = "egs_menu.300.desc"
-	picture = GFX_evt_alien_segregation
-	is_triggered_only = yes
-
-	option = {
-		name = "egs_menu.300.option.no"
-		trigger = {
-			NOT = { has_country_flag = EGS_KERBAL_NO }
-		}
-		hidden_effect = {
-			clear_egs_kerbal_flags = yes
-			set_country_flag = EGS_KERBAL_NO
-			country_event = { id = egs_menu.1 }
-		}
-	}
-
-	option = {
-		name = "egs_menu.300.option.no.on"
-		trigger = {
-			has_country_flag = EGS_KERBAL_NO
-		}
-		hidden_effect = {
-			clear_egs_kerbal_flags = yes
-			set_country_flag = EGS_KERBAL_NO
-			country_event = { id = egs_menu.1 }
-		}
-	}
-
-	option = {
-		name = "egs_menu.300.option.yes"
-		trigger = {
-			NOT = { has_country_flag = EGS_KERBAL_YES }
-		}
-		hidden_effect = {
-			clear_egs_kerbal_flags = yes
-			set_country_flag = EGS_KERBAL_YES
-			country_event = { id = egs_menu.1 }
-		}
-	}
-
-	option = {
-		name = "egs_menu.300.option.yes.on"
-		trigger = {
-			has_country_flag = EGS_KERBAL_YES
-		}
-		hidden_effect = {
-			clear_egs_kerbal_flags = yes
-			set_country_flag = EGS_KERBAL_YES
-			country_event = { id = egs_menu.1 }
-		}
-	}
-}
-
 #Gigastructures Menu
 country_event = {
 	id = egs_menu.400    

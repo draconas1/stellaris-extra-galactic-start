@@ -276,13 +276,49 @@ country_event = {
 				}
 			}
 
-			planet_event = { id = game_start.12 }
-			planet_event = { id = egs_colony.10 days = 1 }
+			# planet_event = { id = game_start.12 }
 
-			# that has created a bunch of pops, that are probably wrong
-			every_owned_pop_group = {
-				kill_all_pop = yes
+			# game_start.12
+			if = {
+				limit = {
+					NOT = { has_planet_flag = special_start_planet }
+				}
+				if = {
+					limit = {
+						OR = {
+							NOT = { has_planet_flag = planet_earth }
+							owner = { has_origin = origin_remnants } #no special earth for you, sorry
+						}
+						NOT = {
+							owner = { has_origin = origin_shattered_ring }	#setup in initializer
+						}
+					}
+					generate_start_deposits_and_blockers = yes
+				}
+				else_if = {
+					limit = {
+						has_planet_flag = planet_earth
+						NOR = {
+							owner = { has_origin = origin_shattered_ring }	 #setup in initializer
+							owner = { has_origin = origin_remnants }		 #custom blockers
+						}
+					}
+					generate_earth_deposits_and_blockers = yes
+					set_earth_entity = yes
+				}
+				generate_start_buildings_and_districts = yes
+				# generate_start_pops = yes
+				generate_home_planet_final_pass = yes
 			}
+
+			if = {
+				limit = { has_planet_flag = void_dweller_habitat_1 }
+				void_dweller_home_planet_setup = yes
+			}
+
+			# end game_start.12
+
+			planet_event = { id = egs_colony.10 days = 1 }
 
 			event_target:previous_home_planet = {
 				every_owned_pop_group = {
