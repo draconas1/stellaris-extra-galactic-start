@@ -7,7 +7,7 @@ If your civilisation takes that then a menu will appear on game start for you to
 [h1]Options[/h1]
 [list]
 [*] Constellation Shape
-[*] Starting  System Initaliser (Sol, Deneb, Random, Ring World)
+[*] Starting  System Initaliser (Sol, Deneb, Random, Ring World, Void Touched, OP System)
 [*] Guarantee that strategic resources and specific stars for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1121692237]Giagastructures[/url] will spawn
 [*] Access to your cluster? (Wormhole, the L-Gate Network)
 [*] Multiplayer support for upto 2 players to start in clusters
@@ -18,7 +18,7 @@ Your civilisation will move into its new cluster home on day 2 to avoid issues w
  original point in the galaxy where the evidence of their passage was left.
 
 Your constellation will not have precursors.  If you want to learn about your precursor civilisation you will need to get back to your
-You can Experimental Subspace Navigation your science vessels to your old home system (and L-Gates if selected), that is deliberate.  Be warned the AI expands towards your home cluster quickly as it has a glut of nice planets and resources.
+You can Experimental Subspace Navigation your science vessels to your old home system (and L-Gates if selected), that is deliberate.
 
 If you select for the rest of the Extra Galatic Cluster to spawn in they will spawn in over time in the first year, to avoid galaxy generation issues.  This means you will get lag and freeze spikes until about August when the last one, Hexagon, spawns.  Hexagon spawns at the edge of the addressable universe so you may need to hide the outlier to select it.
 
@@ -33,16 +33,20 @@ No vanilla files were harmed in the making of this mod, but as it does a lot of 
 [*]This mod is incompatible with things that change the planet/system start, there is a long description why in the discussions section
 [*]It is compatible with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=819148835]Planetary Diversity[/url] planet starts, except for tidally locked.  It will cheerfully ignore the PD "habitable planets to be same type instead of exact match" option.  
 [*]Compatible with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=865040033]Guillis Planet Modifiers[/url].
+[*]Void-Touched / Void Machine starts require Federations DLC and only work in Hexagon cluster
+[*]Shattered Ring start requires Federations DLC
+[*]OP System requires my OP System mod (see links below)
 [/list]
 
 [h1]My Other Mods[/h1]
 [list]
-[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2562023076]Station Solar System Exploitation[/url]: Starbase enhancements for mining, research and planet production.
-[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2836653877]Evolving Hyperlanes Redux[/url]: Galactic hyperlanes change over the course of the game.
-[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2805064456]Bulldose Planets & Create Thrall World[/url]: QoL improvements on creating a Thrall World and rapidly clearing buildings and districts on conquests.
-[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2805054830]OP Isolated Start[/url]: Start in an isolated system with multiple habitatable planets, modifiers and resources
-[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2907704328]Resettlement Tool Redux[/url]: Mass Resettle Pops quickly with a handy menu.
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2909582424]All Ascension Paths[/url]: Take all 4 ascension paths: Psionic, Erudite, Cyborgs working with Synths
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2805054830]OP Isolated Start[/url]: Start in an isolated system with multiple habitatable planets, modifiers and resources
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3389716865]Contingency Core 1A6F[/url]: Modjam 2024 Award winner: Recruit a Contingency Core as a legendary leader, evolve into the Contingency with a new player Crisis path.
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2562023076]Station Solar System Exploitation[/url]: Starbase enhancements for mining, research and planet production.
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2805064456]Bulldose Planets & Create Thrall World[/url]: QoL improvements on creating a Thrall World and rapidly clearing buildings and districts on conquests.
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2907704328]Resettlement Tool Redux[/url]: Mass Resettle Pops quickly with a handy menu.
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2907857801]Planet Name Colour Picker[/url]: Set the text colour and some icons for your planet names.
 [/list]
 
 [h1]HELP!  I DIED ON DAY 1[/h1]
@@ -52,7 +56,7 @@ This is most frequently caused by a modded species home planet, I have to code e
 The only way to achieve a lot of the effects is with a large amount of copy and paste code, so if you have a bug I really need to know the following information, even something so trivial as Spawning Kerbals or not falls down an entirely different branch of the cluster generation and so may have bug where the non kerbals don't.[list]
 [*] What cluster you started with
 [*] What your starting world was
-[*] Whether you have gigastructures stars enabled and the Kerbals enable
+[*] Whether you have gigastructures stars enabled
 [*] What class your original starting planet was 
 [*] What other mods are you using
 [/list]

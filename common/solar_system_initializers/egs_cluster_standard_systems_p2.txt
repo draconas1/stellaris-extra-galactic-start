@@ -681,7 +681,7 @@ egs_p2_trinary_init_02 = {
 # Neighbor Tier 1 First Colony
 egs_p2_neighbor_t1_first_colony = {	
 	class = "rl_standard_stars"
-	flags = { egs_p2_app_10 egs_p2_hex_10 egs_p2_ant_10 egs_p2_ste_6 egs_p2_big_5 }
+	flags = { egs_p2_app_10 egs_p2_hex_10 egs_p2_ant_10 egs_p2_ste_6 egs_p2_big_5  neighbor_t1_first_colony }
 	init_effect = {
 		every_neighbor_system = {
 			set_star_flag = empire_cluster
@@ -748,7 +748,7 @@ egs_p2_neighbor_t1_first_colony = {
 
 egs_p2_neighbor_t2_second_colony = {
 	class = "rl_standard_stars"
-	flags = { egs_p2_app_3 egs_p2_hex_7 egs_p2_ant_3 egs_p2_ste_7 egs_p2_big_7 }
+	flags = { egs_p2_app_3 egs_p2_hex_7 egs_p2_ant_3 egs_p2_ste_7 egs_p2_big_7 neighbor_t2_second_colony }
 	init_effect = {
 		every_neighbor_system = {
 			set_star_flag = empire_cluster

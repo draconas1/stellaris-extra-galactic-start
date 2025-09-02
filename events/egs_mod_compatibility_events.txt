@@ -1,0 +1,80 @@
+namespace = egs_mod_compatibility
+
+# 0-99 = OP Start (Draconas)
+# 100-199 = PD
+# 200-299 = GPM
+
+# OPS Planet setup
+country_event = {
+    id = egs_mod_compatibility.1
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = { has_country_flag = EGS_START_OPS }
+    immediate = {
+        event_target:egs_home_system = {
+            every_system_planet = {
+                limit = { has_planet_flag = ops_starter }
+                change_pc = root
+            }
+            system_event = { id = ops_events.10 }
+        }
+    }
+}
+
+
+# PD setup
+country_event = {
+    id = egs_mod_compatibility.100
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = { has_global_flag = planetarydiversity }
+    immediate = {
+        event_target:egs_home_planet = {
+            if = {
+                limit = {
+                    is_planet_class = pc_superhabitable
+                }
+                change_planet_size = +9
+            }
+            if = {
+                limit = {
+                    is_planet_class = pc_gaia
+                }
+                add_deposit  = d_pdgaia
+            }
+            else = {
+                if = {
+                    limit = {
+                        NOR = {
+                            has_planet_flag = giga_alderson_gaia
+                            has_planet_flag = planet_earth
+                            is_planet_class = pc_ringworld_habitable
+                            is_planet_class = pc_habitat
+                        }
+                    }
+                    generate_pd_start_deposits_and_blockers = yes
+                }
+            }
+        }
+    }
+}
+
+
+
+# GPM setup
+country_event = {
+    id = egs_mod_compatibility.200
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = { has_global_flag = guillis_planet_modifiers_active }
+    immediate = {
+        every_system = {
+            limit = { egs_select_all_relevant_systems = yes }
+            every_system_planet = {
+                planet_event = {
+                    id = gpm_engine.1
+                }
+            }
+        }
+    }
+}

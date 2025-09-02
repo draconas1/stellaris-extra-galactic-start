@@ -16,6 +16,12 @@ country_event = {
 
 	option = {
 		name = "egs_menu.1.option.cluster"
+        allow = {
+            NOR = {
+                has_country_flag = EGS_START_STARBORN
+                has_country_flag = EGS_START_OPS
+            }
+        }
 		hidden_effect = {
 			country_event = { id = egs_menu.100 }
 		}
@@ -420,29 +426,103 @@ country_event = {
 		}
 	}
 
-	# option = {
-	# 	name = "egs_menu.200.option.ringworld"
-	# 	trigger = {
-	# 		NOT = { has_country_flag = EGS_START_RINGWORLD }
-	# 	}
-	# 	hidden_effect = {
-	# 		clear_egs_start_system_flags = yes
-	# 		set_country_flag = EGS_START_RINGWORLD
-	# 		country_event = { id = egs_menu.1 }
-	# 	}
-	# }
-	#
-	# option = {
-	# 	name = "egs_menu.200.option.ringworld.on"
-	# 	trigger = {
-	# 		has_country_flag = EGS_START_RINGWORLD
-	# 	}
-	# 	hidden_effect = {
-	# 		clear_egs_start_system_flags = yes
-	# 		set_country_flag = EGS_START_RINGWORLD
-	# 		country_event = { id = egs_menu.1 }
-	# 	}
-	# }
+	option = {
+		name = "egs_menu.200.option.ringworld"
+		trigger = {
+			NOT = { has_country_flag = EGS_START_RINGWORLD }
+		}
+        allow = {
+            has_federations_dlc = yes
+            NOT = { has_civic = civic_agrarian_idyll }
+            NOR = {
+                has_civic = civic_anglers
+                has_civic = civic_corporate_anglers
+                has_civic = civic_machine_anglers
+                has_civic = civic_corporate_machine_anglers
+            }
+        }
+		hidden_effect = {
+			clear_egs_start_system_flags = yes
+			set_country_flag = EGS_START_RINGWORLD
+			country_event = { id = egs_menu.1 }
+		}
+	}
+
+	option = {
+		name = "egs_menu.200.option.ringworld.on"
+		trigger = {
+			has_country_flag = EGS_START_RINGWORLD
+		}
+        allow = {
+            has_federations_dlc = yes
+            NOT = { has_civic = civic_agrarian_idyll }
+            NOR = {
+                has_civic = civic_anglers
+                has_civic = civic_corporate_anglers
+                has_civic = civic_machine_anglers
+                has_civic = civic_corporate_machine_anglers
+            }
+        }
+		hidden_effect = {
+			clear_egs_start_system_flags = yes
+			set_country_flag = EGS_START_RINGWORLD
+			country_event = { id = egs_menu.1 }
+		}
+	}
+
+    option = {
+        name = "egs_menu.200.option.starborn"
+        trigger = {
+            NOT = { has_country_flag = EGS_START_STARBORN }
+        }
+        allow = {
+            has_federations_dlc = yes
+            has_country_flag = EGS_CLUSTER_HEXAGON
+            NOR = {
+                has_civic = civic_idyllic_bloom
+                has_civic = civic_hive_idyllic_bloom
+            }
+            NOT = { has_civic = civic_agrarian_idyll }
+            NOR = {
+                has_civic = civic_anglers
+                has_civic = civic_corporate_anglers
+                has_civic = civic_machine_anglers
+                has_civic = civic_corporate_machine_anglers
+            }
+        }
+        hidden_effect = {
+            clear_egs_start_system_flags = yes
+            set_country_flag = EGS_START_STARBORN
+            country_event = { id = egs_menu.1 }
+        }
+    }
+
+    option = {
+        name = "egs_menu.200.option.starborn.on"
+        trigger = {
+            has_country_flag = EGS_START_STARBORN
+        }
+        allow = {
+            has_federations_dlc = yes
+            has_country_flag = EGS_CLUSTER_HEXAGON
+            NOR = {
+                has_civic = civic_idyllic_bloom
+                has_civic = civic_hive_idyllic_bloom
+            }
+            NOT = { has_civic = civic_agrarian_idyll }
+            NOR = {
+                has_civic = civic_anglers
+                has_civic = civic_corporate_anglers
+                has_civic = civic_machine_anglers
+                has_civic = civic_corporate_machine_anglers
+            }
+        }
+        hidden_effect = {
+            clear_egs_start_system_flags = yes
+            set_country_flag = EGS_START_STARBORN
+            country_event = { id = egs_menu.1 }
+        }
+    }
 
 	option = {
 		name = "egs_menu.200.option.alderson"

@@ -28,14 +28,14 @@
     egs_menu.100.option.bigdipper.on:0 "§Y$egs_menu.100.option.bigdipper$§!"
 
     egs_menu.200.name:0 "Choose Starting System Initialiser"
-    egs_menu.200.desc:0 "Works just the same as the option on the start screen, setting the details of your starting system.\n\nAvailable Choices:\n\nRandom System (default)\nRandom Binary\nRandom Trinary\nSol\nDeneb\nOP Outside System (Requires: OP Isolated Start)"
+    egs_menu.200.desc:0 "Works just the same as the option on the start screen, setting the details of your starting system.\n\nAvailable Choices:\n\nRandom System (default)\nRandom Binary\nRandom Trinary\nSol\nDeneb\nShattered Ring (Requires Federations DLC)\nVoidtouched (Requires Federations DLC, Hexagon Cluster Only)\nOP Outside System (Requires Mod: OP Isolated Start, Big Dipper Cluster Only)"
     egs_menu.200.option.random:0 "Random System"
     egs_menu.200.option.randombinry:0 "$custom_starting_init_03_NAME$"
     egs_menu.200.option.randomtrinary:0 "$custom_starting_init_01_NAME$"
     egs_menu.200.option.sol:0 "Sol"
     egs_menu.200.option.deneb:0 "Deneb"
     egs_menu.200.option.ringworld:0 "Ring World"
-    egs_menu.200.option.starborn:0 "Starborn"
+    egs_menu.200.option.starborn:0 "Void Touched / Void Machine"
     egs_menu.200.option.alderson:0 "OP System"
 
     egs_menu.200.option.random.on:0 "§Y$egs_menu.200.option.random$§!"
