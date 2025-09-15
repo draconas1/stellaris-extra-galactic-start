@@ -1,5 +1,5 @@
 [h1]Start in an Isolated Extra-Galactic Constellations[/h1]
-This mod takes the excellent constellations from [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1523039190]Extra Galactic Clusters[/url] and makes it possible to have any of them as a starting location for your civilisation (Note only the Constellation, not the contents).  You can also spawn the other EGC's for your civ to later find and explore.  
+This mod takes the excellent constellations from [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1523039190]Extra Galactic Clusters[/url] and makes it possible to have any of them as a starting location for your civilisation.
 
 It is done via a new Origin: Extra-Galatic Cluster.
 If your civilisation takes that then a menu will appear on game start for you to customise your cluster.  The AI never will. 
@@ -19,8 +19,6 @@ Your civilisation will move into its new cluster home on day 2 to avoid issues w
 
 Your constellation will not have precursors.  If you want to learn about your precursor civilisation you will need to get back to your
 You can Experimental Subspace Navigation your science vessels to your old home system (and L-Gates if selected), that is deliberate.
-
-If you select for the rest of the Extra Galatic Cluster to spawn in they will spawn in over time in the first year, to avoid galaxy generation issues.  This means you will get lag and freeze spikes until about August when the last one, Hexagon, spawns.  Hexagon spawns at the edge of the addressable universe so you may need to hide the outlier to select it.
 
 This mod was also inspired by [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1796380598]Isolated Cluster Start[/url]
 

@@ -138,8 +138,7 @@ egs_tag_home_system_and_planet = {
             }
         }
         save_event_target_as = egs_home_system
-        random_system_planet = {
-            limit = { is_star = yes }
+        system_star = {
             save_event_target_as = egs_home_system_star
         }
         random_system_planet = {
@@ -296,6 +295,22 @@ egs_setup_home_system = {
             }
             create_research_station = {
                 owner = root
+            }
+        }
+
+        if = {
+            limit = { ROOT = { is_dark_consortium_empire = yes } }
+            every_system_planet = {
+                limit = {
+                    is_capital = no
+                    has_deposit_for = shipclass_research_station
+                    NOT = {
+                        any_fleet_in_orbit = {
+                            is_ship_class = shipclass_habitat_station
+                        }
+                    }
+                }
+                add_deposit = d_dark_matter_deposit_1
             }
         }
     }
@@ -536,28 +551,32 @@ egs_set_guarenteed_resources = {
     }
 }
 
-egs_setup_home_planet = {
+egs_create_home_planet_colony = {
     event_target:egs_home_planet = {
+        create_colony = { owner = root }
         remove_deposit = yes
         remove_planet_flag = starting_deposit
         remove_planet_flag = starting_mining_target
         remove_planet_flag = starting_research_target
         clear_planet_modifiers = yes
         clear_blockers = yes
-        set_owner = root
-        set_controller = root
         set_capital = yes
         set_sector_capital = yes
         if = {
             limit = { exists = event_target:sector_gov}
             assign_leader = event_target:sector_gov
         }
+    }
+}
 
+egs_setup_home_planet = {
+    event_target:egs_home_planet = {
         set_timed_planet_flag = {
             flag = ignore_ai_building_limitations
             days = 2
         }
 
+        # Don't want the whole of game start 12 as that generates pops too.  Fortunately its not too big to just lift and shift.
         # planet_event = { id = game_start.12 }
         # game_start.12
         if = {
@@ -604,6 +623,16 @@ egs_setup_home_planet = {
             ops_init_home_planet = yes
             set_planet_flag = ignore_startup_effect # important, otherwise gets cleared by the solar system initaliser generate_home_system_resources below
         }
+
+        if = {
+            limit = { ROOT = { is_ascensionist_empire = yes } }
+            set_planetary_ascension_tier = 1
+        }
+
+        # As we created the colony then added buildings, we may get left with a colony shelter.
+        remove_building = building_colony_shelter
+        remove_building = building_deployment_post
+        remove_building = building_hab_capital
     }
 }
 

@@ -21,9 +21,13 @@ country_event = {
 
         egs_set_guarenteed_resources = yes
 
-        egs_setup_home_planet = yes
+        # 2 different steps because I want create_colony to run and its scope to finalise before I poke the colony
+        # Then move all the pops to it first.  This way pop-numbers triggers will be met for the capital buildings.
+        egs_create_home_planet_colony = yes
 
         egs_resettle_pops = yes
+
+        egs_setup_home_planet = yes
 
         egs_modify_species = yes
 
@@ -34,8 +38,6 @@ country_event = {
             planet_event = { id = egs_colony.10 days = 1 }
             planet_event = { id = egs_colony.11 days = 2 }
         }
-
-
 
         # OP Start specific config
         country_event = { id = egs_mod_compatibility.1 }
@@ -48,49 +50,12 @@ country_event = {
 	}
 }
 
-# spawn fix event where occasionally we would be stuck with a colony shelter.
-# this is dodgy as hell, but works!
-# no event = colony shelter
-# hit the first if = 2 capitals, guarenteed
-# so remove down afterwards.
+# transferred any unemployed elites/specialists etc... down to civilians
 planet_event = {
 	id = egs_colony.10
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
-		if = {
-			limit = { exists = owner }
-			if = {
-				limit = { owner = { is_machine_empire = yes } }
-				if = {
-					limit = { NOT = { has_building = building_machine_capital } }
-					add_building = building_machine_capital
-				}
-			}
-			else_if = {
-				limit = { owner = { is_hive_empire = yes } }
-				if = {
-					limit = { NOT = { has_building = building_hive_capital } }
-					add_building = building_hive_capital
-				}
-			}
-            else_if = {
-                # habitats sort themselves out
-                limit = { planet_is_habitat_equivalent = no }
-                if = {
-                    limit = { NOT = { has_building = building_capital } }
-                    add_building = building_capital
-                }
-            }
-		}
-        remove_building = building_colony_shelter
-        remove_building = building_deployment_post
-        remove_building = building_hab_capital
-        egs_remove_duplicate_building = { BUILDING = building_capital }
-        egs_remove_duplicate_building = { BUILDING = building_machine_capital }
-        egs_remove_duplicate_building = { BUILDING = building_hive_capital }
-        egs_remove_duplicate_building = { BUILDING = building_hab_capital }
-
         # fix unemployed pops
         every_owned_pop_group = {
             limit = { is_unemployed = yes }

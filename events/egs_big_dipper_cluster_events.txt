@@ -295,7 +295,7 @@ country_event = {
 					max_distance <= 25
 					min_orientation_angle = 345
 					max_orientation_angle = 350
-					initializer = ops_system_connected
+					initializer = ops_system
 				}
 			}
 			random_system = {
