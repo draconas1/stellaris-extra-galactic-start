@@ -55,7 +55,7 @@
     egs_menu.400.option.yes.on:0 "§Y$egs_menu.400.option.yes$§!"
 
     egs_menu.500.name:0 "Choose Cluster Connectivity"
-    egs_menu.500.desc:0 "Select how you want your cluster to connect to the rest of the galaxy\n\nA single wormhole\nServal Wormholes - these will go to random points in the galaxy and be based in random systems in the cluster.\nL-Gate: you will have an L-Gate node that can be researched and opened to Terminal Ingress as normal (Requires Distant Stars DLC) \n\n§RIn the case of L-Gate you will know about all L-Gate systems in the galaxy.  Check the main galaxy carefully, the L-Gate icon may not appear (because you haven't visited it), but you should see the system name (it will be a black hole) and can target it as a destination.§!"    
+    egs_menu.500.desc:0 "Select how you want your cluster to connect to the rest of the galaxy\n\nA single wormhole\nL-Gate: you will have an L-Gate node that can be researched and opened to Terminal Ingress as normal (Requires Distant Stars DLC) \n\n§RIn the case of L-Gate you will know about all L-Gate systems in the galaxy.  Check the main galaxy carefully, the L-Gate icon may not appear (because you haven't visited it), but you should see the system name (it will be a black hole) and can target it as a destination.§!"
     egs_menu.500.option.wormhole:0 "Single Wormhole"
     egs_menu.500.option.manywormhole:0 "Many Wormholes"
     egs_menu.500.option.lgate:0 "L-Gate"
