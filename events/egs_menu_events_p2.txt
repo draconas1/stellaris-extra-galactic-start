@@ -9,6 +9,10 @@ country_event = {
 	picture = GFX_evt_ancient_databank
 	is_triggered_only = yes
 
+    immediate = {
+        set_country_flag = EGS_PLAYER_2
+    }
+
 	option = {
 		name = "egs_menu_p2.1.option.system"
 		hidden_effect = {

@@ -17,10 +17,6 @@ clear_egs_cluster_flags = {
 	remove_country_flag = EGS_CLUSTER_ATRONACH
 }
 
-clear_egs_kerbal_flags = {
-	remove_country_flag = EGS_KERBAL_YES
-	remove_country_flag = EGS_KERBAL_NO
-}
 
 clear_egs_gigastructure_flags = {
 	remove_country_flag = EGS_GIGA_YES
@@ -38,26 +34,11 @@ clear_egs_diplo_hack_flags = {
 	remove_country_flag = EGS_DIPLO_HACK_NO
 }
 
-clear_egs_silly_flags = {
-	remove_country_flag = EGS_SILLY_YES
-	remove_country_flag = EGS_SILLY_NO
-}
-
 clear_egs_resource_flags = {
 	remove_country_flag = EGS_SR_YES
 	remove_country_flag = EGS_SR_NO
 }
 
-clear_egs_egc_flags = {
-	remove_country_flag = EGS_EGC_YES
-	remove_country_flag = EGS_EGC_NO
-}
-
-clear_egs_egcconnection_flags = {
-	remove_country_flag = EGS_EGC_CONNECTION_DEFAULT
-	remove_country_flag = EGS_EGC_CONNECTION_ROUND_ROBIN
-	remove_country_flag = EGS_EGC_CONNECTION_L_GATE
-}
 
 create_and_share_l_gate = {
 	set_star_flag = lgate

@@ -14,6 +14,10 @@ country_event = {
 		has_origin = origin_egs
 	}
 
+    immediate = {
+        set_country_flag = EGS_PLAYER_1
+    }
+
 	option = {
 		name = "egs_menu.1.option.cluster"
         allow = {
@@ -99,17 +103,13 @@ country_event = {
 
 	immediate = {
 		set_country_flag = EGS_CLUSTER_APPRENTICE
-		set_country_flag = EGS_KERBAL_NO
 		set_country_flag = EGS_GIGA_NO
 		set_country_flag = EGS_LINK_WORMHOLE
 		set_country_flag = EGS_SR_NO
-		set_country_flag = EGS_EGC_NO
-		set_country_flag = EGS_EGC_CONNECTION_DEFAULT
 		set_country_flag = EGS_DIPLO_HACK_NO
-		set_country_flag = EGS_SILLY_NO
 		if = {
 			limit = {
-				egs_multiplayer = yes
+				egs_is_multiplayer = yes
 			}
 			set_country_flag = EGS_START_SOL
 		}
@@ -195,7 +195,7 @@ country_event = {
 		name = "egs_menu.100.option.hexagon"
 		trigger = {
 			NOT = { has_country_flag = EGS_CLUSTER_HEXAGON }
-			egs_multiplayer = no
+			egs_is_multiplayer = no
 		}
 		hidden_effect = {
 			clear_egs_cluster_flags = yes
@@ -207,7 +207,7 @@ country_event = {
 		name = "egs_menu.100.option.hexagon.on"
 		trigger = {
 			has_country_flag = EGS_CLUSTER_HEXAGON
-			egs_multiplayer = no
+			egs_is_multiplayer = no
 		}
 		hidden_effect = {
 			clear_egs_cluster_flags = yes
@@ -220,7 +220,7 @@ country_event = {
 		name = "egs_menu.100.option.steed"
 		trigger = {
 			NOT = { has_country_flag = EGS_CLUSTER_STEED }
-			egs_multiplayer = no
+			egs_is_multiplayer = no
 		}
 		hidden_effect = {
 			clear_egs_cluster_flags = yes
@@ -232,7 +232,7 @@ country_event = {
 		name = "egs_menu.100.option.steed.on"
 		trigger = {
 			has_country_flag = EGS_CLUSTER_STEED
-			egs_multiplayer = no
+			egs_is_multiplayer = no
 		}
 		hidden_effect = {
 			clear_egs_cluster_flags = yes
@@ -268,7 +268,7 @@ country_event = {
 		name = "egs_menu.100.option.bigdipper"
 		trigger = {
 			NOT = { has_country_flag = EGS_CLUSTER_BIG_DIPPER }
-			egs_multiplayer = no
+			egs_is_multiplayer = no
 		}
 		hidden_effect = {
 			clear_egs_cluster_flags = yes
@@ -280,7 +280,7 @@ country_event = {
 		name = "egs_menu.100.option.bigdipper.on"
 		trigger = {
 			has_country_flag = EGS_CLUSTER_BIG_DIPPER
-			egs_multiplayer = no
+			egs_is_multiplayer = no
 		}
 		hidden_effect = {
 			clear_egs_cluster_flags = yes
@@ -352,7 +352,7 @@ country_event = {
 		name = "egs_menu.200.option.random"
 		trigger = {
 			NOT = { has_country_flag = EGS_START_RANDOM }
-			egs_multiplayer = no
+			egs_is_multiplayer = no
 		}
 		hidden_effect = {
 			clear_egs_start_system_flags = yes
@@ -365,7 +365,7 @@ country_event = {
 		name = "egs_menu.200.option.random.on"
 		trigger = {
 			has_country_flag = EGS_START_RANDOM
-			egs_multiplayer = no
+			egs_is_multiplayer = no
 		}
 		hidden_effect = {
 			clear_egs_start_system_flags = yes
@@ -378,7 +378,7 @@ country_event = {
 		name = "egs_menu.200.option.randombinry"
 		trigger = {
 			NOT = { has_country_flag = EGS_START_RANDOM_BINARY }
-			egs_multiplayer = no
+			egs_is_multiplayer = no
 		}
 		hidden_effect = {
 			clear_egs_start_system_flags = yes
@@ -391,7 +391,7 @@ country_event = {
 		name = "egs_menu.200.option.randombinry.on"
 		trigger = {
 			has_country_flag = EGS_START_RANDOM_BINARY
-			egs_multiplayer = no
+			egs_is_multiplayer = no
 		}
 		hidden_effect = {
 			clear_egs_start_system_flags = yes
@@ -404,7 +404,7 @@ country_event = {
 		name = "egs_menu.200.option.randomtrinary"
 		trigger = {
 			NOT = { has_country_flag = EGS_START_RANDOM_TRINARY }
-			egs_multiplayer = no
+			egs_is_multiplayer = no
 		}
 		hidden_effect = {
 			clear_egs_start_system_flags = yes
@@ -417,7 +417,7 @@ country_event = {
 		name = "egs_menu.200.option.randomtrinary.on"
 		trigger = {
 			has_country_flag = EGS_START_RANDOM_TRINARY
-			egs_multiplayer = no
+			egs_is_multiplayer = no
 		}
 		hidden_effect = {
 			clear_egs_start_system_flags = yes

@@ -1,10 +1,25 @@
-egs_has_random_start_system = {
-	OR = {
-		has_country_flag = EGS_START_RANDOM
-		has_country_flag = EGS_START_RANDOM_BINARY
-		has_country_flag = EGS_START_RANDOM_TRINARY
-	}
+egs_player1_trigger = {
+    OR = {
+        has_origin = origin_egs
+        has_country_flag = EGS_PLAYER_1
+    }
 }
+
+egs_player2_trigger = {
+    OR = {
+        has_origin = origin_egs2
+        has_country_flag = EGS_PLAYER_2
+    }
+}
+
+egs_county_player1 = {
+    root = { egs_player1_trigger = yes }
+}
+
+egs_county_player2 = {
+    root = { egs_player2_trigger = yes }
+}
+
 
 suitable_egs_planet_for_sr = {
 	is_star = no
@@ -33,66 +48,62 @@ egs_suitable_system_for_wormhole = {
 		has_star_flag = sol
 		has_star_flag = deneb_system
 		has_star_flag = egs_cluster
+        has_star_flag = egs_p2_cluster
 		has_star_flag = marauder_system
 		has_star_flag = egs_wormhole
+
+        has_star_flag = extragalactic_cluster
+        has_star_flag = lcluster
+        has_star_flag = mem_sadrell_extant_cluster
+        has_star_flag = outercluster
+
+        has_star_flag = giga_galactic_center # gigastructures galatic core
+        has_star_flag = surveillance_supercomputer_system# Ultima Vigilis
+        has_star_flag = chosen_system# All the chosens set
+        has_star_flag = solarpunk_system_02 # Daacha
+        has_star_flag = sealed_system# isolated system
+        has_star_flag = ehof_compound_system# gigastructures compound
+        has_star_flag = maginot_anti_jump_star # gigastructures Maginot World subspace disruption
+        has_star_flag = siegfried_anti_jump_star # gigastructures Katzen version
+        has_star_flag = cohesive_system # gigastructures ehof cohesive
 	}
 }
 
-egs_multiplayer = {
+egs_is_multiplayer = {
 	any_country = {
-		has_origin = origin_egs2
+        egs_player2_trigger = yes
 	}
 }
 
 egs_gigastructures = {
 	any_country = {
-		has_origin = origin_egs
+        egs_player1_trigger = yes
 		has_country_flag = EGS_GIGA_YES
 	}
 }
 
 egs_resources = {
 	any_country = {
-		has_origin = origin_egs
+        egs_player1_trigger = yes
 		has_country_flag = EGS_SR_YES
-	}
-}
-
-
-egs_link_single_wormhole = {
-	any_country = {
-		has_origin = origin_egs
-		has_country_flag = EGS_LINK_WORMHOLE
-	}
-}
-
-egs_link_many_wormhole = {
-	any_country = {
-		has_origin = origin_egs
-		has_country_flag = EGS_LINK_MANY_WORMHOLE
 	}
 }
 
 egs_link_l_gate = {
 	any_country = {
-		has_origin = origin_egs
+        egs_player1_trigger = yes
 		has_country_flag = EGS_LINK_L_GATE
 	}
 }
 
-
 egs_select_all_relevant_systems = {
 	OR = {
 		AND = {
-			root = {
-				has_origin = origin_egs
-			}
+            egs_county_player1 = yes
 			has_star_flag = egs_cluster
 		}
 		AND = {
-			root = {
-				has_origin = origin_egs2
-			}
+            egs_county_player2 = yes
 			has_star_flag = egs_p2_cluster
 		}
 	}
@@ -102,17 +113,5 @@ egs_home_system = {
 	OR = {
 		has_star_flag = egs_empire_home_system
 		has_star_flag = egs_p2_empire_home
-	}
-}
-
-egs_county_player1 = {
-	root = {
-		has_origin = origin_egs
-	}
-}
-
-egs_county_player2 = {
-	root = {
-		has_origin = origin_egs2
 	}
 }
