@@ -82,105 +82,8 @@ create_and_link_wormholes = {
 	}
 }
 
-egs_remove_duplicate_building = {
-	if = {
-		limit = {
-			num_buildings = {
-				type = $BUILDING$
-				value > 1
-			}
-		}
-		remove_building = $BUILDING$
-	}
-}
-
-egs_set_empire_cluster_flags = {
-    # put everything into an empire cluster
-    every_system = {
-        limit = {
-            egs_select_all_relevant_systems = yes
-        }
-        set_star_flag = empire_cluster
-    }
-}
-
-egs_tag_home_system_and_planet = {
-    random_system = {
-        limit = {
-            OR = {
-                AND = {
-                    has_star_flag = egs_empire_home
-                    egs_county_player1 = yes
-                }
-                AND = {
-                    has_star_flag = egs_p2_empire_home
-                    egs_county_player2 = yes
-                }
-            }
-        }
-        save_event_target_as = egs_home_system
-        system_star = {
-            save_event_target_as = egs_home_system_star
-        }
-        random_system_planet = {
-            limit = {
-                OR = {
-                    AND = {
-                        has_planet_flag = egs_home_planet_marker
-                        egs_county_player1 = yes
-                    }
-                    AND = {
-                        has_planet_flag = egs_p2_home_planet_marker
-                        egs_county_player2 = yes
-                    }
-                }
-            }
-            save_event_target_as = egs_home_planet
-        }
-    }
-}
-
-egs_tag_old_home_system_planet_and_govenor = {
-    capital_scope = {
-        save_event_target_as = previous_home_planet
-        solar_system = {
-            save_event_target_as = previous_home_system
-        }
-        # taken from gigastructures.  Go gigas!
-        if = {
-            limit = { exists = sector }
-            sector.sector_capital = {
-                leader = {
-                    unassign_leader = this
-                    save_event_target_as = sector_gov
-                }
-            }
-        }
-        else = {
-            root = {
-                random_owned_leader = {
-                    limit = {
-                        is_ruler = no
-                        leader_class = official
-                    }
-                    save_event_target_as = sector_gov
-                }
-            }
-        }
-    }
-}
 
 egs_set_guarenteed_planet_classes = {
-    if = {
-        limit = {
-            NOR = {
-                has_country_flag = EGS_START_RINGWORLD
-                has_country_flag = EGS_START_STARBORN
-            }
-        }
-        event_target:egs_home_planet = { change_pc = event_target:previous_home_planet }
-    }
-
     every_system = {
         limit = {
             OR = {
@@ -197,196 +100,9 @@ egs_set_guarenteed_planet_classes = {
         every_system_planet = {
             limit = { has_planet_flag = prescripted_ideal }
             save_event_target_as = egs_target_planet
-            change_pc = event_target:previous_home_planet
+            change_pc = root
             reroll_deposits = yes
             reroll_planet_modifiers = yes
-        }
-    }
-}
-
-egs_change_origin = {
-    if = {
-        limit = { has_country_flag = EGS_START_RINGWORLD }
-        set_origin = origin_shattered_ring
-    }
-
-    if = {
-        limit = { has_country_flag = EGS_START_STARBORN }
-        if = {
-            limit = { founder_species = { is_archetype = MACHINE  } }
-            set_origin = origin_void_machines
-        }
-        else = {
-            set_origin = origin_void_dwellers
-        }
-    }
-}
-
-egs_setup_home_system = {
-    #setup starport
-    event_target:egs_home_system = {
-        if = {
-            limit = { ROOT = { is_gestalt = yes }}
-            event_target:egs_home_system = {
-                create_starbase = {
-                    size = "starbase_starport"
-                    module = "shipyard"
-                    module = "solar_panel_network"
-                    building = "crew_quarters"
-                    owner = root
-                }
-            }
-        }
-        else = {
-            event_target:egs_home_system = {
-                create_starbase = {
-                    size = "starbase_starport"
-                    module = "shipyard"
-                    module = "trading_hub"
-                    building = "crew_quarters"
-                    owner = root
-                }
-            }
-        }
-
-        # setup resources
-        if = {
-            limit = {
-                ROOT = {
-                    NOR = {
-                        has_country_flag = EGS_START_OPS
-                        has_country_flag = EGS_START_STARBORN
-                    }
-                }
-            }
-            generate_home_system_resources = yes
-        }
-
-        every_system_planet = {
-            limit = {
-                has_planet_flag = starting_mining_target
-            }
-            create_mining_station = {
-                owner = root
-            }
-        }
-        every_system_planet = {
-            limit = {
-                has_planet_flag = starting_research_target
-            }
-            create_research_station = {
-                owner = root
-            }
-        }
-
-        if = {
-            limit = { ROOT = { is_dark_consortium_empire = yes } }
-            every_system_planet = {
-                limit = {
-                    is_capital = no
-                    has_deposit_for = shipclass_research_station
-                    NOT = {
-                        any_fleet_in_orbit = {
-                            is_ship_class = shipclass_habitat_station
-                        }
-                    }
-                }
-                add_deposit = d_dark_matter_deposit_1
-            }
-        }
-    }
-}
-
-egs_move_fleets = {
-    every_owned_fleet = {
-        limit = {
-            any_owned_ship = {
-                NOR = {
-                    is_ship_class = shipclass_military_station
-                    is_ship_class = shipclass_mining_station
-                    is_ship_class = shipclass_research_station
-                    is_ship_class = shipclass_starbase
-                }
-            }
-        }
-        set_location = event_target:egs_home_system_star
-    }
-}
-
-egs_remove_old_home = {
-    event_target:previous_home_planet = {
-        remove_planet = yes
-    }
-
-    event_target:previous_home_system = {
-        set_name = random
-        random_system_planet = {
-            limit = {
-                is_star = yes
-            }
-            set_name = solar_system
-        }
-
-        remove_star_flag = sol
-        remove_star_flag = deneb_system
-    }
-
-    if = {
-        limit = {
-            NOT = { has_country_flag = EGS_DIPLO_HACK_YES }
-        }
-        event_target:previous_home_system = {
-            every_fleet_in_system = {
-                delete_fleet = this
-            }
-        }
-    }
-}
-
-egs_modify_species = {
-    owner_species = {
-        set_species_homeworld = event_target:egs_home_planet
-    }
-    every_owned_pop_species = {
-        set_species_homeworld = event_target:egs_home_planet
-    }
-
-    if = {
-        limit = { has_country_flag = EGS_START_STARBORN }
-        if = {
-            limit = { owner_main_species = { is_archetype = MACHINE  } }
-            modify_species = {
-                species = owner_main_species
-                add_trait = trait_void_dweller_2
-                add_traits_at_start_of_list = yes
-                change_scoped_species = yes
-                ideal_planet_class = pc_habitat
-                effect = {
-                    root = {
-                        change_dominant_species = {
-                            species = prev
-                            change_all = yes
-                        }
-                    }
-                }
-            }
-        }
-        else = {
-            modify_species = {
-                species = owner_main_species
-                add_trait = trait_void_dweller_1
-                add_traits_at_start_of_list = yes
-                change_scoped_species = yes
-                ideal_planet_class = pc_habitat
-                effect = {
-                    root = {
-                        change_dominant_species = {
-                            species = prev
-                            change_all = yes
-                        }
-                    }
-                }
-            }
         }
     }
 }
@@ -435,7 +151,7 @@ egs_create_cluster_links = {
         }
     }
     else = {
-        event_target:previous_home_system = {
+        event_target:egs_replacement_homeworld_system = {
             event_target:egs_cluster_root = {
                 spawn_natural_wormhole = {
                     bypass_type = wormhole
@@ -532,103 +248,69 @@ egs_set_guarenteed_resources = {
     }
 }
 
-egs_create_home_planet_colony = {
-    event_target:egs_home_planet = {
-        create_colony = { owner = root }
-        remove_deposit = yes
-        remove_planet_flag = starting_deposit
-        remove_planet_flag = starting_mining_target
-        remove_planet_flag = starting_research_target
-        clear_planet_modifiers = yes
-        clear_blockers = yes
-        set_capital = yes
-        set_sector_capital = yes
-        if = {
-            limit = { exists = event_target:sector_gov}
-            assign_leader = event_target:sector_gov
+
+egs_move_home_system = {
+    capital_scope = {
+        solar_system = {
+            spawn_system = {
+                max_distance = 15
+                min_distance = 8
+                max_jumps = 1
+                min_jumps = 1
+                initializer = basic_init_05
+                hyperlane = no
+                effect = { save_event_target_as = egs_replacement_homeworld_system }
+            }
+            solar_system = {
+                every_neighbor_system = {
+                    remove_hyperlane = {
+                        from = this
+                        to = prev
+                    }
+                    add_hyperlane = {
+                        from = this
+                        to = event_target:egs_replacement_homeworld_system
+                    }
+                }
+            }
+            # I can't give an exact direction to move, so instead we are going to spawn, then move, then kill
+            event_target:egs_homeworld_target = {
+                spawn_system = {
+                    min_distance = $MIN_DISTANCE$
+                    max_distance = $MAX_DISTANCE$
+                    min_orientation_angle = $DIRECTION$
+                    max_orientation_angle = $DIRECTION$
+                    hyperlane = no
+                    initializer = random
+                    effect = { save_event_target_as = egs_homeworld_target_locator }
+                }
+            }
+
+            move_system = {
+                target = event_target:egs_homeworld_target_locator
+                min_jumps = 1
+                max_jumps = 1
+                min_distance = 1
+                max_distance = 1
+                hyperlane = no
+                reset_terra_incognita = no
+            }
         }
     }
-}
 
-egs_setup_home_planet = {
-    event_target:egs_home_planet = {
-        set_timed_planet_flag = {
-            flag = ignore_ai_building_limitations
-            days = 2
+    event_target:egs_homeworld_target_locator = {
+        move_system = {
+            target = event_target:egs_replacement_homeworld_system
+            min_jumps = 1
+            max_jumps = 1
+            min_distance = 10
+            max_distance = 15
+            hyperlane = no
+            reset_terra_incognita = no
         }
-
-        # Don't want the whole of game start 12 as that generates pops too.  Fortunately its not too big to just lift and shift.
-        # planet_event = { id = game_start.12 }
-        # game_start.12
-        if = {
-            limit = {
-                NOT = { has_planet_flag = special_start_planet }
-            }
-            if = {
-                limit = {
-                    OR = {
-                        NOT = { has_planet_flag = planet_earth }
-                        owner = { has_origin = origin_remnants } #no special earth for you, sorry
-                    }
-                    NOT = {
-                        owner = { has_origin = origin_shattered_ring }	#setup in initializer
-                    }
-                }
-                generate_start_deposits_and_blockers = yes
-            }
-            else_if = {
-                limit = {
-                    has_planet_flag = planet_earth
-                    NOR = {
-                        owner = { has_origin = origin_shattered_ring }	 #setup in initializer
-                        owner = { has_origin = origin_remnants }		 #custom blockers
-                    }
-                }
-                generate_earth_deposits_and_blockers = yes
-                set_earth_entity = yes
-            }
-            generate_start_buildings_and_districts = yes
-            # generate_start_pops = yes
-            generate_home_planet_final_pass = yes
-        }
-
-        if = {
-            limit = { has_planet_flag = void_dweller_habitat_1 }
-            void_dweller_home_planet_setup = yes
-        }
-
-        # end game_start.12
-
-        if = {
-            limit = { has_planet_flag = egs_ops_home }
-            ops_init_home_planet = yes
-            set_planet_flag = ignore_startup_effect # important, otherwise gets cleared by the solar system initaliser generate_home_system_resources below
-        }
-
-        if = {
-            limit = { ROOT = { is_ascensionist_empire = yes } }
-            set_planetary_ascension_tier = 1
-        }
-
-        # As we created the colony then added buildings, we may get left with a colony shelter.
-        remove_building = building_colony_shelter
-        remove_building = building_deployment_post
-        remove_building = building_hab_capital
-    }
-}
-
-egs_resettle_pops = {
-    if = {
-        # voidborn generates its own pops
-        limit = { NOT = { has_country_flag = EGS_START_STARBORN }}
-        event_target:previous_home_planet = {
-            every_owned_pop_group = {
-                resettle_pop_group = {
-                    POP_GROUP = this
-                    PLANET = event_target:egs_home_planet
-                    PERCENTAGE = 1
-                }
-            }
+        add_hyperlane = {
+            from = this
+            to = event_target:egs_replacement_homeworld_system
         }
     }
 }
