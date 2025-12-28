@@ -10,33 +10,13 @@ country_event = {
 	picture = GFX_evt_ancient_databank
 	is_triggered_only = yes
 
-	trigger = {
-		has_origin = origin_egs
-	}
-
-    immediate = {
-        set_country_flag = EGS_PLAYER_1
-    }
-
 	option = {
 		name = "egs_menu.1.option.cluster"
-        allow = {
-            NOR = {
-                has_country_flag = EGS_START_STARBORN
-                has_country_flag = EGS_START_OPS
-            }
-        }
 		hidden_effect = {
 			country_event = { id = egs_menu.100 }
 		}
 	}
 
-	option = {
-		name = "egs_menu.1.option.system"
-		hidden_effect = {
-			country_event = { id = egs_menu.200 }
-		}
-	}
 
 	option = {
 		name = "egs_menu.1.option.giga"
@@ -69,22 +49,6 @@ country_event = {
 	option = {
 		name = "egs_menu.1.option.begin"
 		hidden_effect = {
-			random_country = {
-				limit = {
-					has_origin = origin_egs2
-				}
-				if = {
-					limit = {
-						root = {
-							has_country_flag = EGS_CLUSTER_APPRENTICE
-						}
-					}
-					set_country_flag = EGS_CLUSTER_ATRONACH
-				}
-				else = {
-					set_country_flag = EGS_CLUSTER_APPRENTICE
-				}
-			}
 			country_event = { id = egs_menu.3 days = 1  }
 		}
 	}
@@ -98,7 +62,10 @@ country_event = {
 
 	trigger = {
 		is_ai = no
-		has_origin = origin_egs
+        OR = {
+            has_civic = civic_egs
+            has_origin = origin_egs
+        }
 	}
 
 	immediate = {
@@ -107,15 +74,6 @@ country_event = {
 		set_country_flag = EGS_LINK_WORMHOLE
 		set_country_flag = EGS_SR_NO
 		set_country_flag = EGS_DIPLO_HACK_NO
-		if = {
-			limit = {
-				egs_is_multiplayer = yes
-			}
-			set_country_flag = EGS_START_SOL
-		}
-		else = {
-			set_country_flag = EGS_START_RANDOM
-		}
 		# make sure we don't spawn extrgalatic cluster by accident
 		set_global_flag = extragalactic_cluster_spawned
 		country_event = { id = egs_menu.1  }
@@ -131,7 +89,6 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		has_origin = origin_egs
 	}
 
 	immediate = {
@@ -173,6 +130,9 @@ country_event = {
 		trigger = {
 			NOT = { has_country_flag = EGS_CLUSTER_APPRENTICE }
 		}
+        allow = {
+            NOT = { any_country = { has_country_flag = EGS_CLUSTER_APPRENTICE } }
+        }
 		hidden_effect = {
 			clear_egs_cluster_flags = yes
 			set_country_flag = EGS_CLUSTER_APPRENTICE
@@ -195,8 +155,11 @@ country_event = {
 		name = "egs_menu.100.option.hexagon"
 		trigger = {
 			NOT = { has_country_flag = EGS_CLUSTER_HEXAGON }
-			egs_is_multiplayer = no
+			
 		}
+        allow = {
+            NOT = { any_country = { has_country_flag = EGS_CLUSTER_HEXAGON } }
+        }
 		hidden_effect = {
 			clear_egs_cluster_flags = yes
 			set_country_flag = EGS_CLUSTER_HEXAGON
@@ -207,7 +170,7 @@ country_event = {
 		name = "egs_menu.100.option.hexagon.on"
 		trigger = {
 			has_country_flag = EGS_CLUSTER_HEXAGON
-			egs_is_multiplayer = no
+			
 		}
 		hidden_effect = {
 			clear_egs_cluster_flags = yes
@@ -220,8 +183,11 @@ country_event = {
 		name = "egs_menu.100.option.steed"
 		trigger = {
 			NOT = { has_country_flag = EGS_CLUSTER_STEED }
-			egs_is_multiplayer = no
+			
 		}
+        allow = {
+            NOT = { any_country = { has_country_flag = EGS_CLUSTER_STEED } }
+        }
 		hidden_effect = {
 			clear_egs_cluster_flags = yes
 			set_country_flag = EGS_CLUSTER_STEED
@@ -232,7 +198,7 @@ country_event = {
 		name = "egs_menu.100.option.steed.on"
 		trigger = {
 			has_country_flag = EGS_CLUSTER_STEED
-			egs_is_multiplayer = no
+			
 		}
 		hidden_effect = {
 			clear_egs_cluster_flags = yes
@@ -246,6 +212,9 @@ country_event = {
 		trigger = {
 			NOT = { has_country_flag = EGS_CLUSTER_ATRONACH }
 		}
+        allow = {
+            NOT = { any_country = { has_country_flag = EGS_CLUSTER_ATRONACH } }
+        }
 		hidden_effect = {
 			clear_egs_cluster_flags = yes
 			set_country_flag = EGS_CLUSTER_ATRONACH
@@ -268,8 +237,11 @@ country_event = {
 		name = "egs_menu.100.option.bigdipper"
 		trigger = {
 			NOT = { has_country_flag = EGS_CLUSTER_BIG_DIPPER }
-			egs_is_multiplayer = no
+			
 		}
+        allow = {
+            NOT = { any_country = { has_country_flag = EGS_CLUSTER_BIG_DIPPER } }
+        }
 		hidden_effect = {
 			clear_egs_cluster_flags = yes
 			set_country_flag = EGS_CLUSTER_BIG_DIPPER
@@ -280,278 +252,11 @@ country_event = {
 		name = "egs_menu.100.option.bigdipper.on"
 		trigger = {
 			has_country_flag = EGS_CLUSTER_BIG_DIPPER
-			egs_is_multiplayer = no
+			
 		}
 		hidden_effect = {
 			clear_egs_cluster_flags = yes
 			set_country_flag = EGS_CLUSTER_BIG_DIPPER
-			country_event = { id = egs_menu.1 }
-		}
-	}
-}
-
-
-
-#Home System Menu
-country_event = {
-	id = egs_menu.200    
-	title = "egs_menu.200.name"
-	desc = "egs_menu.200.desc"
-	picture = GFX_evt_colony_settlement
-	is_triggered_only = yes
-
-	option = {
-		name = "egs_menu.200.option.sol"
-		trigger = {
-			NOT = { has_country_flag = EGS_START_SOL }
-		}
-		hidden_effect = {
-			clear_egs_start_system_flags = yes
-			set_country_flag = EGS_START_SOL
-			country_event = { id = egs_menu.1 }
-		}
-	}
-
-	option = {
-		name = "egs_menu.200.option.sol.on"
-		trigger = {
-			has_country_flag = EGS_START_SOL
-		}
-		hidden_effect = {
-			clear_egs_start_system_flags = yes
-			set_country_flag = EGS_START_SOL
-			country_event = { id = egs_menu.1 }
-		}
-	}
-
-	option = {
-		name = "egs_menu.200.option.deneb"
-		trigger = {
-			NOT = { has_country_flag = EGS_START_DENEB }
-		}
-		hidden_effect = {
-			clear_egs_start_system_flags = yes
-			set_country_flag = EGS_START_DENEB
-			country_event = { id = egs_menu.1 }
-		}
-	}
-
-	option = {
-		name = "egs_menu.200.option.deneb.on"
-		trigger = {
-			has_country_flag = EGS_START_DENEB
-		}
-		hidden_effect = {
-			clear_egs_start_system_flags = yes
-			set_country_flag = EGS_START_DENEB
-			country_event = { id = egs_menu.1 }
-		}
-	}
-
-	option = {
-		name = "egs_menu.200.option.random"
-		trigger = {
-			NOT = { has_country_flag = EGS_START_RANDOM }
-			egs_is_multiplayer = no
-		}
-		hidden_effect = {
-			clear_egs_start_system_flags = yes
-			set_country_flag = EGS_START_RANDOM
-			country_event = { id = egs_menu.1 }
-		}
-	}
-
-	option = {
-		name = "egs_menu.200.option.random.on"
-		trigger = {
-			has_country_flag = EGS_START_RANDOM
-			egs_is_multiplayer = no
-		}
-		hidden_effect = {
-			clear_egs_start_system_flags = yes
-			set_country_flag = EGS_START_RANDOM
-			country_event = { id = egs_menu.1 }
-		}
-	}
-
-	option = {
-		name = "egs_menu.200.option.randombinry"
-		trigger = {
-			NOT = { has_country_flag = EGS_START_RANDOM_BINARY }
-			egs_is_multiplayer = no
-		}
-		hidden_effect = {
-			clear_egs_start_system_flags = yes
-			set_country_flag = EGS_START_RANDOM_BINARY
-			country_event = { id = egs_menu.1 }
-		}
-	}
-
-	option = {
-		name = "egs_menu.200.option.randombinry.on"
-		trigger = {
-			has_country_flag = EGS_START_RANDOM_BINARY
-			egs_is_multiplayer = no
-		}
-		hidden_effect = {
-			clear_egs_start_system_flags = yes
-			set_country_flag = EGS_START_RANDOM_BINARY
-			country_event = { id = egs_menu.1 }
-		}
-	}
-
-	option = {
-		name = "egs_menu.200.option.randomtrinary"
-		trigger = {
-			NOT = { has_country_flag = EGS_START_RANDOM_TRINARY }
-			egs_is_multiplayer = no
-		}
-		hidden_effect = {
-			clear_egs_start_system_flags = yes
-			set_country_flag = EGS_START_RANDOM_TRINARY
-			country_event = { id = egs_menu.1 }
-		}
-	}
-
-	option = {
-		name = "egs_menu.200.option.randomtrinary.on"
-		trigger = {
-			has_country_flag = EGS_START_RANDOM_TRINARY
-			egs_is_multiplayer = no
-		}
-		hidden_effect = {
-			clear_egs_start_system_flags = yes
-			set_country_flag = EGS_START_RANDOM_TRINARY
-			country_event = { id = egs_menu.1 }
-		}
-	}
-
-	option = {
-		name = "egs_menu.200.option.ringworld"
-		trigger = {
-			NOT = { has_country_flag = EGS_START_RINGWORLD }
-		}
-        allow = {
-            has_federations_dlc = yes
-            NOT = { has_civic = civic_agrarian_idyll }
-            NOR = {
-                has_civic = civic_anglers
-                has_civic = civic_corporate_anglers
-                has_civic = civic_machine_anglers
-                has_civic = civic_corporate_machine_anglers
-            }
-        }
-		hidden_effect = {
-			clear_egs_start_system_flags = yes
-			set_country_flag = EGS_START_RINGWORLD
-			country_event = { id = egs_menu.1 }
-		}
-	}
-
-	option = {
-		name = "egs_menu.200.option.ringworld.on"
-		trigger = {
-			has_country_flag = EGS_START_RINGWORLD
-		}
-        allow = {
-            has_federations_dlc = yes
-            NOT = { has_civic = civic_agrarian_idyll }
-            NOR = {
-                has_civic = civic_anglers
-                has_civic = civic_corporate_anglers
-                has_civic = civic_machine_anglers
-                has_civic = civic_corporate_machine_anglers
-            }
-        }
-		hidden_effect = {
-			clear_egs_start_system_flags = yes
-			set_country_flag = EGS_START_RINGWORLD
-			country_event = { id = egs_menu.1 }
-		}
-	}
-
-    option = {
-        name = "egs_menu.200.option.starborn"
-        trigger = {
-            NOT = { has_country_flag = EGS_START_STARBORN }
-        }
-        allow = {
-            has_federations_dlc = yes
-            has_country_flag = EGS_CLUSTER_HEXAGON
-            NOR = {
-                has_civic = civic_idyllic_bloom
-                has_civic = civic_hive_idyllic_bloom
-            }
-            NOT = { has_civic = civic_agrarian_idyll }
-            NOR = {
-                has_civic = civic_anglers
-                has_civic = civic_corporate_anglers
-                has_civic = civic_machine_anglers
-                has_civic = civic_corporate_machine_anglers
-            }
-        }
-        hidden_effect = {
-            clear_egs_start_system_flags = yes
-            set_country_flag = EGS_START_STARBORN
-            country_event = { id = egs_menu.1 }
-        }
-    }
-
-    option = {
-        name = "egs_menu.200.option.starborn.on"
-        trigger = {
-            has_country_flag = EGS_START_STARBORN
-        }
-        allow = {
-            has_federations_dlc = yes
-            has_country_flag = EGS_CLUSTER_HEXAGON
-            NOR = {
-                has_civic = civic_idyllic_bloom
-                has_civic = civic_hive_idyllic_bloom
-            }
-            NOT = { has_civic = civic_agrarian_idyll }
-            NOR = {
-                has_civic = civic_anglers
-                has_civic = civic_corporate_anglers
-                has_civic = civic_machine_anglers
-                has_civic = civic_corporate_machine_anglers
-            }
-        }
-        hidden_effect = {
-            clear_egs_start_system_flags = yes
-            set_country_flag = EGS_START_STARBORN
-            country_event = { id = egs_menu.1 }
-        }
-    }
-
-	option = {
-		name = "egs_menu.200.option.alderson"
-		trigger = {
-			NOT = { has_country_flag = EGS_START_OPS }
-		}
-		allow = {
-			has_global_flag = OPS_ACTIVE
-			has_country_flag = EGS_CLUSTER_BIG_DIPPER
-		}
-		hidden_effect = {
-			clear_egs_start_system_flags = yes
-			set_country_flag = EGS_START_OPS
-			country_event = { id = egs_menu.1 }
-		}
-	}
-
-	option = {
-		name = "egs_menu.200.option.alderson.on"
-		trigger = {
-			has_country_flag = EGS_START_OPS
-		}
-		allow = {
-			has_global_flag = OPS_ACTIVE
-			has_country_flag = EGS_CLUSTER_BIG_DIPPER
-		}
-		hidden_effect = {
-			clear_egs_start_system_flags = yes
-			set_country_flag = EGS_START_OPS
 			country_event = { id = egs_menu.1 }
 		}
 	}

@@ -92,10 +92,7 @@ country_event = {
                 hyperlane = no
 				initializer = egs_special_init_09 # pulsar
                 effect = {
-                    save_event_target_as = egs_cluster_02
-                    set_star_flag = egs_cluster
-                    set_star_flag = egs_2
-                    set_star_flag = empire_cluster
+                    egs_set_starFlags = { TARGET = 02 FLAG = 2}
                 }
 			}
 
@@ -127,10 +124,7 @@ country_event = {
                 hyperlane = no
                 initializer = egs_basic_init_05
                 effect = {
-                    save_event_target_as = egs_cluster_04
-                    set_star_flag = egs_cluster
-                    set_star_flag = egs_4
-                    set_star_flag = empire_cluster
+                    egs_set_starFlags = { TARGET = 04 FLAG = 4 }
                 }
             }
 
@@ -145,10 +139,7 @@ country_event = {
                 hyperlane = no
                 initializer = egs_special_init_08 #neutron
                 effect = {
-                    save_event_target_as = egs_cluster_05
-                    set_star_flag = egs_cluster
-                    set_star_flag = egs_5
-                    set_star_flag = empire_cluster
+                    egs_set_starFlags = { TARGET = 05 FLAG = 5 }
                 }
             }
 
@@ -163,10 +154,7 @@ country_event = {
                 hyperlane = no
                 initializer = egs_asteroid_init_01
                 effect = {
-                    save_event_target_as = egs_cluster_06
-                    set_star_flag = egs_cluster
-                    set_star_flag = egs_6
-                    set_star_flag = empire_cluster
+                    egs_set_starFlags = { TARGET = 06 FLAG = 6 }
                 }
             }
 
@@ -181,10 +169,7 @@ country_event = {
                 hyperlane = no
                 initializer = egs_basic_init_04
                 effect = {
-                    save_event_target_as = egs_cluster_07
-                    set_star_flag = egs_cluster
-                    set_star_flag = egs_7
-                    set_star_flag = empire_cluster
+                    egs_set_starFlags = { TARGET = 07 FLAG = 7 }
                 }
             }
 		}
@@ -206,10 +191,7 @@ country_event = {
                 hyperlane = no
 				initializer =  egs_sca_init #class A star
                 effect = {
-                    save_event_target_as = egs_cluster_08
-                    set_star_flag = egs_cluster
-                    set_star_flag = egs_8
-                    set_star_flag = empire_cluster
+                    egs_set_starFlags = { TARGET = 08 FLAG = 8 }
                 }
 			}
 		}
@@ -227,19 +209,8 @@ country_event = {
             MIN_DISTANCE = 25
             MAX_DISTANCE = 28
             DIRECTION = 47
-        }
-
-        capital_scope = {
-            solar_system = {
-                save_event_target_as = egs_cluster_09
-                set_star_flag = egs_cluster
-                set_star_flag = egs_9
-                set_star_flag = egs_empire_home
-                set_star_flag = empire_cluster
-                save_event_target_as = egs_home_system
-                system_star = { save_event_target_as = egs_home_system_star }
-            }
-            save_event_target_as = egs_home_planet
+            TARGET = 09
+            FLAG = 9
         }
 
 
@@ -271,10 +242,7 @@ country_event = {
 				initializer = egs_basic_init_06_2
                 hyperlane = no
                 effect = {
-                    save_event_target_as = egs_cluster_11
-                    set_star_flag = egs_cluster
-                    set_star_flag = egs_11
-                    set_star_flag = empire_cluster
+                    egs_set_starFlags = { TARGET = 11 FLAG = 11 }
                 }
 			}
 		}

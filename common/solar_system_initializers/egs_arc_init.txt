@@ -3,7 +3,7 @@
 
 egs_arc_init = {
     class = "rl_standard_stars"
-    flags = {    egs_big_2 }
+    flags = {    egs_big_2 egs_hex_11 }
 
     asteroid_belt = {
         type = rocky_asteroid_belt

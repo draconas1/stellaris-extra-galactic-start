@@ -1,26 +1,3 @@
-egs_player1_trigger = {
-    OR = {
-        has_origin = origin_egs
-        has_country_flag = EGS_PLAYER_1
-    }
-}
-
-egs_player2_trigger = {
-    OR = {
-        has_origin = origin_egs2
-        has_country_flag = EGS_PLAYER_2
-    }
-}
-
-egs_county_player1 = {
-    root = { egs_player1_trigger = yes }
-}
-
-egs_county_player2 = {
-    root = { egs_player2_trigger = yes }
-}
-
-
 suitable_egs_planet_for_sr = {
 	is_star = no
 	has_deposit = no
@@ -29,84 +6,31 @@ suitable_egs_planet_for_sr = {
 		egs_select_all_relevant_systems = yes
 		NOR = {
 			has_star_flag = egs_init_system
-			has_star_flag = egs_p2_init_system
 			has_star_flag = egs_empire_home
-			has_star_flag = egs_p2_empire_home
 		}
-	}
-}
-
-egs_suitable_system_for_wormhole = {
-	has_natural_wormhole = no
-	is_fe_cluster = no
-	NOR = {
-		has_star_flag = abandoned_gateway
-		has_star_flag = AI_hub
-		has_star_flag = empire_home_system
-		has_star_flag = empire_cluster
-		has_star_flag = hostile_system
-		has_star_flag = sol
-		has_star_flag = deneb_system
-		has_star_flag = egs_cluster
-        has_star_flag = egs_p2_cluster
-		has_star_flag = marauder_system
-		has_star_flag = egs_wormhole
-
-        has_star_flag = extragalactic_cluster
-        has_star_flag = lcluster
-        has_star_flag = mem_sadrell_extant_cluster
-        has_star_flag = outercluster
-
-        has_star_flag = giga_galactic_center # gigastructures galatic core
-        has_star_flag = surveillance_supercomputer_system# Ultima Vigilis
-        has_star_flag = chosen_system# All the chosens set
-        has_star_flag = solarpunk_system_02 # Daacha
-        has_star_flag = sealed_system# isolated system
-        has_star_flag = ehof_compound_system# gigastructures compound
-        has_star_flag = maginot_anti_jump_star # gigastructures Maginot World subspace disruption
-        has_star_flag = siegfried_anti_jump_star # gigastructures Katzen version
-        has_star_flag = cohesive_system # gigastructures ehof cohesive
-	}
-}
-
-egs_is_multiplayer = {
-	any_country = {
-        egs_player2_trigger = yes
 	}
 }
 
 egs_gigastructures = {
-	any_country = {
-        egs_player1_trigger = yes
-		has_country_flag = EGS_GIGA_YES
-	}
+    has_country_flag = EGS_GIGA_YES
 }
 
 egs_resources = {
-	any_country = {
-        egs_player1_trigger = yes
-		has_country_flag = EGS_SR_YES
-	}
+    has_country_flag = EGS_SR_YES
 }
 
 egs_link_l_gate = {
-	any_country = {
-        egs_player1_trigger = yes
-		has_country_flag = EGS_LINK_L_GATE
-	}
+    has_country_flag = EGS_LINK_L_GATE
 }
 
 egs_select_all_relevant_systems = {
-	OR = {
-		AND = {
-            egs_county_player1 = yes
-			has_star_flag = egs_cluster
-		}
-		AND = {
-            egs_county_player2 = yes
-			has_star_flag = egs_p2_cluster
-		}
-	}
+    distance = {
+        source = event_target:egs_cluster_root
+        min_jumps = 0
+        max_jumps = 15
+        type = hyperlane
+        use_bypasses = no
+    }
 }
 
 egs_home_system = {
