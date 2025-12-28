@@ -20,14 +20,14 @@ country_event = {
                         galaxy_size = small
                     }
                 }
-                egs_hex_star_1 = { DIST = 390 }
+                egs_hex_star_1 = { DIST = 420 }
             }
             else_if = {
                 limit = { galaxy_size = medium }
-                egs_hex_star_1 = { DIST = 450 }
+                egs_hex_star_1 = { DIST = 500 }
             }
             else = {
-                egs_hex_star_1 = { DIST = 550 }
+                egs_hex_star_1 = { DIST = 570 }
             }
 		}
 

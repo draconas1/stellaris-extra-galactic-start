@@ -69,6 +69,11 @@ country_event = {
 	}
 
 	immediate = {
+        capital_star = {
+            solar_system = {
+                set_star_flag = ops_ignore_start_choice
+            }
+        }
 		set_country_flag = EGS_CLUSTER_APPRENTICE
 		set_country_flag = EGS_GIGA_NO
 		set_country_flag = EGS_LINK_WORMHOLE
