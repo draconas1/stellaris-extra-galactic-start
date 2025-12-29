@@ -22,6 +22,7 @@ civic_egs = {
     possible = {
         origin = {
             NOR = {
+                value = origin_egs
                 value = origin_common_ground
                 value = origin_hegemon
             }

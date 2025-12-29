@@ -1,7 +1,7 @@
 [h1]Start in an Isolated Extra-Galactic Constellations[/h1]
 This mod takes the excellent constellations from [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1523039190]Extra Galactic Clusters[/url] and makes it possible to have any of them as a starting location for your civilisation.
 
-It is done via Civic: Extra-Galatic Cluster.
+It is done via Civic or an Origin: Extra-Galatic Cluster (take the one that combines best with your playstyle).
 If your civilisation takes that then a menu will appear on game start for you to customise your cluster.  The AI never will. 
 
 
