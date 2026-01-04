@@ -107,16 +107,57 @@ egs_set_guarenteed_planet_classes = {
 egs_create_cluster_links = {
     if = {
         limit = {  egs_link_l_gate = yes }
-
+        if = {
+            limit = { NOT = { has_event_chain = egs_lgate_locations_chain } }
+            begin_event_chain = {
+                event_chain = egs_lgate_locations_chain
+                target = this
+            }
+        }
+        ROOT = { set_variable = { which = egs_lgate_number value = 1 } }
         # you need to know about every other Lgate so you can exit the L cluster.
         every_system = {
             limit = { has_star_flag =  lgate }
+
             every_system_planet = {
                 limit = { is_star = yes }
                 set_surveyed = {
                     surveyed = yes
                     surveyor = ROOT
                 }
+            }
+            ROOT = {
+                # can't pass a variable in :'(
+                inline_script = { script = egs_create_lcluster_poi NUMBER = 1 }
+                inline_script = { script = egs_create_lcluster_poi NUMBER = 2 }
+                inline_script = { script = egs_create_lcluster_poi NUMBER = 3 }
+                inline_script = { script = egs_create_lcluster_poi NUMBER = 4 }
+                inline_script = { script = egs_create_lcluster_poi NUMBER = 5 }
+                inline_script = { script = egs_create_lcluster_poi NUMBER = 6 }
+                inline_script = { script = egs_create_lcluster_poi NUMBER = 7 }
+                inline_script = { script = egs_create_lcluster_poi NUMBER = 8 }
+                inline_script = { script = egs_create_lcluster_poi NUMBER = 9 }
+                inline_script = { script = egs_create_lcluster_poi NUMBER = 11 }
+                inline_script = { script = egs_create_lcluster_poi NUMBER = 12 }
+                inline_script = { script = egs_create_lcluster_poi NUMBER = 13 }
+                inline_script = { script = egs_create_lcluster_poi NUMBER = 14 }
+                inline_script = { script = egs_create_lcluster_poi NUMBER = 15 }
+                inline_script = { script = egs_create_lcluster_poi NUMBER = 16 }
+                inline_script = { script = egs_create_lcluster_poi NUMBER = 17 }
+                inline_script = { script = egs_create_lcluster_poi NUMBER = 18 }
+                inline_script = { script = egs_create_lcluster_poi NUMBER = 19 }
+                if = {
+                    limit = { check_variable = { which = egs_lgate_number value >= 20 } }
+                    # all going to ahve the same id, so galaxy ping won't work.
+                    create_point_of_interest = {
+                        id = egs_lgate_location_POI.20
+                        name = egs_lgate_location_POI.name
+                        desc = egs_lgate_location_POI.desc
+                        event_chain = egs_lgate_locations_chain
+                        location = prev
+                    }
+                }
+                change_variable = { which = egs_lgate_number value = 1 }
             }
         }
 
