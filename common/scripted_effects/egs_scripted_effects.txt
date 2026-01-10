@@ -84,22 +84,28 @@ create_and_link_wormholes = {
 
 
 egs_set_guarenteed_planet_classes = {
-    every_system = {
-        limit = {
-            distance = {
-                source = event_target:egs_cluster_root
-                min_jumps = 1
-                max_jumps = 15
-                type = hyperlane
-                use_bypasses = no
+    if = {
+        # only run if our homeworld is a habitable planet
+        # very rough check, but should cover the biggies like
+        # shattered ring and voidborn
+        limit = { root = { capital_scope = { habitable_planet = yes } } }
+        every_system = {
+            limit = {
+                distance = {
+                    source = event_target:egs_cluster_root
+                    min_jumps = 1
+                    max_jumps = 15
+                    type = hyperlane
+                    use_bypasses = no
+                }
+                NOT = { is_same_value = event_target:egs_home_system }
             }
-            NOT = { is_same_value = event_target:egs_home_system }
-        }
-        every_system_planet = {
-            limit = { has_planet_flag = prescripted_ideal }
-            change_pc = root
-            reroll_deposits = yes
-            reroll_planet_modifiers = yes
+            every_system_planet = {
+                limit = { has_planet_flag = prescripted_ideal }
+                change_pc = root
+                reroll_deposits = yes
+                reroll_planet_modifiers = yes
+            }
         }
     }
 }
