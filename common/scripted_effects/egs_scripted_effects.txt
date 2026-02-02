@@ -282,50 +282,45 @@ egs_set_guarenteed_resources = {
 
 
 egs_move_home_system = {
+    optimize_memory
+
+    # I can't give an exact direction to move, so instead we are going to spawn, then move, then kill
+    event_target:egs_homeworld_target = {
+        spawn_system = {
+            min_distance = $MIN_DISTANCE$
+            max_distance = $MAX_DISTANCE$
+            min_orientation_angle = $DIRECTION$
+            max_orientation_angle = $DIRECTION$
+            hyperlane = no
+            initializer = random
+            effect = { save_event_target_as = egs_homeworld_target_locator }
+        }
+    }
+
     capital_scope = {
         solar_system = {
             spawn_system = {
-                max_distance = 5
-                min_distance = 3
-                max_jumps = 1
-                min_jumps = 1
-                initializer = basic_init_05
-                hyperlane = no
+                initializer = random
+                min_distance = 0.1
+                max_distance = 0.2
+                hyperlane = yes
+                authorize_spawn_on_galactic_core = no
                 effect = { save_event_target_as = egs_replacement_homeworld_system }
             }
-            solar_system = {
-                every_neighbor_system = {
-                    remove_hyperlane = {
-                        from = this
-                        to = prev
-                    }
-                    add_hyperlane = {
-                        from = this
-                        to = event_target:egs_replacement_homeworld_system
-                    }
-                }
-            }
-            # I can't give an exact direction to move, so instead we are going to spawn, then move, then kill
-            event_target:egs_homeworld_target = {
-                spawn_system = {
-                    min_distance = $MIN_DISTANCE$
-                    max_distance = $MAX_DISTANCE$
-                    min_orientation_angle = $DIRECTION$
-                    max_orientation_angle = $DIRECTION$
-                    hyperlane = no
-                    initializer = random
-                    effect = { save_event_target_as = egs_homeworld_target_locator }
+            every_neighbor_system = {
+                add_hyperlane = {
+                    from = this
+                    to = event_target:egs_replacement_homeworld_system
                 }
             }
 
             move_system = {
                 target = event_target:egs_homeworld_target_locator
-                min_jumps = 1
-                max_jumps = 1
+                max_jumps = 0
                 min_distance = 1
                 max_distance = 1
                 hyperlane = no
-                reset_terra_incognita = no
+                reset_terra_incognita = yes
             }
         }
     }
