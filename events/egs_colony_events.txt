@@ -7,6 +7,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
+        log = "EGS: Linking Cluster"
         egs_create_cluster_links = yes
 
         country_event = { id = egs_colony.2 days = 3 }
@@ -23,6 +24,7 @@ country_event = {
     hide_window = yes
     is_triggered_only = yes
     immediate = {
+        log = "EGS: Setting Guarenteed Planets"
         egs_set_guarenteed_planet_classes = yes
     }
 }
@@ -32,7 +34,9 @@ country_event = {
     hide_window = yes
     is_triggered_only = yes
     immediate = {
+        log = "EGS: Setting Guarenteed Resources"
         egs_set_guarenteed_resources = yes
+        log = "EGS: Setup Complete"
     }
 }
 

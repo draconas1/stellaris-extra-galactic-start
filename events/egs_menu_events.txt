@@ -99,22 +99,27 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			if = {
-				limit = { has_country_flag = EGS_CLUSTER_APPRENTICE }				
+				limit = { has_country_flag = EGS_CLUSTER_APPRENTICE }
+				log = "EGS: Spawning Apprentice"
 				country_event = { id = egs_apprentice.1 }
 			}
 			else_if = {
-				limit = { has_country_flag = EGS_CLUSTER_STEED }				
+				limit = { has_country_flag = EGS_CLUSTER_STEED }
+				log = "EGS: Spawning Steed"
 				country_event = { id = egs_steed.1 }
 			}
 			else_if = {
-				limit = { has_country_flag = EGS_CLUSTER_ATRONACH }				
+				limit = { has_country_flag = EGS_CLUSTER_ATRONACH }
+				log = "EGS: Spawning Atronach"
 				country_event = { id = egs_atronach.1 }
 			}
 			else_if = {
-				limit = { has_country_flag = EGS_CLUSTER_BIG_DIPPER }				
+				limit = { has_country_flag = EGS_CLUSTER_BIG_DIPPER }
+				log = "EGS: Spawning Big Dipper"
 				country_event = { id = egs_big_dipper.1 }
 			}
 			else = {
+				log = "EGS: Spawning Hexagon"
 				country_event = { id = egs_hexagon.1 }
 			}
 		}

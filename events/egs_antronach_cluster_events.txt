@@ -187,15 +187,6 @@ country_event = {
             egs_antronach_star_10 = { INITIALIZER = egs_binary_init_02 }
         }
 
-
-	
-		# clear all hyperlanes to and within the cluster
-		every_system = {
-			limit = { has_star_flag = egs_cluster }
-			isolate_system = yes
-		}
-
-
 		#create the cluster hyperlanes
 		event_target:egs_cluster_01 = {
 			add_hyperlane = {

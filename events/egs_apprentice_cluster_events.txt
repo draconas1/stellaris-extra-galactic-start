@@ -247,13 +247,6 @@ country_event = {
 			}
 		}
 
-
-		# clear all hyperlanes to and within the cluster
-		every_system = {
-			limit = { has_star_flag = egs_cluster }
-			isolate_system = yes
-		}
-
 		#create the cluster hyperlanes
 		
 		add_hyperlane = {
