@@ -1,6 +1,6 @@
 ﻿l_english:
     egs_menu.1.name:0 "Choose Extra Galactic Start Options"
-    egs_menu.1.desc:0 "These options let you customise your extra galaxy cluster start.\n\n§RThe move will happen AFTER day 1, so you need to start time.  The game may lag when moving you§!\n\nDon't forget to reassign your governor!\n\n\nNote: When claiming systems you may find that the borders are not rendered, this is a Stellaris issue (often happens with the L-Cluster), and they should render after reloading the game.!\n\n§HLarge and Huge Galaxies may experience significant lag when moving§!\n\n§HThere may be some unemployed pops, inefficient jobs, some not entirely accurate districts or weird issues with dual capital buildings, most of these should resolve at the end of the first month§!"
+    egs_menu.1.desc:0 "These options let you customise your extra galaxy cluster start.\n\n§RThe move will happen AFTER day 1, so you need to start time.  The game may lag when moving you§!\n\nNote: When claiming systems you may find that the borders are not rendered, this is a Stellaris issue (often happens with the L-Cluster), and they should render after reloading the game.!\n\n§HLarge and Huge Galaxies may experience significant lag when moving§!\n\n§HMultiplayer: Make sure you all select different clusters!§!"
     egs_menu.1.desc.retile:0 "$egs_menu.1.desc$"
     egs_menu.1.option.cluster:0 "Choose Extragalactic Constellation"
     egs_menu.1.option.system:0 "Choose Home System Details"

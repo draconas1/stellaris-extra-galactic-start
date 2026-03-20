@@ -7,82 +7,35 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
-        egs_set_empire_cluster_flags = yes
-        egs_tag_home_system_and_planet = yes
-        egs_tag_old_home_system_planet_and_govenor = yes
-        egs_set_guarenteed_planet_classes = yes
-        egs_change_origin = yes
-
-        egs_setup_home_system = yes
-
-        egs_move_fleets = yes
-
         egs_create_cluster_links = yes
 
-        egs_set_guarenteed_resources = yes
-
-        # 2 different steps because I want create_colony to run and its scope to finalise before I poke the colony
-        # Then move all the pops to it first.  This way pop-numbers triggers will be met for the capital buildings.
-        egs_create_home_planet_colony = yes
-
-        egs_resettle_pops = yes
-
-        egs_setup_home_planet = yes
-
-        egs_modify_species = yes
-
-        egs_remove_old_home = yes
-
-        # Fix the ship shelter issues
-        event_target:egs_home_planet = {
-            planet_event = { id = egs_colony.10 days = 1 }
-            planet_event = { id = egs_colony.11 days = 2 }
-        }
-
-        # OP Start specific config
-        country_event = { id = egs_mod_compatibility.1 }
-
-        # PD specific config
-        country_event = { id = egs_mod_compatibility.100 }
+        country_event = { id = egs_colony.2 days = 3 }
+        country_event = { id = egs_colony.3 days = 4 }
 
         # GPM specific config
         country_event = { id = egs_mod_compatibility.200 }
 	}
 }
 
-# transferred any unemployed elites/specialists etc... down to civilians
-planet_event = {
-	id = egs_colony.10
-	hide_window = yes
-	is_triggered_only = yes
-	immediate = {
-        # fix unemployed pops
-        every_owned_pop_group = {
-            limit = { is_unemployed = yes }
-            save_event_target_as = old_pop_group
-            prev = {
-                create_pop_group = {
-                    pop_group = event_target:old_pop_group
-                    category = civilian
-                    effect = {
-                        transfer_pop_amount = {
-                            source = event_target:old_pop_group
-                            target = this
-                            percentage = 1
-                        }
-                    }
-                }
-            }
-        }
-	}
+
+country_event = {
+    id = egs_colony.2
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        egs_set_guarenteed_planet_classes = yes
+    }
 }
 
-planet_event = {
-	id = egs_colony.11
-	hide_window = yes
-	is_triggered_only = yes
-	immediate = {
-		check_planet_employment = yes
-	}
+country_event = {
+    id = egs_colony.3
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        egs_set_guarenteed_resources = yes
+    }
 }
+
+
+
 
