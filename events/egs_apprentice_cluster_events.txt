@@ -297,16 +297,9 @@ country_event = {
 			from = event_target:egs_cluster_09
 			to = event_target:egs_cluster_11
 		}
-		
 
 		set_spawn_system_batch = end
 
-
 		country_event = { id = egs_colony.1 }
-
-
 	}
-
-
-	
 }
